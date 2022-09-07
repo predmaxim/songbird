@@ -11,4 +11,7 @@ Contacts:
 
 | task                        | status                | comment   | deploy / solution                                                                         |
 |----------------------------:|----------------------:|----------:|------------------------------------------------------------------------------------------:|
-|                             |                       | 0/100     | -                                                                                         |
+| RSS Test                    | complete              | 97/100    | -                                                                                         |
+| CV#1. Markdown & Git        | complete              | 100/100   | -                                                                                         |
+| CV#2. HTML, CSS & Git Basics| complete              | 100/100   | -                                                                                         |
+| Git Test [RU]               | complete              | 96/100    | -                                                                                         |
