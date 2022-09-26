@@ -1,0 +1,142 @@
+%headerLinkStyle {
+  color: $color-menu-link;
+  font-weight: $weight-menu-link;
+}
+
+header {
+  background: $color-bg-header;
+  height: $height-header-desktop + px;
+  display: flex;
+  position: relative;
+  z-index: 1;
+
+  @media screen and (max-width: ($notebook + px)) {
+    & {
+      height: $height-header-notebook + px;
+    }
+  }
+
+  @media screen and (max-width: ($tablet + px)) {
+    & {
+      height: $height-header-tablet + px;
+    }
+  }
+
+  @media screen and (max-width: ($mobile + px)) {
+    & {
+      height: $height-header-mobile + px;
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    width: $max-width + px;
+
+    @media screen and (max-width: ($tablet + px)) {
+      & {
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+.logo {
+  margin-right: 3.75rem;
+
+  .logo-mobile {
+    display: none;
+  }
+
+  @media screen and (max-width: ($tablet + px)) {
+    .logo-desktop {
+      display: none;
+    }
+
+    .logo-mobile {
+      display: block;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  width: 100%;
+
+  @media screen and (max-width: ($tablet + px)) {
+    & {
+      flex-direction: column;
+      position: fixed;
+      right: 0;
+      @include prefix((transform: translateX(100vw)));
+      top: calc($height-header-tablet - ($height-header-tablet * 0.5)) + px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    @extend %headerLinkStyle;
+
+    &:hover {
+      color: $color-menu-link-hover;
+    }
+  }
+
+  .menu__item {
+    &:not(:last-child) {
+      margin-right: 3.75rem;
+    }
+
+    @media screen and (max-width: ($notebook + px)) {
+      &:not(:last-child) {
+        margin-right: 2.5rem;
+      }
+    }
+  }
+}
+
+.burger {
+  display: none;
+  color: $color-burger;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+
+  @media screen and (max-width: ($tablet + px)) {
+    & {
+      display: flex;
+    }
+  }
+
+  .burger-icon {
+    @extend %headerLinkStyle;
+
+    &:hover {
+      color: $color-orange;
+      @include prefix((transition: .3s));
+    }
+  }
+
+}
+
+.author-desktop {
+  display: block;
+  flex: 1 0 auto;
+  @extend %headerLinkStyle;
+
+  @media screen and (max-width: ($tablet + px)) {
+    & {
+      display: none;
+    }
+  }
+}
+
+.author-mobile {
+  display: none;
+
+  @media screen and (max-width: ($tablet + px)) {
+    & {
+      display: block;
+    }
+  }
+}

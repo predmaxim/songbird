@@ -1,0 +1,80 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(href=require('Styles/main.scss') rel='stylesheet')
+    title PetStory
+  body
+    .overlay.dispnone    
+    include Header/header.pug  
+    main
+      section.home-screen
+        .container
+          .h1-wrap
+            .h1-wrap__circle
+            h1 Watch your 
+              span.color-yellow favorite 
+              span animal online
+          a.button.orange.big.radius-25.uppercase(href='#') watch online
+      section.backstage
+        img.absolute.flower1(src=require('Img/flower_foto1.png') alt="flower")
+        img.absolute.flower2(src=require('Img/flower_foto2.png') alt="flower")
+        img.absolute.flower3(src=require('Img/flower_foto3.png') alt="flower")
+        .container
+          .inner-row
+            .inner-column
+              .backstage__img
+                img(src=require('Img/bamboo-cap.jpg') alt="a man with asian appearance")
+            .inner-column
+              .backstage__text
+                h2 The Backstage of the Wilderness World.
+                p The site was founded on the basis of a volunteer movement to protect and care for animals.
+                h4 How it works 
+                p The main goal is to help the animals, as well as the nature reserves and zoos where they are kept. We are currently working on video projects targeting pandas in China, eagles on an island near Los Angeles, alligators in Florida and gorillas in the Congo. These have a total of more than 1,500 mammals and reptiles.
+          .inner-row             
+            include Sliders/slider-backstage/slider-backstage.pug
+            button.button.orange.big.radius-25.absolute-center.uppercase choose your favorite
+      section.feed-friend
+        .container
+          .inner-row.border-radius-20
+            .inner-column 
+              h2 Pick and feed a friend
+              p.feed-friend__description We know the animals bring you joy, and in these extraordinary times, we’re glad.
+              p.bold-500 During a time when the COVID-19 epidemic is touching all of our lives, we’re proud and glad that people around the world find joy in PetStory.
+              p Even though the zoo has reopened, we need you now more than ever to help us deal with these problems. Please consider a gift to our Emergency Support Fund . 
+              h3 How it works
+              .how-it-works
+                .how-it-works__wrap
+                  .how-it-works__icon-wrap.radius-5 
+                    img.how-it-works__icon(src=require('Img/pay.png') alt="Pay with card")
+                  p.how-it-works__text Pay with card
+                .how-it-works__wrap
+                  .how-it-works__icon-wrap
+                    img.how-it-works__icon(src=require('Img/arrow.png') alt="arrow")
+                .how-it-works__wrap
+                  .how-it-works__icon-wrap.radius-5 
+                    img.how-it-works__icon(src=require('Img/zoo.png') alt="Payment goes to the zoo")
+                  p.how-it-works__text Payment goes to the zoo
+                .how-it-works__wrap
+                  .how-it-works__icon-wrap
+                    img.how-it-works__icon(src=require('Img/arrow.png') alt="arrow")
+                .how-it-works__wrap
+                  .how-it-works__icon-wrap.radius-5 
+                    img.how-it-works__icon(src=require('Img/monkey.png') alt="Your favorite animal gets delicious dish")
+                  p.how-it-works__text Your favorite animal gets delicious dish
+              button.button.orange.big.radius-25.absolute-center.uppercase Feed a friend now
+      section.testimonials
+        .container
+          h2 Testimonials          
+          include Sliders/slider-testimonials/slider-testimonials.pug
+          button.button.orange.big.radius-5.uppercase leave feedback      
+        img.absolute.flower4(src=require('Img/leaf_foto.png') alt="flower")
+      include Footer/footer.pug
+    script(src=require('Js/index.js') defer)
+
+
+
+
+

@@ -1,0 +1,37 @@
+footer#footer
+  .container
+    .row-inner
+      .column-inner 
+        .logo
+          a(href='/') 
+            img.logo__img-img.logo-desktop(src=require('Img/logo_desktop.png') alt="logo")
+            img.logo__img-img.logo-mobile(src=require('Img/logo_mobile.png') alt="logo")
+      .column-inner 
+        .subscribe-form
+          h4 Subscribe to our news
+          include Forms/subscribe-form/subscribe-form.pug
+    .row-inner
+      .column-inner   
+        button.button.orange.big.radius-5.uppercase donate for volunteers
+    .row-inner
+      .column-inner
+        .socials 
+          .socials__social 
+            a.social-icon.mdi.mdi-facebook(href='#')
+              span Facebook
+            a.social-icon.mdi.mdi-twitter(href='#')
+              span Twitter
+            a.social-icon.mdi.mdi-instagram(href='#')
+              span Instagram
+            a.social-icon.mdi.mdi-youtube(href='#')
+              span YouTube
+      .column-inner 
+        .menu  
+          a.menu__item(href='/') About
+          a.menu__item(href='#') Map
+          a.menu__item(href='#') Zoos
+          a.menu__item(href='#') Contact us
+      .column-inner 
+        .footer__author 
+          p Designed by © Predibaylo Maxim
+          p ©RSSchool ©2022

@@ -1,0 +1,310 @@
+$height-home-screen-section-desktop: 780;
+$height-home-screen-section-notebook: 584;
+$height-home-screen-section-tablet: 373;
+$height-home-screen-section-mobile: 187;
+$height-home-screen-circle-desktop: 465;
+$height-home-screen-circle-notebook: 367;
+$height-home-screen-circle-tablet: 237;
+$height-home-screen-circle-mobile: 119;
+
+.home-screen {
+  background: $home-screen-bg;
+  background-size: cover;
+  height: $height-home-screen-section-desktop + px;
+  text-align: center;
+  transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+
+  @media screen and (max-width: ($notebook + px)) {
+    & {
+      height: $height-home-screen-section-notebook + px;
+    }
+  }
+
+  @media screen and (max-width: ($tablet + px)) {
+    & {
+      height: $height-home-screen-section-tablet + px;
+    }
+  }
+
+  @media screen and (max-width: ($mobile + px)) {
+    & {
+      height: $height-home-screen-section-mobile + px;
+    }
+  }
+
+  .container {
+    height: 100%;
+  }
+
+  .h1-wrap {
+    position: relative;
+    top: 86px;
+    right: calc(575px - 100%);
+    width: fit-content;
+
+    @media screen and (max-width: ($notebook + px)) {
+      & {
+        top: 10px;
+      }
+    }
+
+    @media screen and (max-width: ($tablet + px)) {
+      & {
+        top: 10px;
+        right: calc(300px - 100%);
+      }
+    }
+
+    @media screen and (max-width: ($mobile + px)) {
+      & {
+        top: 10px;
+        right: calc(150px - 100%);
+      }
+    }
+
+    h1 {
+      max-width: 500px;
+      position: relative;
+      top: 70px;
+      left: 70px;
+
+      @media screen and (max-width: ($notebook + px)) {
+        & {
+          font-size: 85px;
+          top: 53px;
+          left: 0px;
+        }
+      }
+
+      @media screen and (max-width: ($tablet + px)) {
+        & {
+          max-width: 300px;
+          font-size: 54px;
+          top: 38px;
+          left: 18px;
+        }
+      }
+
+      @media screen and (max-width: ($mobile + px)) {
+        & {
+          max-width: 150px;
+          font-size: 28px;
+          top: 15px;
+          left: 5px;
+
+        }
+      }
+    }
+
+    &__circle {
+      width: 465px;
+      height: $height-home-screen-circle-desktop + px;
+      background: $color-orange;
+      position: absolute;
+      transition: .3s;
+      -webkit-transition: .3s;
+      -moz-transition: .3s;
+      -ms-transition: .3s;
+      -o-transition: .3s;
+      @include prefix((border-radius: 50%));
+
+      @media screen and (max-width: ($notebook + px)) {
+        & {
+          height: $height-home-screen-circle-notebook + px;
+          width: $height-home-screen-circle-notebook + px;
+        }
+      }
+
+      @media screen and (max-width: ($tablet + px)) {
+        & {
+          height: $height-home-screen-circle-tablet + px;
+          width: $height-home-screen-circle-tablet + px;
+        }
+      }
+
+      @media screen and (max-width: ($mobile + px)) {
+        & {
+          height: $height-home-screen-circle-mobile + px;
+          width: $height-home-screen-circle-mobile + px;
+        }
+      }
+    }
+  }
+
+  .button {
+    bottom: 100px;
+    right: 10%;
+    transform: translateX(-5%);
+    -webkit-transform: translateX(-5%);
+    -moz-transform: translateX(-5%);
+    -ms-transform: translateX(-5%);
+    -o-transform: translateX(-5%);
+
+    @media screen and (max-width: ($notebook + px)) {
+      & {
+        bottom: 47px;
+        right: 20%;
+      }
+    }
+
+    @media screen and (max-width: ($tablet + px)) {
+      & {
+        bottom: 40px;
+        right: auto;
+        left: 30px;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+      }
+    }
+
+    @media screen and (max-width: ($mobile + px)) {
+      & {
+        bottom: -40%;
+        right: 30px;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+      }
+    }
+  }
+}
+
+.backstage {
+  position: relative;
+
+  h2 {
+    color: $color-black-blue;
+    margin: 0;
+  }
+
+  h4 {
+    margin: 50px 0 20px;
+  }
+
+  .inner-row:last-child .button {
+    bottom: 100px;
+  }
+
+  .inner-row {
+    display: flex;
+  }
+
+  .inner-column {    
+    margin: 140px 0 100px;
+
+    &:not(:last-child) {
+      margin-right: 87px;
+    }
+  }
+
+  .absolute-img {
+    position: absolute;
+  }
+
+  .flower1 {
+    right: 0;
+    top: 12px;
+  }
+
+  .flower2 {
+    right: 0;
+    bottom: 0;
+  }
+
+  .flower3 {
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.feed-friend {
+  padding: 69px;
+  background: $color-orange-gradient;
+  color: $color-black-blue;
+
+  h2 {
+    color: $color-orange;
+    text-align: center;
+  }
+
+  h3 {
+    text-align: center;
+    margin-top: 60px;
+  }
+
+  &__description {
+    font-size: 24px;
+  }
+
+  .inner-row {
+    background-color: $color-frosted-glass-white;
+    padding: 41px 100px 155px;
+  }
+
+  .how-it-works {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+
+    &__wrap {
+      max-width: min-content;
+
+      &:nth-child(1) .how-it-works__icon-wrap,
+      &:nth-child(3) .how-it-works__icon-wrap,
+      &:nth-child(5) .how-it-works__icon-wrap {
+        background-color: $color-white;
+        border: 1px solid $color-orange;
+      }
+
+      &:nth-child(2) .how-it-works__icon-wrap,
+      &:nth-child(4) .how-it-works__icon-wrap {
+        width: auto;
+      }
+    }
+
+    &__icon-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 168px;
+      height: 168px;
+    }
+
+    &__icon {}
+
+    &__text {}
+
+
+
+  }
+
+  .button {
+    bottom: 59px;
+  }
+
+}
+
+.testimonials {
+  padding: 140px 0 180px;
+
+  .flower4 {
+    right: 0;
+    bottom: 0;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 47px;
+  }
+  &__slider {}
+}

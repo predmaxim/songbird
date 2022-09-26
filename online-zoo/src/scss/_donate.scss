@@ -1,0 +1,131 @@
+$height-home-screen-donate-section-desktop: 390;
+$height-home-screen-donate-section-notebook: 390;
+$height-home-screen-donate-section-tablet: 335;
+$height-home-screen-donate-section-mobile: 187;
+
+
+.home-screen-donate {
+  background: $home-screen-bg;
+  background-size: cover;
+  height: $height-home-screen-donate-section-desktop + px;
+  text-align: center;
+  background-position: center;
+
+
+  @media screen and (max-width: ($notebook + px)) {
+    & {
+      height: $height-home-screen-donate-section-notebook + px;
+    }
+  }
+
+  @media screen and (max-width: ($tablet + px)) {
+    & {
+      height: $height-home-screen-donate-section-tablet + px;
+    }
+  }
+
+  @media screen and (max-width: ($mobile + px)) {
+    & {
+      height: $height-home-screen-donate-section-mobile + px;
+    }
+  }
+
+}
+
+.donation-information {
+  background: $color-orange-gradient;
+  padding: 40px 0 180px;
+
+
+  h1 {
+    font-size: $font-size-h3 + px;
+    font-weight: 400;
+  }
+
+  p {
+    color: $color-white;
+  }
+
+  h3 {
+    color: $color-orange;
+  }
+
+  &__description {
+    font-size: $font-size-h4 + px;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+
+  &__row-wrap {
+    background: $color-frosted-glass-white;
+    padding: 40px 92px 60px;
+
+    h2 {
+      color: $color-orange;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: $color-black-blue;
+    }
+
+    .donation-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-wrap: wrap;
+
+      p:first-child {
+        font-size: 72px;
+        font-weight: 500;
+      }
+    }
+
+    .donation-wrap .inner-column:nth-child(1) {
+      flex: 0 0 200px;
+    }
+
+    .donation-wrap .inner-column:nth-child(2) {
+      flex: 0 0 100px;
+    }
+
+    .donation-wrap .inner-column:nth-child(3) {
+      flex: 0 0 200px;
+    }
+
+    .icon-x {
+      font-size: 25px;
+    }
+
+    .range-wrap {
+      width: 100%;
+
+      .inner-column {
+        p {}
+
+        .range {
+          width: 100%;
+          margin-bottom: 50px;
+
+          input {
+            width: 100%;
+          }
+
+          &__range-values {
+            display: flex;
+            justify-content: space-between;
+            color: $color-black-blue;
+            font-weight: 700;
+            font-size: $font-size-h4 + px;
+          }
+
+        }
+
+
+
+      }
+    }
+  }
+}
