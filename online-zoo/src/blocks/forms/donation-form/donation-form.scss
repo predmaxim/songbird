@@ -3,13 +3,28 @@
   justify-content: center;
 
   form {
-    input[type="text"] {
+    input[type="number"] {
       color: $color-gray;
       background: transparent;
       border: 1px solid $color-gray;
       padding: 10px;
       margin-right: 10px;
+
+      & {
+        -moz-appearance:textfield
+      }
+
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+  
+     
+
     }
+
+   
 
     .amount-input {
       margin-bottom: 27px;

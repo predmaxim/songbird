@@ -30,31 +30,7 @@ html(lang="en")
                   span.icon-x.mdi.mdi-close
                 .inner-column
                   img.panda(src=require("Img/panda.png") alt="panda")
-              .inner-row.range-wrap
-                .inner-column
-                  p Amount
-                  .range
-                    input(type="range" name="donate-value")
-                    .range__range-values 
-                      span $5000
-                      span $2000
-                      span $1000
-                      span $500
-                      span $250
-                      span $100
-                      span $50
-                      span $25
-              .inner-row
-                .inner-column.donation-form
-                  form(action="#")
-                    .amount-input
-                      input.radius-2(type="text" name="donate-value" placeholder="Another amount")
-                    .radio-btns
-                      input(type="radio" id="Monthly" name="donate-value" value="Monthly")
-                      label(for="Monthly") Monthly
-                      input(type="radio" id="Once" name="donate-value" value="Once")
-                      label(for="Once") Once
-                    input.button-input.big.orange.radius-25(type="submit" value="Feed a friend now")
+              include Forms/donation-form/donation-form.pug
                     p Share with your friends on social networks 
 
 
