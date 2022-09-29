@@ -12,9 +12,9 @@ html(lang="en")
     main
       section.home-screen
         .container
-          .h1-wrap
-            .h1-wrap__circle
-            h1 Watch your 
+          .text-wrap
+            .text-wrap__circle
+            p.uppercase Watch your 
               span.color-yellow favorite 
               span animal online
           a.button.orange.big.radius-25.uppercase(href='javascript://') 
@@ -34,8 +34,10 @@ html(lang="en")
                 p The site was founded on the basis of a volunteer movement to protect and care for animals.
                 h4 How it works 
                 p The main goal is to help the animals, as well as the nature reserves and zoos where they are kept. We are currently working on video projects targeting pandas in China, eagles on an island near Los Angeles, alligators in Florida and gorillas in the Congo. These have a total of more than 1,500 mammals and reptiles.
-          .inner-row             
-            include Sliders/slider-backstage/slider-backstage.pug
+          .inner-row
+            .inner-column             
+              include Sliders/slider-backstage/slider-backstage.pug
+          .inner-row
             a.button.orange.big.radius-25.absolute-center.uppercase(href='javascript://') 
               span choose your favorite
       section.feed-friend
