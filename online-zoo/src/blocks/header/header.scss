@@ -45,7 +45,12 @@ header {
   position: relative;
   margin-right: 63px;
   border: 1px solid $color-white;
+  border-radius: 2px;
   padding: 3px 6px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
 
   @media screen and (max-width: ($tablet + px)) {
     & {
