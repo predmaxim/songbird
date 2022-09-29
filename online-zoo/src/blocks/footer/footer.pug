@@ -12,7 +12,7 @@ footer#footer
           include Forms/subscribe-form/subscribe-form.pug
     .row-inner
       .column-inner   
-        button(type="button" onclick="window.location.href='/donate.html'").button.orange.big.radius-5.uppercase donate for volunteers
+        a(href='/donate.html').button.orange.big.radius-5.uppercase donate for volunteers
     .row-inner
       .column-inner
         .socials 
@@ -26,11 +26,7 @@ footer#footer
             a.social-icon.mdi.mdi-youtube(href='#')
               span YouTube
       .column-inner 
-        .menu  
-          a.active.menu__item(href='#home') About
-          a.menu__item(href='#') Map
-          a.menu__item(href='#') Zoos
-          a.menu__item(href='#') Contact us
+        include Blocks/menu/menu.pug
       .column-inner 
         .footer__author 
           p Designed by © Predibaylo Maxim

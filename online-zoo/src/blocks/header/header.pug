@@ -1,22 +1,11 @@
 header#home
   .container
     .logo
-      a(href='/') 
-        img.logo__img-img.logo-desktop(src=require('Img/logo_desktop.png') alt="logo")
-        img.logo__img-img.logo-mobile(src=require('Img/logo_mobile.png') alt="logo")
-    .burger
-      a.burger-icon(href='#') 
-        i.mdi.mdi-menu
-      a.burger-icon(href='#')
-        i.mdi.mdi-close.opazero.dispnone
-    .menu  
-      a.active.menu__item(href='/') About
-      a.menu__item(href='#') Map
-      a.menu__item(href='#') Zoos
-      a.menu__item(href='/donate.html') Donate
-      a.menu__item(href='#') Contact us
-      a.author-mobile(href='https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online') Designed by © Predibaylo Maxim
-    a.author-desktop(href='https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online') Designed by © Predibaylo Maxim
+      a.logo_link(href='/')
+        h1.logo__name PetStory online
+        img.logo__icon(src=require("Img/bamboo.png"), alt="logo_icon")
+    include Blocks/menu/menu.pug
+    a.author(href='https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online' target="_blank") Designed by ©
 
 
 

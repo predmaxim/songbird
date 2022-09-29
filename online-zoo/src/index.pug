@@ -35,7 +35,7 @@ html(lang="en")
                 p The main goal is to help the animals, as well as the nature reserves and zoos where they are kept. We are currently working on video projects targeting pandas in China, eagles on an island near Los Angeles, alligators in Florida and gorillas in the Congo. These have a total of more than 1,500 mammals and reptiles.
           .inner-row             
             include Sliders/slider-backstage/slider-backstage.pug
-            button.button.orange.big.radius-25.absolute-center.uppercase choose your favorite
+            a.button.orange.big.radius-25.absolute-center.uppercase(href='#') choose your favorite
       section.feed-friend
         .container
           .inner-row.border-radius-20
@@ -65,12 +65,12 @@ html(lang="en")
                   .how-it-works__icon-wrap.radius-5 
                     img.how-it-works__icon(src=require('Img/monkey.png') alt="Your favorite animal gets delicious dish")
                   p.how-it-works__text Your favorite animal gets delicious dish
-              button(type="button" onclick="window.location.href='/donate.html'").button.orange.big.radius-25.absolute-center.uppercase Feed a friend now
+              a(href='donate.html').button.orange.big.radius-25.absolute-center.uppercase Feed a friend now
       section.testimonials
         .container
           h2 Testimonials          
           include Sliders/slider-testimonials/slider-testimonials.pug
-          button.button.orange.big.radius-5.uppercase leave feedback      
+          a.button.orange.big.radius-5.uppercase(href='#') leave feedback      
         img.absolute.flower4(src=require('Img/leaf_foto.png') alt="flower")
       include Footer/footer.pug
     script(src=require('Js/index.js') defer)
