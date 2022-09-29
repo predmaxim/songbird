@@ -3,6 +3,10 @@ footer {
   padding: 41px 0 50px;
   color: $color-white;
 
+  a {
+    border: none;
+  }
+
   .container {
     .row-inner {
       display: flex;

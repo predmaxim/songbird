@@ -10,6 +10,10 @@ header {
   position: relative;
   z-index: 1;
 
+  a {
+    border: none;
+  }
+
   @media screen and (max-width: ($notebook + px)) {
     & {
       height: $height-header-notebook + px;
@@ -76,7 +80,7 @@ header {
 
   }
 
-  & a {
+  a {
     color: $color-menu-link;
 
     &:hover {
