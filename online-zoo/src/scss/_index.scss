@@ -193,6 +193,7 @@ $height-home-screen-circle-mobile: 119;
 
 .backstage {
   position: relative;
+  padding: 140px 0 100px;
 
   h2 {
     color: $color-black-blue;
@@ -200,24 +201,35 @@ $height-home-screen-circle-mobile: 119;
   }
 
   h4 {
-    margin: 50px 0 20px;
+    margin: 54px 0 25px;
   }
 
-  .inner-row:last-child .button {
-    bottom: 100px;
-  }
+
 
   .inner-row {
     display: flex;
-  }
 
-  .inner-column {
-    margin: 140px 0 100px;
+    &:first-child {
+      margin-bottom: 180px;
 
-    &:not(:last-child) {
-      margin-right: 87px;
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      .inner-column {
+        &:first-child {
+          margin-right: 87px;
+        }
+      }
     }
+
+    // &:last-child {
+    //   margin-bottom: 100px;
+    // }
+
   }
+
+  .button {}
 
   .absolute-img {
     position: absolute;
@@ -237,6 +249,7 @@ $height-home-screen-circle-mobile: 119;
     left: 0;
     bottom: 0;
   }
+
 }
 
 .feed-friend {
