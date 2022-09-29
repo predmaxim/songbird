@@ -3,16 +3,17 @@ footer#footer
     .row-inner
       .column-inner 
         .logo
-          a(href='#home') 
-            img.logo__img-img.logo-desktop(src=require('Img/logo_desktop.png') alt="logo")
-            img.logo__img-img.logo-mobile(src=require('Img/logo_mobile.png') alt="logo")
+          a.logo_link(href='/')
+            p.logo__name PetStory online
+            img.logo__icon(src=require("Img/bamboo.png"), alt="logo_icon")
       .column-inner 
         .subscribe-form
           h4 Subscribe to our news
           include Forms/subscribe-form/subscribe-form.pug
     .row-inner
       .column-inner   
-        a(href='/donate.html').button.orange.big.radius-5.uppercase donate for volunteers
+        a.button.orange.big.radius-5.uppercase(href='/donate.html')
+          span donate for volunteers
     .row-inner
       .column-inner
         .socials 

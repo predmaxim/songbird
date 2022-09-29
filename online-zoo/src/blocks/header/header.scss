@@ -44,9 +44,16 @@ header {
 .logo {
   position: relative;
   margin-right: 63px;
-
   border: 1px solid $color-white;
   padding: 3px 6px;
+
+  @media screen and (max-width: ($tablet + px)) {
+    & {
+      border: none;
+      padding: 0;
+    }
+  }
+
 
   h1 {
     font-size: 19px;
@@ -55,6 +62,13 @@ header {
     font-weight: 400;
     text-transform: none;
     width: min-content;
+
+    @media screen and (max-width: ($tablet + px)) {
+      & {
+        font-size: 12.29px;
+      }
+    }
+
   }
 
   & a {
@@ -69,30 +83,18 @@ header {
     position: absolute;
     top: 45%;
     left: 13%;
-  }
 
-  @media screen and (max-width: ($tablet + px)) {
-    .logo-desktop {
-      display: none;
+    @media screen and (max-width: ($tablet + px)) {
+      & {
+        top: 45%;
+        left: 9%;
+        width: 8px;
+      }
     }
 
-    .logo-mobile {
-      display: block;
-    }
-  }
-}
-
-.author-desktop {
-  display: block;
-  flex: 1 0 auto;
-  @extend %headerLinkStyle;
-
-  @media screen and (max-width: ($tablet + px)) {
-    & {
-      display: none;
-    }
   }
 }
+
 
 .author {
   color: $color-white;
