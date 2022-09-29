@@ -17,7 +17,8 @@ html(lang="en")
             h1 Watch your 
               span.color-yellow favorite 
               span animal online
-          a.button.orange.big.radius-25.uppercase(href='#') watch online
+          a.button.orange.big.radius-25.uppercase(href='#') 
+            span watch online
       section.backstage
         img.absolute.flower1(src=require('Img/flower_foto1.png') alt="flower")
         img.absolute.flower2(src=require('Img/flower_foto2.png') alt="flower")
@@ -35,7 +36,8 @@ html(lang="en")
                 p The main goal is to help the animals, as well as the nature reserves and zoos where they are kept. We are currently working on video projects targeting pandas in China, eagles on an island near Los Angeles, alligators in Florida and gorillas in the Congo. These have a total of more than 1,500 mammals and reptiles.
           .inner-row             
             include Sliders/slider-backstage/slider-backstage.pug
-            a.button.orange.big.radius-25.absolute-center.uppercase(href='#') choose your favorite
+            a.button.orange.big.radius-25.absolute-center.uppercase(href='#') 
+              span choose your favorite
       section.feed-friend
         .container
           .inner-row.border-radius-20
@@ -44,7 +46,7 @@ html(lang="en")
               p.feed-friend__description We know the animals bring you joy, and in these extraordinary times, we’re glad.
               p.bold-500 During a time when the COVID-19 epidemic is touching all of our lives, we’re proud and glad that people around the world find joy in PetStory.
               p Even though the zoo has reopened, we need you now more than ever to help us deal with these problems. Please consider a gift to our 
-                a(href='./donate.html') Emergency Support Fund. 
+                a(href='donate.html') Emergency Support Fund. 
               h3 How it works
               .how-it-works
                 .how-it-works__wrap
@@ -65,12 +67,14 @@ html(lang="en")
                   .how-it-works__icon-wrap.radius-5 
                     img.how-it-works__icon(src=require('Img/monkey.png') alt="Your favorite animal gets delicious dish")
                   p.how-it-works__text Your favorite animal gets delicious dish
-              a(href='donate.html').button.orange.big.radius-25.absolute-center.uppercase Feed a friend now
+              a(href='donate.html').button.orange.big.radius-25.absolute-center.uppercase 
+                span Feed a friend now
       section.testimonials
         .container
           h2 Testimonials          
           include Sliders/slider-testimonials/slider-testimonials.pug
-          a.button.orange.big.radius-5.uppercase(href='#') leave feedback      
+          a.button.orange.big.radius-5.uppercase(href='#') 
+            span leave feedback      
         img.absolute.flower4(src=require('Img/leaf_foto.png') alt="flower")
       include Footer/footer.pug
     script(src=require('Js/index.js') defer)

@@ -12,6 +12,11 @@
   -ms-transition: all .2s;
   -o-transition: all .2s;
 
+  & span {
+    position: relative;
+    z-index: 2;
+  }
+
   &:after {
     position: absolute;
     content: "";
