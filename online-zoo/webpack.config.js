@@ -57,14 +57,14 @@ module.exports = ({ dev }) => ({
         loader: PugPlugin.loader,
       },
       {
-        test: /\.(?:ico|gif|png|jpg|jpeg|webp)$/i,
+        test: /\.(?:ico|gif|png|jpg|jpeg|webp|svg)$/i,
         type: 'asset/resource',
         generator: {
           filename: 'assets/img/[name].[hash:8][ext]'
         }
       },
       {
-        test: /\.(?:woff(2)?|eot|ttf|otf|svg)$/i,
+        test: /\.(?:woff(2)?|eot|ttf|otf)$/i,
         type: 'asset/inline',
         generator: {
           filename: 'assets/fonts/[name][ext][query]'
