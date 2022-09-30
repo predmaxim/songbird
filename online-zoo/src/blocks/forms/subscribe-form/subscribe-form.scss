@@ -1,6 +1,5 @@
 .subscribe-form {
-  margin-left: -88%;
-  
+
   h4 {
     margin: 0 0 14px;
   }
@@ -13,6 +12,11 @@
       border: 1px solid $color-orange;
       padding: 12px;
       margin-right: 10px;
+
+      &:focus {
+        outline: none;
+        border-color: $color-green;
+      }
     }
 
     input[type="submit"] {}
