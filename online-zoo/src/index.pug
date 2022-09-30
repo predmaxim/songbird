@@ -69,14 +69,16 @@ html(lang="en")
                   .how-it-works__icon-wrap.radius-5 
                     img.how-it-works__icon(src=require('Img/monkey.png') alt="Your favorite animal gets delicious dish")
                   p.how-it-works__text Your favorite animal gets delicious dish
-              a(href='donate.html').button.orange.big.radius-25.absolute-center.uppercase 
-                span Feed a friend now
+              .feed-friend__button 
+                a(href='donate.html').button.orange.big.radius-25.uppercase 
+                  span Feed a friend now
       section.testimonials
         .container
-          h2 Testimonials          
+          h3 Testimonials          
           include Sliders/slider-testimonials/slider-testimonials.pug
-          a.button.orange.big.radius-5.uppercase(href='javascript://') 
-            span leave feedback      
+          .feedback-button
+            a.button.orange.big.radius-5.uppercase(href='javascript://') 
+              span leave feedback      
         img.absolute.flower4(src=require('Img/leaf_foto.png') alt="flower")
       include Footer/footer.pug
     script(src=require('Js/index.js') defer)
