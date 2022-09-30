@@ -14,7 +14,7 @@ footer {
 
       &:first-child {
         align-items: flex-start;
-        margin-bottom: 134px;
+        margin-bottom: 36px;
       }
 
       &:not(:first-child) {
@@ -25,7 +25,7 @@ footer {
         position: relative;
 
         .logo {
-          & p {
+          p {
             margin: 0;
             font-size: 19px;
             line-height: 1.3;
@@ -37,12 +37,37 @@ footer {
           }
         }
 
-        .button.orange {
-          bottom: 44px;
-        }
-
         .socials {
           .socials__social {
+
+            .facebook {
+              object-fit: cover;
+              width: 26px;
+              height: 26px;
+              object-position: left center;
+            }
+
+            .twitter {
+              object-fit: cover;
+              width: 26px;
+              height: 26px;
+              object-position: -56px center;
+            }
+
+            .instagram {
+              object-fit: cover;
+              width: 26px;
+              height: 26px;
+              object-position: -112px center;
+            }
+
+            .youtube {
+              object-fit: cover;
+              width: 26px;
+              height: 26px;
+              object-position: -168px center;
+            }
+
             display: flex;
             flex-direction: column;
             font-size: 26px;
@@ -50,6 +75,10 @@ footer {
             .social-icon {
               display: flex;
               align-items: center;
+
+              &:not(:last-child) {
+                margin-bottom: 10px;
+              }
 
               span {
                 font-size: 16px;
@@ -79,6 +108,20 @@ footer {
           }
         }
 
+      }
+
+
+    }
+
+    .button-row {
+      margin-bottom: 44px;
+
+      .column-inner {
+        // bottom: 44px;
+
+        .button.orange {
+          display: block;
+        }
       }
     }
   }

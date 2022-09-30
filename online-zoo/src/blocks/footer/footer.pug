@@ -10,7 +10,7 @@ footer#footer
         .subscribe-form
           h4 Subscribe to our news
           include Forms/subscribe-form/subscribe-form.pug
-    .row-inner
+    .row-inner.button-row
       .column-inner   
         a.button.orange.big.radius-5.uppercase(href='donate.html')
           span donate for volunteers
@@ -18,13 +18,17 @@ footer#footer
       .column-inner
         .socials 
           .socials__social 
-            a.social-icon.mdi.mdi-facebook(href='javascript://')
+            a.social-icon(href='javascript://')
+              img.facebook(src=require('Img/social_network.svg') alt="Facebook")
               span Facebook
-            a.social-icon.mdi.mdi-twitter(href='javascript://')
+            a.social-icon(href='javascript://')
+              img.twitter(src=require('Img/social_network.svg') alt="Twitter")
               span Twitter
-            a.social-icon.mdi.mdi-instagram(href='javascript://')
+            a.social-icon(href='javascript://')
+              img.instagram(src=require('Img/social_network.svg') alt="Instagram")
               span Instagram
-            a.social-icon.mdi.mdi-youtube(href='javascript://')
+            a.social-icon(href='javascript://')
+              img.youtube(src=require('Img/social_network.svg') alt="YouTube")
               span YouTube
       .column-inner 
         include Blocks/menu/menu.pug
