@@ -1,14 +1,16 @@
 .testimonials__slider {
+  overflow: hidden;
   margin-bottom: 32px;
 
   .testimonials-container {
     display: flex;
 
     .item {
-      margin-bottom: 20px;
+      margin-bottom: 22px;
       background: $color-gray-light;
-      border: 1px solid $color-orange;
-      padding: 15px;
+      border: 2px solid transparent;
+      padding: 13px 13px 19px;
+      background: linear-gradient($color-gray-light, $color-gray-light) padding-box, linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%) border-box;
       border-radius: 20px;
       -webkit-border-radius: 20px;
       -moz-border-radius: 20px;
@@ -21,7 +23,6 @@
 
       .item__header {
         display: flex;
-
 
         .avatar {
           margin-right: 10px;
@@ -43,10 +44,12 @@
             display: flex;
             font-size: 15px;
             font-weight: 300;
-            columns: $color-gray-light;
+            color: #BDBDBD;
 
-            .location {
+            .location,
+            .date {
               margin-right: 5px;
+              line-height: 1;
             }
           }
         }
@@ -55,10 +58,12 @@
       .item__text {
         font-size: 15px;
         font-weight: 300;
-        margin-top: 10px;
+        margin-top: 5px;
 
         p {
           margin: 0;
+          line-height: 1.2;
+          color: $color-gray
         }
       }
     }
@@ -80,10 +85,6 @@
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-    
-    &:hover {
-      box-shadow: 0 0 5px 0px #eba350;
-    }
 
     .pagination {
       height: 6px;
