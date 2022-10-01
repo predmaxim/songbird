@@ -32,6 +32,12 @@
         margin-right: 48px;
       }
     }
+
+    @media screen and (max-width: ($table-land + px)) {
+      &:not(:last-child) {
+        margin-right: clamp(15px, 6%, 48px);
+      }
+    }
   }
 }
 
