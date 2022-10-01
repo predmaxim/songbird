@@ -174,4 +174,16 @@ section {
   padding: $padding-desktop + px;
   position: relative;
   height: 100%;
+
+  @media screen and (max-width: ($tablet + px)) {
+    & {
+      padding: $padding-tablet + px;
+    }
+  }
+
+  @media screen and (max-width: ($mobile + px)) {
+    & {
+      padding: $padding-mobile + px;
+    }
+  }
 }
