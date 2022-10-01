@@ -1,1 +1,2 @@
-import { } from "../blocks/menu/menu.js";
+import { } from "../blocks/menu/menu";
+import { } from "../blocks/forms/forms";
