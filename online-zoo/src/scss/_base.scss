@@ -95,6 +95,17 @@ a {
   }
 }
 
+label {
+  cursor: pointer;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  background: transparent;
+  cursor: pointer;
+
+}
+
 h1 {
   font-weight: 700;
   font-size: $font-size-h1 + px;
