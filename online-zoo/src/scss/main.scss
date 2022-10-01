@@ -2,11 +2,11 @@
 @import './vars';
 @import './mixins';
 @import './base';
-@import './index';
-@import './donate';
 @import '../blocks/menu/menu';
 @import '../blocks/sliders/sliders';
 @import '../blocks/header/header';
 @import '../blocks/footer/footer';
 @import '../blocks/buttons/buttons';
 @import '../blocks/forms/forms';
+@import './index';
+@import './donate';
