@@ -1,8 +1,10 @@
 // VIEWPORT
 $desktop: 1160;
-$notebook: 1024;
-$tablet: 900;
-$mobile: 600;
+$notebook-big: 1220;
+$notebook: 1000;
+$table-land: 980;
+$tablet: 640;
+$mobile: 320;
 
 // OPTIONS
 $max-width: $desktop;
@@ -17,7 +19,8 @@ $prefixes: (
 
 // PADDINGS
 $padding-desktop: 0 30;
-$padding-mobile: 0 30;
+$padding-tablet: 0 20;
+$padding-mobile: 0 10;
 
 // TYPOGRAPHY
 $font-family-roboto: 'Roboto', sans-serif;
@@ -58,5 +61,17 @@ $color-burger-hover: $color-orange;
 // HEADER
 $height-header-desktop: 80;
 $height-header-notebook: 80;
+$height-header-tablet-land: 80;
 $height-header-tablet: 34;
 $height-header-mobile: 34;
+
+// HOME SCREEN
+$height-home-screen-section-desktop: 700;
+$height-home-screen-section-notebook: 504;
+$height-home-screen-section-tablet: 339;
+$height-home-screen-section-mobile: 187;
+
+$height-home-screen-circle-desktop: 465;
+$height-home-screen-circle-notebook: 367;
+$height-home-screen-circle-tablet: 237;
+$height-home-screen-circle-mobile: 119;
