@@ -2,8 +2,18 @@
   .inner-column
     p Amount
     .range
-      input(type="range" name="donate-value" min="0" max="7" step="1")
-      .range__range-values 
+      .range__input-wrap
+        datalist#range-values 
+          option(value="$5000") 
+          option(value="$2000")
+          option(value="$1000")
+          option(value="$500")
+          option(value="$250")
+          option(value="$100")
+          option(value="$50")
+          option(value="$25")
+        input(type="range" name="donate-value" min="1" max="8" step="1" list="range-values" required)
+      .range__range-values
         span $5000
         span $2000
         span $1000
@@ -16,10 +26,13 @@
   .inner-column.donation-form
     form(action="#")
       .amount-input
-        input.radius-2(type="number" name="donate-value" placeholder="Another amount")
+        input.radius-2(type="number" name="donate-value" placeholder="Another amount" size="24")
       .radio-btns
-        input(type="radio" id="Monthly" name="donate-value" value="Monthly")
-        label(for="Monthly") Monthly
-        input(type="radio" checked id="Once" name="donate-value" value="Once")
-        label(for="Once" ) Once
-      input.button-input.big.orange.radius-25(type="submit" value="Feed a friend now")
+        input(type="radio" id="monthly" name="donate-pay" value="Monthly")
+        label(for="monthly") Monthly
+        input(type="radio" checked id="once" name="donate-pay" value="Once")
+        label(for="once" ) Once
+      .button-submit
+        button.button.big.orange.radius-25(type="submit")
+          span Feed a friend now
+      p Share with your friends on social networks 
