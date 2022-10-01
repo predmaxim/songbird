@@ -2,31 +2,40 @@
   .inner-column
     p Amount
     .range
-      .range__input-wrap
-        datalist#range-values 
-          option(value="$5000") 
-          option(value="$2000")
-          option(value="$1000")
-          option(value="$500")
-          option(value="$250")
-          option(value="$100")
-          option(value="$50")
-          option(value="$25")
-        input(type="range" name="donate-value" min="1" max="8" step="1" list="range-values" required)
+      .range__input-wrap        
+        input#range__range-input(type="range" name="donate-value" min="1" max="8" step="1" list="range-values" value="1")
       .range__range-values
-        span $5000
-        span $2000
-        span $1000
-        span $500
-        span $250
-        span $100
-        span $50
-        span $25
+        //- .yellow-dots
+        //-   .dot
+        //-   .dot
+        //-   .dot
+        //-   .dot
+        //-   .dot
+        //-   .dot
+        //-   .dot
+        //-   .dot
+        datalist#range-values 
+          option(value="8" label="$5000") 
+          option(value="7" label="$2000")
+          option(value="6" label="$1000")
+          option(value="5" label="$500")
+          option(value="4" label="$250")
+          option(value="3" label="$100")
+          option(value="2" label="$50")
+          option(value="1" label="$25")
+      //-   span $5000
+      //-   span $2000
+      //-   span $1000
+      //-   span $500
+      //-   span $250
+      //-   span $100
+      //-   span $50
+      //-   span $25
 .inner-row
   .inner-column.donation-form
-    form(action="#")
+    form(action="javascript://")
       .amount-input
-        input.radius-2(type="number" name="donate-value" placeholder="Another amount" size="24")
+        input#amount.radius-2(type="number" name="donate-value" placeholder="Another amount" size="24" min="25" max="5000" required="true")
       .radio-btns
         input(type="radio" id="monthly" name="donate-pay" value="Monthly")
         label(for="monthly") Monthly

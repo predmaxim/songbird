@@ -10,8 +10,30 @@
       background: #404950;
       padding: 3px 26px 0;
       border-radius: 2px;
+      position: relative;
+
+      .yellow-dots {
+        display: flex;
+        justify-content: space-between;
+        bottom: 0;
+        z-index: 0;
+        margin: 0 8px 0 8px;
+        position: absolute;
+        left: 26px;
+        right: 26px;
+        top: 9px;
+
+        .dot {
+          width: 10px;
+          height: 10px;
+          background: red;
+          border-radius: 50%;
+        }
+      }
+
 
       input[type="range"] {
+        direction: rtl;
         width: 100%;
         margin-bottom: -2px;
 
@@ -28,7 +50,7 @@
         &::-webkit-slider-thumb {
           -webkit-appearance: none;
           appearance: none;
-          margin-top: -12px;
+          margin-top: -3px;
           background-color: $color-yellow;
           height: 10px;
           width: 10px;
@@ -58,13 +80,28 @@
     }
 
     &__range-values {
-      display: flex;
-      justify-content: space-between;
-      color: $color-black-blue;
-      font-weight: 500;
-      font-size: 26px;
-      margin-top: 12px;
-      margin-right: 26px;
+
+      & #range-values {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 12px;
+        margin-right: 26px;
+
+        option {
+          color: $color-black-blue;
+          font-size: 26px;
+          font-weight: 500;
+          transition: .3s;
+          -webkit-transition: .3s;
+          -moz-transition: .3s;
+          -ms-transition: .3s;
+          -o-transition: .3s;
+
+          &:hover {
+            color: $color-orange;
+          }
+        }
+      }
     }
   }
 }
@@ -80,6 +117,11 @@
       border: 1px solid $color-gray;
       padding: 10px;
       margin-right: 10px;
+      width: 231px;
+
+      @media screen and (max-width: ($tablet + px)) {
+        width: 143px;
+      }
 
       & {
         -moz-appearance: textfield;
