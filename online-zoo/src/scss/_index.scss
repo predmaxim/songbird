@@ -84,7 +84,8 @@
           max-width: 300px;
           font-size: 54px;
           top: 38px;
-          left: 15px;
+          left: 40px;
+          position: absolute;
         }
       }
 
@@ -93,7 +94,7 @@
           max-width: 150px;
           font-size: 28px;
           top: 19px;
-          left: 8px;
+          left: 20px;
 
         }
       }
@@ -235,7 +236,13 @@
     @media screen and (max-width: 1440px) {
       & {
         display: none;
-        ;
+      }
+    }
+
+    @media screen and (max-width: ($tablet-land + px)) {
+      & {
+        display: block;
+        height: 470px;
       }
     }
   }
@@ -278,14 +285,24 @@
 
   @media screen and (max-width: ($notebook + px)) {
     padding: 109px 0 140px;
+
   }
 
   @media screen and (max-width: ($tablet-land + px)) {
     padding: 60px 0 100px;
 
+    h4 {
+      margin: 30px 0 20px;
+    }
+
     .inner-row:first-child {
       grid-template-columns: 1fr;
       margin-bottom: 80px;
+      grid-gap: 0;
+
+      .backstage__text {
+        padding: 0 20% 0 0;
+      }
 
       .backstage__img {
         & img {
@@ -308,6 +325,19 @@
     }
   }
 
+  @media screen and (max-width: ($tablet - 40 + px)) {
+
+    .inner-row:first-child {
+      .backstage__text {
+        padding: 0;
+      }
+    }
+
+
+    .flower1 {
+      display: none;
+    }
+  }
 }
 
 .feed-friend {

@@ -7,7 +7,7 @@ html(lang="en")
     link(href=require('Styles/main.scss') rel='stylesheet')
     title PetStory
   body
-    .overlay.dispnone    
+    .overlay.opazero    
     include Header/header.pug  
     main
       section.home-screen
@@ -17,8 +17,9 @@ html(lang="en")
             p.uppercase Watch your 
               span.color-yellow favorite 
               span animal online
-          a.button.orange.big.radius-25.uppercase(href='javascript://') 
-            span watch online
+          .fs-btn
+            a.button.orange.big.radius-25.uppercase(href='javascript://') 
+              span watch online
       section.backstage
         img.absolute.flower1(src=require('Img/flower_foto1.png') alt="flower")
         img.absolute.flower2(src=require('Img/flower_foto2.png') alt="flower")
