@@ -189,7 +189,7 @@
     padding: 109px 0 140px;
   }
 
-  @media screen and (max-width: ($table-land + px)) {
+  @media screen and (max-width: ($tablet-land + px)) {
     padding: 60px 0 100px;
   }
 
@@ -215,13 +215,13 @@
       grid-gap: 87px;
       margin-bottom: 180px;
 
-      @media screen and (max-width: ($notebook-big + px)) {
+      @media screen and (max-width: ($desktop-big + px)) {
         grid-template-columns: minmax(225px, 46%) auto;
         grid-gap: 31px;
         margin-bottom: 152px;
       }
 
-      @media screen and (max-width: ($table-land + px)) {
+      @media screen and (max-width: ($tablet-land + px)) {
         grid-template-columns: 1fr;
         margin-bottom: 80px;
       }
@@ -236,13 +236,13 @@
 
         & img {
 
-          @media screen and (max-width: ($notebook-big + px)) {
+          @media screen and (max-width: ($desktop-big + px)) {
             object-fit: none;
             width: 100%;
             height: 408px;
           }
 
-          @media screen and (max-width: ($table-land + px)) {
+          @media screen and (max-width: ($tablet-land + px)) {
             display: none;
           }
         }
@@ -255,7 +255,15 @@
 
   }
 
-  .button {}
+  .button {
+    @media screen and (max-width: ($tablet - 1 + px)) {
+      padding: 16px 14%;
+    }
+
+    @media screen and (max-width: ($mobile + px)) {
+      padding: 16px 18%;
+    }
+  }
 
   .absolute-img {
     position: absolute;
@@ -276,11 +284,21 @@
   .flower2 {
     right: 0;
     bottom: 0;
+
+    @media screen and (max-width: ($desktop-super + px)) {
+      max-width: 28%;
+    }
+
   }
 
   .flower3 {
     left: 0;
     bottom: 0;
+
+    @media screen and (max-width: ($desktop-super + px)) {
+      max-width: 14%;
+    }
+
   }
 
 }
@@ -316,23 +334,31 @@
   }
 
   .how-it-works {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: minmax(168px, auto) auto minmax(168px, auto) auto minmax(168px, auto);
+    grid-gap: 10px;
+    justify-items: center;
+
+    @media screen and (max-width: ($tablet-land + px)) {
+      grid-template-columns: repeat(auto-fit, minmax(168px, auto));
+    }
 
 
     &__wrap {
       max-width: min-content;
 
-      &:nth-child(1) .how-it-works__icon-wrap,
-      &:nth-child(3) .how-it-works__icon-wrap,
-      &:nth-child(5) .how-it-works__icon-wrap {
+      &:nth-child(2n) {
+        @media screen and (max-width: ($tablet-land + px)) {
+          display: none;
+        }
+      }
+
+      &:nth-child(2n + 1) .how-it-works__icon-wrap {
         background-color: $color-white;
         border: 1px solid $color-orange;
       }
 
-      &:nth-child(2) .how-it-works__icon-wrap,
-      &:nth-child(4) .how-it-works__icon-wrap {
+      &:nth-child(2n) .how-it-works__icon-wrap {
         width: auto;
       }
     }
