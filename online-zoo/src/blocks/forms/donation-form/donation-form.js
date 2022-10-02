@@ -5,9 +5,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const values = [25, 50, 100, 250, 500, 1000, 2000, 5000]
 
+
   document.addEventListener('input', (e) => {
+    if (e.target.value.length > 4) {
+      e.target.value = e.target.value.slice(0, 4);
+    }
     e.target == range ? amount.value = values[range.value - 1] : false;
-    e.target == amount ? range.value = values.reduce((acc, el, i) => el == amount.value ? i + 1 : acc, 0) : false;
+    e.target == amount ? range.value = values.reduce((acc, el, i) => el == amount.value ? i + 1 : acc, 3) : false;
   });
 
   document.addEventListener('click', (e) => {

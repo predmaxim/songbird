@@ -3,7 +3,7 @@
     p.amount-text Amount
     .range
       .range__input-wrap        
-        input#range__range-input(type="range" name="donate-value" min="1" max="8" step="1" list="range-values" value="1")
+        input#range__range-input(type="range" name="donate-value" min="1" max="8" step="1" list="range-values" value="3")
       .range__range-values
         //- .yellow-dots
         //-   .dot
@@ -35,7 +35,7 @@
   .inner-column.donation-form
     form(action="javascript://")
       .amount-input
-        input#amount.radius-2(type="number" name="donate-value" placeholder="Another amount" size="24" min="25" max="5000" required="true")
+        input#amount.radius-2(type="number" name="donate-value" placeholder="Another amount" size="4" min="1" max="9999" required="true")
       .radio-btns
         input(type="radio" id="monthly" name="donate-pay" value="Monthly")
         label(for="monthly") Monthly
