@@ -57,7 +57,7 @@ header {
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
 
-  @media screen and (max-width: ($table-land + px)) {
+  @media screen and (max-width: ($tablet-land + px)) {
     & {
       margin-right: clamp(15px, 6%, 63px);
     }
