@@ -1,6 +1,6 @@
 .inner-row.range-wrap
   .inner-column
-    p Amount
+    p.amount-text Amount
     .range
       .range__input-wrap        
         input#range__range-input(type="range" name="donate-value" min="1" max="8" step="1" list="range-values" value="1")
@@ -42,6 +42,6 @@
         input(type="radio" checked id="once" name="donate-pay" value="Once")
         label(for="once" ) Once
       .button-submit
-        button.button.big.orange.radius-25(type="submit")
+        button.button.big.orange.uppercase.radius-25(type="submit")
           span Feed a friend now
       p Share with your friends on social networks 
