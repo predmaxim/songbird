@@ -1,10 +1,20 @@
 // VIEWPORT
+$desktop-super: 1360;
+$desktop-big: 1220;
 $desktop: 1160;
-$notebook-big: 1220;
 $notebook: 1000;
-$table-land: 980;
+$tablet-land: 980;
 $tablet: 640;
 $mobile: 320;
+
+// $desktop-super: 1360;
+// $desktop-big: 1220;
+// $desktop: 1160;
+// $notebook-big: 1000;
+// $notebook: 980;
+// $tablet-big: 768;
+// $tablet: 640;
+// $mobile: 320;
 
 // OPTIONS
 $max-width: $desktop;
