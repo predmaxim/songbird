@@ -304,9 +304,28 @@
 }
 
 .feed-friend {
+  position: relative;
   padding: 69px 0 100px;
   background: $color-orange-gradient-light;
   color: $color-black-blue;
+
+
+  @media screen and (max-width: ($tablet-land + px)) {
+
+    padding: 20px 0 20px;
+
+    .container {
+      padding: 0;
+
+      .inner-row {
+        padding: 10px 20px 60px;
+      }
+    }
+  }
+
+  .hit-wrap {
+    position: relative;
+  }
 
   h2 {
     color: $color-orange;
@@ -333,6 +352,62 @@
     padding: 41px 99px 59px;
   }
 
+  .arrow-svg1,
+  .arrow-svg2 {
+    display: none;
+  }
+
+  @media screen and (max-width: ($tablet-land + px)) {
+
+    .arrow-svg1,
+    .arrow-svg2 {
+      display: block;
+      position: absolute;
+      top: -7%;
+    }
+
+    .arrow-svg1 {
+      left: 24%;
+    }
+
+    .arrow-svg2 {
+      left: 56%;
+    }
+  }
+
+  @media screen and (max-width: ($tablet + px)) {
+
+    .arrow-svg1 {
+      left: 23%;
+    }
+
+    .arrow-svg2 {
+      left: 57%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+
+    .arrow-svg1,
+    .arrow-svg2 {
+      left: auto;
+      right: -5%;
+      transform: rotateZ(81deg);
+      -webkit-transform: rotateZ(81deg);
+      -moz-transform: rotateZ(81deg);
+      -ms-transform: rotateZ(81deg);
+      -o-transform: rotateZ(81deg);
+    }
+
+    .arrow-svg1 {
+      top: 60%;
+    }
+
+    .arrow-svg2 {
+      top: 26%;
+    }
+  }
+
   .how-it-works {
     display: grid;
     grid-template-columns: minmax(168px, auto) auto minmax(168px, auto) auto minmax(168px, auto);
@@ -343,12 +418,19 @@
       grid-template-columns: repeat(auto-fit, minmax(168px, auto));
     }
 
+    @media screen and (max-width: 600px) {
+      grid-template-columns: 1fr;
+      grid-gap: 30px 10px;
+    }
+
 
     &__wrap {
       max-width: min-content;
+      position: relative;
 
-      &:nth-child(2n) {
-        @media screen and (max-width: ($tablet-land + px)) {
+      @media screen and (max-width: ($tablet-land + px)) {
+
+        &:nth-child(2n) {
           display: none;
         }
       }
@@ -375,6 +457,11 @@
 
     &__text {
       margin: 30px 0 0;
+
+      @media screen and (max-width: ($tablet + px)) {
+
+        margin: 10px 0 0;
+      }
     }
 
 
@@ -384,6 +471,14 @@
   .button {
     margin: 60px auto 0;
     display: block;
+
+    @media screen and (max-width: ($tablet + px)) {
+      padding: 16px 14%;
+    }
+
+    @media screen and (max-width: ($mobile + px)) {
+      padding: 16px 21%;
+    }
   }
 
 }
