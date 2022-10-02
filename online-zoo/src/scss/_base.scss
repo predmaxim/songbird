@@ -89,8 +89,8 @@
 }
 
 .error {
-  color: $color-red;
-  border-color: $color-red;
+  color: $color-red  !important;
+  border-color: $color-red  !important;
 }
 
 .color-yellow {
