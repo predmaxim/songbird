@@ -47,6 +47,8 @@ module.exports = ({ dev }) => ({
       Footer: '/src/blocks/footer/',
       Header: '/src/blocks/header/',
       Sliders: '/src/blocks/sliders/',
+      Popups: '/src/blocks/popups/',
+      Menu: '/src/blocks/menu/',
       Js: '/src/js/',
     },
   },

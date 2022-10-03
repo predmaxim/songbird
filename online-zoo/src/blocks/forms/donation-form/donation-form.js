@@ -9,10 +9,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
   document.addEventListener('input', (e) => {
 
-    if (e.target.value.length > 4) {
-      e.target.value = e.target.value.slice(0, 4);
-    }
-
     if (e.target == range) {
 
       amount.value = labelValues[range.value - 1];
@@ -25,6 +21,9 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
     if (e.target == amount) {
+      if (e.target.value.length > 4) {
+        e.target.value = e.target.value.slice(0, 4);
+      }
       range.value = labelValues.reduce((acc, el, i) => el == amount.value ? i + 1 : acc, 3);
 
       if (labelValues.some(el => el == amount.value)) {
