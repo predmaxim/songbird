@@ -1,15 +1,19 @@
 .testimonials__slider {
   overflow: hidden;
   margin-bottom: 32px;
+  position: relative;
 
   .testimonials-container {
     display: flex;
 
     .item {
+      position: relative;
       margin-bottom: 22px;
       background: $color-gray-light;
       border: 2px solid transparent;
       padding: 13px 13px 19px;
+      min-width: 238px;
+      cursor: pointer;
       background: linear-gradient($color-gray-light, $color-gray-light) padding-box, linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%) border-box;
       border-radius: 20px;
       -webkit-border-radius: 20px;
@@ -19,6 +23,15 @@
 
       &:not(:last-child) {
         margin-right: 30px;
+      }
+
+      &__wrapper {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
       }
 
       .item__header {
@@ -34,7 +47,7 @@
           -o-border-radius: 50%;
         }
 
-        .header {
+        .header-text {
           display: flex;
           flex-direction: column;
 
@@ -59,11 +72,30 @@
         font-size: 15px;
         font-weight: 300;
         margin-top: 5px;
+        line-height: 1.2;
+        color: $color-gray;
 
         p {
           margin: 0;
-          line-height: 1.2;
-          color: $color-gray
+        }
+      }
+    }
+
+    @media screen and (max-width: ($tablet + px)) {
+      flex-direction: column;
+      max-height: 380px;
+
+      .item {
+        margin-bottom: 0;
+
+        &:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 15px;
+        }
+
+        &__text {
+          max-height: 38px;
+          overflow: hidden;
         }
       }
     }
@@ -95,6 +127,12 @@
       -moz-border-radius: 5px;
       -ms-border-radius: 5px;
       -o-border-radius: 5px;
+    }
+
+    @media screen and (max-width: ($tablet + px)) {
+      & {
+        display: none;
+      }
     }
 
   }
