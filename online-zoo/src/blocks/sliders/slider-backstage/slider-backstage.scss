@@ -65,6 +65,10 @@
           right: 34%;
         }
       }
+
+      @media screen and (max-width: ($tablet - 40 + px)) {
+        display: none;
+      }
     }
   }
 
@@ -144,6 +148,22 @@
           -moz-transform: scaleY(30);
           -ms-transform: scaleY(30);
           -o-transform: scaleY(30);
+
+          @media screen and (max-width: ($tablet-land + px)) {
+            transform: scaleY(40);
+            -webkit-transform: scaleY(40);
+            -moz-transform: scaleY(40);
+            -ms-transform: scaleY(40);
+            -o-transform: scaleY(40);
+          }
+
+          @media screen and (max-width: ($tablet + px)) {
+            transform: scaleY(40);
+            -webkit-transform: scaleY(40);
+            -moz-transform: scaleY(40);
+            -ms-transform: scaleY(40);
+            -o-transform: scaleY(40);
+          }
         }
 
         .item__inner-wrap {
@@ -167,21 +187,21 @@
 
           @media screen and (max-width: ($tablet + px)) {
             & {
-              transform: translateY(-390%);
-              -webkit-transform: translateY(-390%);
-              -moz-transform: translateY(-390%);
-              -ms-transform: translateY(-390%);
-              -o-transform: translateY(-390%);
+              transform: translateY(-440%);
+              -webkit-transform: translateY(-440%);
+              -moz-transform: translateY(-440%);
+              -ms-transform: translateY(-440%);
+              -o-transform: translateY(-440%);
             }
           }
 
           @media screen and (max-width: ($mobile + px)) {
             & {
-              transform: translateY(-510%);
-              -webkit-transform: translateY(-510%);
-              -moz-transform: translateY(-510%);
-              -ms-transform: translateY(-510%);
-              -o-transform: translateY(-510%);
+              transform: translateY(-450%);
+              -webkit-transform: translateY(-450%);
+              -moz-transform: translateY(-450%);
+              -ms-transform: translateY(-450%);
+              -o-transform: translateY(-450%);
             }
           }
         }
@@ -206,6 +226,8 @@
           padding: 0 0 8px 15px;
           flex: 0 1 auto;
         }
+
+        @media screen and (max-width: ($mobile + px)) {}
       }
 
 
@@ -222,6 +244,20 @@
         bottom: 10px;
         z-index: 1;
       }
+
+      @media screen and (max-width: ($tablet-land + px)) {
+
+        &:nth-child(5),
+        &:nth-child(6) {
+          display: none;
+        }
+      }
+
+    }
+
+    @media screen and (max-width: ($tablet - 40 + px)) {
+
+      grid-gap: 20px 10px;
 
     }
   }
