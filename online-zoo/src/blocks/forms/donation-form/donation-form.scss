@@ -99,6 +99,23 @@
           -ms-transition: .3s;
           -o-transition: .3s;
 
+          &.active {
+            &:before {
+              background: #ffee2e;
+              width: 14px;
+              height: 14px;
+              position: absolute;
+              top: -33px;
+              border: 4px solid #333b41;
+              outline: 2px solid #fe9013;
+              border-radius: 50%;
+            }
+
+            &:after {
+              outline: 2px solid #fe9013;
+            }
+          }
+
           &:before {
             content: "";
             background: #ffee2e;

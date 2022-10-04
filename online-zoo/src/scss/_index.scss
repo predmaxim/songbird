@@ -163,7 +163,7 @@
         bottom: 40px;
         right: auto;
         left: 22px;
-        padding: 17px 91px;
+        padding: 17px min(85px, 20%);
         transform: translateX(0);
         -webkit-transform: translateX(0);
         -moz-transform: translateX(0);
@@ -176,7 +176,7 @@
       & {
         bottom: -76.4px;
         left: 10px;
-        padding: 17px 85px;
+        padding: 17px max(20px, 27%);
       }
     }
   }
@@ -623,6 +623,7 @@
 
   @media screen and (max-width: 600px) {
     padding: 30px 0 60px;
+    overflow: hidden;
 
     h3 {
       font-size: 24px;

@@ -96,6 +96,10 @@
         margin-bottom: 0;
         max-height: 380px;
 
+        &:nth-child(1n + 4) {
+          display: none;
+        }
+
 
         &:not(:last-child) {
           margin-right: 0;
