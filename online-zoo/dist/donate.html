@@ -1,132 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="assets/css/main.caff6478.css" rel="stylesheet">
-    <title>Donate</title>
-  </head>
-  <body>
-    <div class="overlay opazero"></div>
-    <header id="home">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="assets/css/main.3b8a1775.css" rel="stylesheet">
+  <title>Donate</title>
+</head>
+
+<body>
+  <div class="overlay opazero"></div>
+  <header id="home">
+    <div class="container">
+      <div class="logo"><a class="logo_link" href="index.html">
+          <h1 class="logo__name">PetStory online</h1><img class="logo__icon" src="assets/img/bamboo.png"
+            alt="logo_icon">
+        </a></div>
+      <div class="burger"><a class="burger-icon menu-btn" href="javascript://"> <i class="mdi mdi-menu"></i></a><a
+          class="burger-icon close-btn opazero" href="javascript://"><i class="mdi mdi-close"></i></a></div>
+      <div class="menu"> <a class="menu__item" href="index.html">About</a><a class="menu__item"
+          href="javascript://">Map</a><a class="menu__item" href="javascript://">Zoos</a><a class="menu__item"
+          href="donate.html">Donate</a><a class="menu__item" href="javascript://">Contact us</a></div><a class="author"
+        href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online" target="_blank">Designed by ©</a>
+    </div>
+  </header>
+  <main>
+    <section class="home-screen-donate">
+      <div class="container"></div>
+    </section>
+    <section class="donation-information">
       <div class="container">
-        <div class="logo"><a class="logo_link" href="/">
-            <h1 class="logo__name">PetStory online</h1><img class="logo__icon" src="assets/img/bamboo.png"
-              alt="logo_icon">
-          </a></div>
+        <div class="inner-row">
+          <div class="inner-column">
+            <h2>THE ZOO HAS OFFICIALLY REOPENED BUT WE STILL NEED YOUR HELP!</h2>
+            <p>Even though the Zoo has been able to reopen, we are at a greatly reduced capacity with educational
+              programs and public and private events cancelled or postponed for additional months. We need you now
+              more than ever to help ensure that we overcome these challenges. We have been actively raising funds in
+              the community, and we are grateful for the generosity. But much more support is still needed, and we
+              need your help! Please consider a gift today – no matter what size – to help us sustain our mission.</p>
+            <h3>Donation Information</h3>
+          </div>
+        </div>
+        <div class="inner-row donation-information__row-wrap border-radius-20">
+          <div class="inner-column">
+            <h2>Pick and feed a friend</h2>
+            <p class="donation-information__description">We know the animals bring you joy, and in these extraordinary
+              times, we’re glad.</p>
+            <div class="inner-row donation-wrap">
+              <div class="inner-column">
+                <p>4</p>
+                <p>Panda diet for the day.</p>
+              </div>
+              <div class="inner-column"><span class="icon-x mdi mdi-close"></span></div>
+              <div class="inner-column"><img class="panda" src="assets/img/panda.png" alt="panda"></div>
+            </div>
+            <div class="inner-row range-wrap">
+              <div class="inner-column">
+                <p class="amount-text">Amount</p>
+                <div class="range">
+                  <div class="range__input-wrap"> <input id="range__range-input" type="range" name="donate-value"
+                      min="1" max="8" step="1" list="range-values" value="3"></div>
+                  <div class="range__range-values"><datalist id="range-values">
+                      <option value="8" label="$5000"> </option>
+                      <option value="7" label="$2000"></option>
+                      <option value="6" label="$1000"></option>
+                      <option value="5" label="$500"></option>
+                      <option value="4" label="$250"></option>
+                      <option value="3" label="$100"></option>
+                      <option value="2" label="$50"></option>
+                      <option value="1" label="$25"></option>
+                    </datalist></div>
+                </div>
+              </div>
+            </div>
+            <div class="inner-row">
+              <div class="inner-column donation-form">
+                <form action="javascript://">
+                  <div class="amount-input"><input class="radius-2" id="amount" type="number" name="donate-value"
+                      placeholder="Another amount" size="4" min="1" max="9999" required="true"></div>
+                  <div class="radio-btns"><input type="radio" id="monthly" name="donate-pay" value="Monthly"><label
+                      for="monthly">Monthly</label><input type="radio" checked id="once" name="donate-pay"
+                      value="Once"><label for="once">Once</label></div>
+                  <div class="button-submit"><button class="button big orange uppercase radius-25"
+                      type="submit"><span>Feed a friend now</span></button></div>
+                  <p>Share with your friends on social networks </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer">
+    <div class="container">
+      <div class="logo"><a class="logo_link" href="index.html">
+          <p class="logo__name">PetStory online</p><img class="logo__icon" src="assets/img/bamboo.png" alt="logo_icon">
+        </a></div>
+      <div class="subscribe-form">
+        <h4>Subscribe to our news</h4>
+        <form action="#" id="subscription-form"><input class="radius-2" type="email"
+            placeholder="Enter your email"><input class="button small gray-light radius-5" type="submit" value="Submit">
+        </form>
+      </div>
+      <div class="footer__button"><a class="button orange big radius-5 uppercase" href="donate.html"><span>donate for
+            volunteers</span></a></div>
+      <div class="socials">
+        <div class="socials__social"> <a class="social-icon" href="javascript://"><img class="facebook"
+              src="assets/img/social_network.svg" alt="Facebook"><span>Facebook</span></a><a class="social-icon"
+            href="javascript://"><img class="twitter" src="assets/img/social_network.svg"
+              alt="Twitter"><span>Twitter</span></a><a class="social-icon" href="javascript://"><img class="instagram"
+              src="assets/img/social_network.svg" alt="Instagram"><span>Instagram</span></a><a class="social-icon"
+            href="javascript://"><img class="youtube" src="assets/img/social_network.svg"
+              alt="YouTube"><span>YouTube</span></a></div>
+      </div>
+      <div class="footer__menu">
         <div class="burger"><a class="burger-icon menu-btn" href="javascript://"> <i class="mdi mdi-menu"></i></a><a
             class="burger-icon close-btn opazero" href="javascript://"><i class="mdi mdi-close"></i></a></div>
-        <div class="menu"> <a class="menu__item" href="/">About</a><a class="menu__item" href="javascript://">Map</a><a
-            class="menu__item" href="javascript://">Zoos</a><a class="menu__item" href="donate.html">Donate</a><a
-            class="menu__item" href="javascript://">Contact us</a></div><a class="author"
-          href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online" target="_blank">Designed by ©</a>
+        <div class="menu"> <a class="menu__item" href="index.html">About</a><a class="menu__item"
+            href="javascript://">Map</a><a class="menu__item" href="javascript://">Zoos</a><a class="menu__item"
+            href="donate.html">Donate</a><a class="menu__item" href="javascript://">Contact us</a></div>
       </div>
-    </header>
-    <main>
-      <section class="home-screen-donate">
-        <div class="container"></div>
-      </section>
-      <section class="donation-information">
-        <div class="container">
-          <div class="inner-row">
-            <div class="inner-column">
-              <h2>THE ZOO HAS OFFICIALLY REOPENED BUT WE STILL NEED YOUR HELP!</h2>
-              <p>Even though the Zoo has been able to reopen, we are at a greatly reduced capacity with educational
-                programs and public and private events cancelled or postponed for additional months. We need you now
-                more than ever to help ensure that we overcome these challenges. We have been actively raising funds in
-                the community, and we are grateful for the generosity. But much more support is still needed, and we
-                need your help! Please consider a gift today – no matter what size – to help us sustain our mission.</p>
-              <h3>Donation Information</h3>
-            </div>
-          </div>
-          <div class="inner-row donation-information__row-wrap border-radius-20">
-            <div class="inner-column">
-              <h2>Pick and feed a friend</h2>
-              <p class="donation-information__description">We know the animals bring you joy, and in these extraordinary
-                times, we’re glad.</p>
-              <div class="inner-row donation-wrap">
-                <div class="inner-column">
-                  <p>4</p>
-                  <p>Panda diet for the day.</p>
-                </div>
-                <div class="inner-column"><span class="icon-x mdi mdi-close"></span></div>
-                <div class="inner-column"><img class="panda" src="assets/img/panda.png" alt="panda"></div>
-              </div>
-              <div class="inner-row range-wrap">
-                <div class="inner-column">
-                  <p class="amount-text">Amount</p>
-                  <div class="range">
-                    <div class="range__input-wrap"> <input id="range__range-input" type="range" name="donate-value"
-                        min="1" max="8" step="1" list="range-values" value="3"></div>
-                    <div class="range__range-values"><datalist id="range-values">
-                        <option value="8" label="$5000"> </option>
-                        <option value="7" label="$2000"></option>
-                        <option value="6" label="$1000"></option>
-                        <option value="5" label="$500"></option>
-                        <option value="4" label="$250"></option>
-                        <option value="3" label="$100"></option>
-                        <option value="2" label="$50"></option>
-                        <option value="1" label="$25"></option>
-                      </datalist></div>
-                  </div>
-                </div>
-              </div>
-              <div class="inner-row">
-                <div class="inner-column donation-form">
-                  <form action="javascript://">
-                    <div class="amount-input"><input class="radius-2" id="amount" type="number" name="donate-value"
-                        placeholder="Another amount" size="4" min="1" max="9999" required="true"></div>
-                    <div class="radio-btns"><input type="radio" id="monthly" name="donate-pay" value="Monthly"><label
-                        for="monthly">Monthly</label><input type="radio" checked id="once" name="donate-pay"
-                        value="Once"><label for="once">Once</label></div>
-                    <div class="button-submit"><button class="button big orange uppercase radius-25"
-                        type="submit"><span>Feed a friend now</span></button></div>
-                    <p>Share with your friends on social networks </p>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer id="footer">
-      <div class="container">
-        <div class="logo"><a class="logo_link" href="/">
-            <p class="logo__name">PetStory online</p><img class="logo__icon" src="assets/img/bamboo.png"
-              alt="logo_icon">
-          </a></div>
-        <div class="subscribe-form">
-          <h4>Subscribe to our news</h4>
-          <form action="#" id="subscription-form"><input class="radius-2" type="email"
-              placeholder="Enter your email"><input class="button small gray-light radius-5" type="submit"
-              value="Submit"></form>
-        </div>
-        <div class="footer__button"><a class="button orange big radius-5 uppercase" href="donate.html"><span>donate for
-              volunteers</span></a></div>
-        <div class="socials">
-          <div class="socials__social"> <a class="social-icon" href="javascript://"><img class="facebook"
-                src="assets/img/social_network.svg" alt="Facebook"><span>Facebook</span></a><a class="social-icon"
-              href="javascript://"><img class="twitter" src="assets/img/social_network.svg"
-                alt="Twitter"><span>Twitter</span></a><a class="social-icon" href="javascript://"><img class="instagram"
-                src="assets/img/social_network.svg" alt="Instagram"><span>Instagram</span></a><a class="social-icon"
-              href="javascript://"><img class="youtube" src="assets/img/social_network.svg"
-                alt="YouTube"><span>YouTube</span></a></div>
-        </div>
-        <div class="footer__menu">
-          <div class="burger"><a class="burger-icon menu-btn" href="javascript://"> <i class="mdi mdi-menu"></i></a><a
-              class="burger-icon close-btn opazero" href="javascript://"><i class="mdi mdi-close"></i></a></div>
-          <div class="menu"> <a class="menu__item" href="/">About</a><a class="menu__item"
-              href="javascript://">Map</a><a class="menu__item" href="javascript://">Zoos</a><a class="menu__item"
-              href="donate.html">Donate</a><a class="menu__item" href="javascript://">Contact us</a></div>
-        </div>
-        <div class="footer__author">
-          <p>Designed by Alisa Samborskaya</p>
-          <p>©RSSchool & ©Yem Digital 2021</p>
-        </div>
+      <div class="footer__author">
+        <p>Designed by Alisa Samborskaya</p>
+        <p>©RSSchool & ©Yem Digital 2021</p>
       </div>
-    </footer>
-    <script src="assets/js/index.2.b5274144.js" defer></script>
-  </body>
+    </div>
+  </footer>
+  <script src="assets/js/index.2.b5274144.js" defer></script>
+</body>
+
 </html>
