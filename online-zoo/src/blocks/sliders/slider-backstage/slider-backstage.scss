@@ -3,7 +3,7 @@
 
   .control-buttons {
     position: absolute;
-    top: 47%;
+    top: 46.5%;
     z-index: 1;
     width: 100%;
 
@@ -66,9 +66,23 @@
         }
       }
 
+      @media screen and (max-width: ($tablet + px)) {
+        &.left {
+          left: 37.2%;
+        }
+
+        &.right {
+          right: 37.2%;
+        }
+      }
+
       @media screen and (max-width: ($tablet - 40 + px)) {
         display: none;
       }
+    }
+
+    @media screen and (max-width: ($tablet + px)) {
+      top: 45.4%;
     }
   }
 
@@ -79,11 +93,6 @@
     grid-gap: 20px 30px;
     margin-bottom: 80px;
     position: relative;
-
-    @media screen and (max-width: ($desktop-super + px)) {
-      grid-gap: 92px 29px;
-    }
-
 
     .item {
       position: relative;
@@ -125,6 +134,8 @@
       }
 
       &__img {
+        width: 100%;
+        height: auto;
         transition: .3s;
         -webkit-transition: .3s;
         -moz-transition: .3s;
@@ -207,27 +218,35 @@
         }
       }
 
-      &__img {
-        width: 100%;
-        height: auto;
-      }
-
       .item__inner-wrap {
         display: flex;
         flex-direction: column;
 
         .header-item {
-          padding: 8px 0 0 15px;
+          padding: 6px 0 0 15px;
+          text-transform: uppercase;
           font-weight: 500;
           flex: 0 1 auto;
+          line-height: 1;
         }
 
         .text-item {
-          padding: 0 0 8px 15px;
+          padding: 0 0 10px 15px;
           flex: 0 1 auto;
         }
 
-        @media screen and (max-width: ($mobile + px)) {}
+        @media screen and (max-width: ($tablet-land + px)) {
+          .header-item {
+            padding: 4px 0 0 12px;
+            font-size: 13px;
+            line-height: 1;
+          }
+
+          .text-item {
+            padding: 0 0 10px 12px;
+            font-size: 12px;
+          }
+        }
       }
 
 
@@ -255,10 +274,26 @@
 
     }
 
+    @media screen and (max-width: ($desktop-super + px)) {
+      grid-gap: 94px 28px;
+    }
+
+    @media screen and (max-width: ($tablet-land + px)) {
+      grid-gap: 88px 28px;
+      margin-bottom: 58px;
+    }
+
     @media screen and (max-width: ($tablet - 40 + px)) {
 
       grid-gap: 20px 10px;
 
+    }
+
+    @media screen and (max-width: ($mobile + px)) {
+      grid-template-columns: repeat(auto-fit, minmax(282px, 80%));
+      grid-gap: 20px 0;
+      justify-content: center;
+      margin-bottom: 20px;
     }
   }
 }

@@ -14,7 +14,7 @@ footer {
     grid-template-areas:
       "logo logo logo form form form"
       "button button button button button button "
-      "socials menu menu menu author author";
+      "socials socials menu menu author author";
 
     .logo {
       grid-area: logo;
@@ -190,6 +190,22 @@ footer {
 
     }
 
+
+    @media screen and (max-width: (($tablet) + px)) {
+
+      .logo {
+        width: 100%;
+        margin: 0 0 0 6px;
+
+        &__icon {
+          top: 52%;
+          left: 1.5%;
+          width: 11px;
+        }
+      }
+
+    }
+
     @media screen and (max-width: (($tablet - 40) + px)) {
       grid-template-areas:
         "logo logo logo logo logo logo"
@@ -302,7 +318,70 @@ footer {
     }
   }
 
+  @media screen and (max-width: ($notebook + px)) {
+    padding: 39px 0 50px;
+
+
+    .footer__menu {
+      margin-left: -23px;
+    }
+
+    .footer__button {
+      .button {
+        padding: 16px 25.5%;
+      }
+    }
+  }
+
   @media screen and (max-width: ($tablet-land + px)) {
     padding: 13px 0;
+  }
+
+  @media screen and (max-width: ($tablet + px)) {
+    padding: 12px 0 9px;
+
+    .footer__menu {
+      margin-left: 3px;
+
+      .menu {
+        grid-gap: 26px;
+      }
+    }
+
+    .container {
+      .footer__button {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  @media screen and (max-width: ($mobile + px)) {
+    padding: 18px 0 9px;
+
+    .container {
+      .logo {
+        margin: 0;
+      }
+    }
+
+    .footer__menu {
+      margin-left: 3px;
+      width: 94%;
+
+      .menu {
+        grid-gap: 26px;
+      }
+    }
+
+    .container {
+
+      .footer__author {
+        font-size: 15px;
+      }
+
+      .footer__button {
+        margin-bottom: -5px;
+      }
+    }
   }
 }

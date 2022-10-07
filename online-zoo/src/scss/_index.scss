@@ -22,9 +22,9 @@
   }
 
   @media screen and (max-width: ($mobile + px)) {
-    & {
-      height: $height-home-screen-section-mobile + px;
-    }
+    height: $height-home-screen-section-mobile + px;
+    background-position: 50% 100%;
+    overflow: initial;
   }
 
   .container {
@@ -48,15 +48,13 @@
     @media screen and (max-width: ($tablet + px)) {
       & {
         top: 10px;
-        right: calc(273px - 100%);
+        right: calc(289px - 100%);
       }
     }
 
     @media screen and (max-width: ($mobile + px)) {
-      & {
-        top: 20px;
-        right: calc(148px - 100%);
-      }
+      top: 22px;
+      right: calc(148px - 100%);
     }
 
     p {
@@ -74,8 +72,8 @@
       @media screen and (max-width: ($notebook + px)) {
         & {
           font-size: 85px;
-          top: 57px;
-          left: 11px;
+          top: 52px;
+          left: 6px;
         }
       }
 
@@ -83,8 +81,8 @@
         & {
           max-width: 300px;
           font-size: 54px;
-          top: 38px;
-          left: 40px;
+          top: 35px;
+          left: 42px;
           position: absolute;
         }
       }
@@ -162,8 +160,8 @@
       & {
         bottom: 40px;
         right: auto;
-        left: 22px;
-        padding: 17px min(85px, 20%);
+        left: 20px;
+        padding: 17px min(92px, 20%);
         transform: translateX(0);
         -webkit-transform: translateX(0);
         -moz-transform: translateX(0);
@@ -173,11 +171,9 @@
     }
 
     @media screen and (max-width: ($mobile + px)) {
-      & {
-        bottom: -76.4px;
-        left: 10px;
-        padding: 17px max(20px, 27%);
-      }
+      bottom: -75.4px;
+      left: 11px;
+      padding: 17px max(20px, 28.6%);
     }
   }
 }
@@ -188,7 +184,7 @@
 
   h2 {
     color: $color-black-blue;
-    margin: 0;
+    margin: -10px 0 0 0;
   }
 
   h4 {
@@ -216,7 +212,13 @@
   }
 
   .button {
-    @media screen and (max-width: ($tablet - 1 + px)) {
+    padding: 16px 6%;
+
+    @media screen and (max-width: ($tablet + px)) {
+      padding: 16px 9.5%;
+    }
+
+    @media screen and (max-width: ($tablet - 40 + px)) {
       padding: 16px 14%;
     }
 
@@ -240,10 +242,18 @@
     }
 
     @media screen and (max-width: ($tablet-land + px)) {
-      & {
-        display: block;
-        height: 470px;
-      }
+      display: block;
+      height: 470px;
+      right: -27px;
+      top: 1px;
+    }
+
+    @media screen and (max-width: ($mobile + px)) {
+      display: block;
+      height: unset;
+      right: -42px;
+      top: 37px;
+      max-width: 23%;
     }
   }
 
@@ -253,6 +263,24 @@
 
     @media screen and (max-width: ($desktop-super + px)) {
       max-width: 28%;
+    }
+
+    @media screen and (max-width: ($notebook + px)) {
+      max-width: 27%;
+      right: -14px;
+      bottom: -9px;
+    }
+
+    @media screen and (max-width: ($tablet + px)) {
+      max-width: 27%;
+      right: -1px;
+      bottom: -2px;
+    }
+
+    @media screen and (max-width: ($mobile + px)) {
+      max-width: 30%;
+      right: -22px;
+      bottom: -4px;
     }
 
   }
@@ -265,11 +293,27 @@
       max-width: 14%;
     }
 
+    @media screen and (max-width: ($notebook + px)) {
+      left: 67px;
+      bottom: -2px;
+      max-width: 13%;
+    }
+
+    @media screen and (max-width: ($tablet + px)) {
+      max-width: 20%;
+      left: 5px;
+    }
+
+    @media screen and (max-width: ($mobile + px)) {
+      max-width: 14%;
+      left: 16px;
+    }
+
   }
 
   @media screen and (max-width: ($desktop-big + px)) {
     .inner-row:first-child {
-      grid-template-columns: minmax(225px, 46%) auto;
+      grid-template-columns: minmax(238px, 50%) auto;
       grid-gap: 31px;
       margin-bottom: 152px;
 
@@ -286,19 +330,39 @@
   @media screen and (max-width: ($notebook + px)) {
     padding: 109px 0 140px;
 
+    .backstage__text p {
+      margin: 20px 0 0;
+    }
+
+    h4 {
+      margin: 52px 0 29px;
+    }
+
+    .inner-row:first-child {
+      margin-bottom: 141px;
+    }
+
   }
 
   @media screen and (max-width: ($tablet-land + px)) {
-    padding: 60px 0 100px;
+    padding: 69px 0 100px;
+
+    h2 {
+      margin: -10px 0 0 4px;
+    }
 
     h4 {
-      margin: 30px 0 20px;
+      margin: 27px 0 10px 4px;
     }
 
     .inner-row:first-child {
       grid-template-columns: 1fr;
       margin-bottom: 80px;
       grid-gap: 0;
+
+      p:last-child {
+        margin: 15px 0 0;
+      }
 
       .backstage__text {
         padding: 0 20% 0 0;
@@ -312,18 +376,7 @@
     }
   }
 
-  @media screen and (max-width: ($mobile + px)) {
-    padding: 104px 0 60px;
-
-    .inner-row:first-child {
-      grid-template-columns: 1fr;
-      margin-bottom: 40px;
-
-      h2 {
-        font-size: 24px;
-      }
-    }
-  }
+  @media screen and (max-width: ($tablet + px)) {}
 
   @media screen and (max-width: ($tablet - 40 + px)) {
 
@@ -338,6 +391,34 @@
       display: none;
     }
   }
+
+  @media screen and (max-width: ($mobile + px)) {
+    padding: 114px 0 60px;
+    margin-left: -4px;
+
+    .inner-row:first-child {
+      grid-template-columns: 1fr;
+      margin-bottom: 40px;
+
+      h2 {
+        font-size: 24px;
+      }
+
+      h4 {
+        margin: 15px 0 10px 6px;
+      }
+
+      p:last-child {
+        margin: -4px 0 0 4px;
+      }
+    }
+
+    .backstage__text p {
+      margin: 9px 0 0 6px;
+    }
+  }
+
+
 }
 
 .feed-friend {
@@ -384,13 +465,37 @@
   @media screen and (max-width: ($desktop-big + px)) {}
 
   @media screen and (max-width: ($notebook + px)) {
+    padding: 30px 0 49px;
+
+
+
     h2 {
       margin: 0 0 20px
     }
 
-    &__description {
-      margin: 0 0 20px;
+    h3 {
+      margin: 38px 0 40px;
     }
+
+    &__description {
+      margin: 0 0 17px;
+      white-space: nowrap;
+    }
+
+    p.bold-500 {
+      margin: 0 0 6px;
+    }
+
+    p.wlink {
+      margin: 0;
+    }
+
+    .how-it-works {
+      max-width: 93%;
+      margin: 0 auto;
+    }
+
+
   }
 
   @media screen and (max-width: ($tablet-land + px)) {
@@ -453,8 +558,13 @@
       }
     }
 
+    h3 {
+      margin: 28px 0 20px;
+    }
+
     &__description {
       font-size: 18px;
+      white-space: normal;
     }
 
     .arrow-svg1 {
@@ -497,7 +607,54 @@
     }
   }
 
-  @media screen and (max-width: ($mobile + px)) {}
+  @media screen and (max-width: ($mobile + px)) {
+
+    h2 {
+      margin: 0 0 6px;
+    }
+
+    h3 {
+      margin: 13px 0 15px;
+    }
+
+    &__description {
+      font-size: 18px;
+      text-align: center;
+      margin: 0 0 10px;
+    }
+
+    p.bold-500 {
+      display: none;
+    }
+
+    p.wlink {
+      display: none;
+    }
+
+    .container {
+      padding: 0 10px 0;
+
+      .inner-row {
+        padding: 21px 0px 40px;
+      }
+    }
+
+
+    .arrow-svg1,
+    .arrow-svg2 {
+      right: 2%;
+    }
+
+    .arrow-svg1 {
+      top: 27%;
+    }
+
+    .arrow-svg2 {
+      top: 61%;
+    }
+
+
+  }
 
   .how-it-works {
     display: grid;
@@ -505,8 +662,17 @@
     grid-gap: 10px;
     justify-items: center;
 
+
     @media screen and (max-width: ($tablet-land + px)) {
       grid-template-columns: repeat(auto-fit, minmax(168px, auto));
+    }
+
+    @media screen and (max-width: ($tablet-land + px)) {
+      max-width: unset;
+      margin: unset;
+      grid-gap: 25px;
+      justify-items: center;
+      margin-left: -12px;
     }
 
     @media screen and (max-width: 600px) {
@@ -514,17 +680,14 @@
       grid-gap: 30px 10px;
     }
 
+    @media screen and (max-width: ($mobile + px)) {
+      grid-gap: 40px 10px;
+      margin-left: 0px;
+    }
 
     &__wrap {
       max-width: min-content;
       position: relative;
-
-      @media screen and (max-width: ($tablet-land + px)) {
-
-        &:nth-child(2n) {
-          display: none;
-        }
-      }
 
       &:nth-child(2n + 1) .how-it-works__icon-wrap {
         background-color: $color-white;
@@ -533,6 +696,20 @@
 
       &:nth-child(2n) .how-it-works__icon-wrap {
         width: auto;
+      }
+
+      @media screen and (max-width: ($tablet-land + px)) {
+
+        &:nth-child(2n) {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: ($mobile + px)) {
+
+        &:last-child {
+          margin-top: -16px;
+        }
       }
     }
 
@@ -550,25 +727,37 @@
       margin: 30px 0 0;
 
       @media screen and (max-width: ($tablet + px)) {
+        margin: 29px 0 0;
+      }
 
-        margin: 10px 0 0;
+      @media screen and (max-width: ($mobile + px)) {
+        margin: 12px 0 0;
       }
     }
-
-
-
   }
 
-  .button {
-    margin: 60px auto 0;
-    display: block;
+  .inner-row {
 
-    @media screen and (max-width: ($tablet + px)) {
-      padding: 16px 14%;
-    }
+    padding: 28px 49px 50px;
 
-    @media screen and (max-width: ($mobile + px)) {
-      padding: 16px 21%;
+
+    .button {
+      margin: 70px auto 0;
+      display: block;
+
+      @media screen and (max-width: ($notebook + px)) {
+        padding: 16px 75px;
+      }
+
+      @media screen and (max-width: ($tablet + px)) {
+        margin: 42px auto 0;
+        padding: 16px 12.5%;
+      }
+
+      @media screen and (max-width: ($mobile + px)) {
+        padding: 16px 24.5%;
+        margin: 36px 0 0 0px;
+      }
     }
   }
 
@@ -603,20 +792,43 @@
     h3 {
       margin-bottom: 30px;
     }
+
+    .flower4 {
+      right: 0;
+      bottom: 0;
+      max-width: 11%;
+    }
+
+    .feedback-button .button {
+      padding: 16px 9%;
+    }
   }
 
   @media screen and (max-width: ($tablet-land + px)) {
     padding: 80px 0 80px;
 
     .flower4 {
-      width: 10%;
+      max-width: 10%;
     }
   }
 
   @media screen and (max-width: ($tablet + px)) {
+
+    h3 {
+      margin-bottom: 32px
+    }
+
+    padding: 58px 0 80px;
+
     .button {
       text-align: center;
       margin: 0 auto;
+    }
+
+    .flower4 {
+      max-width: 11%;
+      right: -5px;
+      bottom: -18px;
     }
 
   }
@@ -640,5 +852,14 @@
     }
   }
 
-  @media screen and (max-width: ($mobile + px)) {}
+  @media screen and (max-width: ($mobile + px)) {
+
+    h3 {
+      margin-bottom: 18px;
+    }
+
+    .button {
+      width: 62%;
+    }
+  }
 }

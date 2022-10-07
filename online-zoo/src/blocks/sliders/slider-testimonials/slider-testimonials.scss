@@ -89,12 +89,24 @@
       }
     }
 
+    @media screen and (max-width: ($notebook + px)) {
+
+      .item {
+        min-width: 259px;
+        max-height: 355px;
+        padding: 13px 13px 58px 18px;
+        margin-bottom: 20px;
+      }
+
+    }
+
     @media screen and (max-width: ($tablet + px)) {
       flex-direction: column;
 
       .item {
         margin-bottom: 0;
         max-height: 380px;
+        padding: 13px 13px 6px 18px;
 
         &:nth-child(1n + 4) {
           display: none;
@@ -112,7 +124,34 @@
         }
       }
     }
+
+    @media screen and (max-width: ($mobile + px)) {
+      flex-direction: column;
+
+      .item {
+        margin-right: 0;
+        padding: 7px 13px 11px 18px;
+
+        &:not(:last-child) {
+          margin-bottom: 17px;
+        }
+      }
+    }
   }
+
+  @media screen and (max-width: ($notebook + px)) {
+    margin-bottom: 52px;
+  }
+
+  @media screen and (max-width: ($tablet + px)) {
+    margin-bottom: 26px;
+  }
+
+  @media screen and (max-width: ($mobile + px)) {
+    margin-bottom: 14px;
+  }
+
+
 
   .slider-pagination {
     // position: relative;
