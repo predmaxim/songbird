@@ -13,22 +13,23 @@ $height-home-screen-donate-section-mobile: 187;
 
 
   @media screen and (max-width: ($notebook + px)) {
-    & {
-      height: $height-home-screen-donate-section-notebook + px;
-    }
+    height: $height-home-screen-donate-section-notebook + px;
+    background-position: 28% 50%;
+    background-size: 158%;
   }
 
   @media screen and (max-width: ($tablet + px)) {
-    & {
-      height: $height-home-screen-donate-section-tablet + px;
-    }
+    height: $height-home-screen-donate-section-tablet + px;
+    background-position: 37% 51%;
+    background-size: 215%;
   }
 
   @media screen and (max-width: ($mobile + px)) {
-    & {
-      height: $height-home-screen-donate-section-mobile + px;
-    }
+    height: $height-home-screen-donate-section-mobile + px;
+    background-position: 34% 50%;
+    background-size: 246%;
   }
+
 
 }
 
@@ -119,6 +120,26 @@ $height-home-screen-donate-section-mobile: 187;
       font-size: 25px;
     }
 
+    @media screen and (max-width: ($mobile + px)) {
+      .amount-text {
+        margin: 0px 0 8px 0;
+      }
+
+      .range {
+        margin: 0 0 23px;
+
+        &__input-wrap {
+          height: 14px;
+          padding: 0 19px 0;
+
+          input[type=range] {
+            position: relative;
+            top: -5px;
+          }
+        }
+      }
+    }
+
 
   }
 
@@ -130,54 +151,48 @@ $height-home-screen-donate-section-mobile: 187;
       margin-bottom: 40px;
     }
 
+    .inner-row:first-child {
+      p {
+        margin: 29px 0 45px;
+      }
+    }
+
     &__row-wrap {
       background: $color-frosted-glass-white;
-      padding: 20px 65px 45.98px;
+      padding: 20px 47px 45.98px;
 
       h2 {
         font-size: 48px;
-        margin: 0 0 10px;
+        margin: -3px 0 10px -15px
       }
 
       .donation-wrap {
-        margin: 107px 0 48.53px;
+        margin: 102px auto 45.53px;
 
-        //   p:first-child {
-        //     font-size: 72px;
-        //     line-height: .8;
-        //     font-weight: 500;
-        //     margin-bottom: 11px;
-        //   }
+        .inner-column:nth-child(1) {
+          flex: 0 0 170px;
+        }
 
-        //   p:last-child {
-        //     margin: 0;
-        //   }
+        .inner-column:nth-child(2) {
+          flex: 0 0 80px;
+          margin-top: -20px;
+        }
 
-        //   .panda {
-        //     max-width: 268.49px;
-        //     height: auto;
-        //     display: block;
-        //   }
-        // }
-
-        // .donation-wrap .inner-column:nth-child(1) {
-        //   flex: 0 0 200px;
-        // }
-
-        // .donation-wrap .inner-column:nth-child(2) {
-        //   flex: 0 0 70px;
-        //   text-align: left;
-        // }
-
-        // .donation-wrap .inner-column:nth-child(3) {
-        //   flex: 0 0 200px;
-        // }
-
-        // .icon-x {
-        //   font-size: 25px;
+        .inner-column:nth-child(3) {
+          flex: 0 0 308px;
+        }
       }
 
 
+    }
+
+    .range-wrap {
+      width: 96%;
+      margin: auto;
+    }
+
+    .button {
+      padding: 16px 8.5%;
     }
   }
 
@@ -227,12 +242,34 @@ $height-home-screen-donate-section-mobile: 187;
     }
   }
 
-  @media screen and (max-width: ($tablet - 40 + px)) {
+  @media screen and (max-width: ($tablet + px)) {
+
+    h2 {
+      margin-bottom: 15px;
+    }
+
+    .inner-row:first-child p {
+      margin: 0 0 28px;
+    }
+
     &__row-wrap {
       .donation-wrap {
         display: grid;
         grid-template-columns: .6fr .2fr 1fr;
         align-items: center;
+        margin: 0 0 40px;
+
+        .inner-column:nth-child(1) {
+          margin: -4px 0 0 14px;
+        }
+
+        .inner-column:nth-child(2) {
+          margin: -28px -9px 0;
+        }
+
+        .inner-column:nth-child(3) {
+          margin: -8px 0 0 9px;
+        }
 
         .panda {
           width: 100%;
@@ -240,6 +277,11 @@ $height-home-screen-donate-section-mobile: 187;
         }
       }
     }
+
+    .range-wrap {
+      width: 100%;
+    }
+
   }
 
   @media screen and (max-width: ($tablet - 40 + px)) {
@@ -284,21 +326,32 @@ $height-home-screen-donate-section-mobile: 187;
       padding: 16px;
       width: 100%;
     }
+
   }
 
   @media screen and (max-width: ($mobile + px)) {
     &__row-wrap {
+      padding: 15px 0px 19.98px;
+
       h2 {
         font-size: 24px;
-        margin: 0 0 10px;
+        margin: 0 0 7px;
       }
 
+      // .inner-row {
+      //   &:first-child {
+      //     p {
+      //       margin: 0 0 24px;
+      //     }
+      //   }
+      // }
+
       p {
-        margin-bottom: 36.78px;
+        margin-bottom: 44px;
       }
 
       .donation-wrap {
-        margin: 0 0 4.3px;
+        margin: 0 0 2px;
 
 
         p:first-child {
@@ -318,6 +371,18 @@ $height-home-screen-donate-section-mobile: 187;
 
         .icon-x {
           font-size: 12px;
+        }
+
+        .inner-column:nth-child(1) {
+          margin: -7px 0 0 -7px;
+        }
+
+        .inner-column:nth-child(2) {
+          margin: -26px -7px 0;
+        }
+
+        .inner-column:nth-child(3) {
+          margin: -8px 6px 0px 9px;
         }
       }
     }

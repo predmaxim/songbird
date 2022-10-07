@@ -7,6 +7,7 @@
     margin: 17px 0 50px;
     position: relative;
 
+
     .range__input-wrap {
       background: #404950;
       padding: 3px 26px 0;
@@ -77,6 +78,10 @@
           // -ms-border-radius: 50%;
           // -o-border-radius: 50%;
         }
+      }
+
+      @media screen and (max-width: ($mobile + px)) {
+        padding: 0px 26px 0;
       }
     }
 
@@ -185,8 +190,49 @@
 
           @media screen and (max-width: ($mobile + px)) {
             font-size: 13px;
+
+            &.active {
+              &:before {
+                width: 10px;
+                height: 10px;
+                top: -22px;
+                left: 3px;
+              }
+            }
+
+            &:before {
+              width: 10px;
+              height: 10px;
+              top: -20px;
+              left: 5px;
+            }
+
+            &:hover:before {
+              width: 10px;
+              height: 10px;
+              top: -22px;
+              left: 3px;
+              border-width: 3px;
+            }
+
+            &:after {
+              top: -29px;
+              width: 30px;
+              height: 30px;
+              left: -4px;
+            }
+
+
           }
         }
+
+        @media screen and (max-width: ($notebook + px)) {
+          margin: 7px 12px 0;
+        }
+
+        @media screen and (max-width: ($tablet + px)) {}
+
+        @media screen and (max-width: ($mobile+ px)) {}
       }
     }
   }
@@ -223,6 +269,7 @@
     @media screen and (max-width: ($mobile + px)) {
       p {
         margin-bottom: 0;
+        white-space: nowrap;
       }
     }
 
@@ -234,6 +281,10 @@
         padding-right: 25px;
         line-height: 2;
         margin-left: -8px;
+
+        @media screen and (max-width: ($notebook + px)) {
+          margin-left: 9px;
+        }
 
         @media screen and (max-width: ($tablet + px)) {
           line-height: 1.3;
@@ -256,6 +307,20 @@
       input.error {
         color: $color-red;
         border-color: $color-red;
+      }
+
+
+      @media screen and (max-width: ($notebook + px)) {
+        margin-bottom: 29px;
+        width: 98%;
+      }
+
+      @media screen and (max-width: ($tablet + px)) {
+        margin-bottom: 33px;
+      }
+
+      @media screen and (max-width: ($mobile + px)) {
+        margin-bottom: 23px;
       }
 
     }
@@ -295,19 +360,43 @@
           border-color: $color-green;
         }
       }
+
+      @media screen and (max-width: ($notebook + px)) {
+        margin-bottom: 27px;
+        width: 98%;
+      }
+
+      @media screen and (max-width: ($tablet + px)) {
+        margin-bottom: 27px;
+        width: 97%;
+      }
+
+      @media screen and (max-width: ($mobile + px)) {
+        margin-bottom: 25px;
+        width: 93%;
+      }
     }
 
     .button-submit {
       margin-bottom: 30.98px;
 
       button[type="submit"] {
+        @media screen and (max-width: ($tablet + px)) {
+          padding: 16px 12.5%;
+        }
+
         @media screen and (max-width: ($mobile + px)) {
           width: 100%;
         }
-
       }
     }
+
+    p {
+      margin-bottom: -1px;
+    }
   }
+
+
 
 
 }
