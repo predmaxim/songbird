@@ -181,6 +181,16 @@
 .backstage {
   position: relative;
   padding: 140px 0 100px;
+  flex: 1 0 auto;
+
+  // .backstage-slider {
+  //   display: flex;
+  // }
+
+  .backstage-slider {
+    overflow: hidden;
+    
+  }
 
   h2 {
     color: $color-black-blue;

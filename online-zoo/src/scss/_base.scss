@@ -60,6 +60,33 @@
   -o-transition: 1s;
 }
 
+.sliderHide {
+  transition: opacity .5s;
+  -webkit-transition: opacity .5s;
+  -moz-transition: opacity .5s;
+  -ms-transition: opacity .5s;
+  -o-transition: opacity .5s;
+  opacity: 0;
+  z-index: -999;
+}
+
+.sliderShow {
+  transition: opacity .5s;
+  -webkit-transition: opacity .5s;
+  -moz-transition: opacity .5s;
+  -ms-transition: opacity .5s;
+  -o-transition: opacity .5s;
+  opacity: 1;
+  z-index: 1;
+}
+
+.s-notransition {
+  transition: 0s;
+  -webkit-transition: 0s;
+  -moz-transition: 0s;
+  -ms-transition: 0s;
+  -o-transition: 0s;
+}
 
 .mob-menu-open {
   height: 50px;
@@ -133,12 +160,12 @@
 }
 
 .active {
-  color: $color-orange  !important;
+  color: $color-orange !important;
 }
 
 .error {
-  color: $color-red  !important;
-  border-color: $color-red  !important;
+  color: $color-red !important;
+  border-color: $color-red !important;
 }
 
 .color-yellow {
