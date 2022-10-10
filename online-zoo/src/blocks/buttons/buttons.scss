@@ -1,0 +1,137 @@
+.button {
+  position: relative;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  line-height: 1.4;
+  width: max-content;
+  z-index: 1;
+  transition: all .2s;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -ms-transition: all .2s;
+  -o-transition: all .2s;
+
+  & span {
+    position: relative;
+    z-index: 2;
+  }
+
+  &:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .2s linear;
+    -webkit-transition: opacity .2s linear;
+    -moz-transition: opacity .2s linear;
+    -ms-transition: opacity .2s linear;
+    -o-transition: opacity .2s linear;
+  }
+
+  &:hover:after {
+    opacity: 1;
+  }
+
+  &.orange {
+    background: $color-orange-gradient;
+    color: $color-white;
+
+    &:after {
+      background: $color-orange-dark;
+    }
+
+    &:active {
+      background: $color-green;
+    }
+
+    &[disabled] {
+      background: $color-gray;
+    }
+
+  }
+
+  &.gray-light {
+    background: $color-gray-light;
+    color: $color-black;
+    border: 1px solid $color-black;
+
+    &:active {
+      color: $color-green;
+      border-color: inherit;
+    }
+
+    &:hover {
+      color: $color-green;
+      border-color: inherit;
+    }
+  }
+
+  &.big {
+    padding: 16px 80px;
+    font-weight: 500;
+
+    @media screen and (max-width: ($mobile + px)) {
+      & {
+        padding: 16px;
+      }
+    }
+  }
+
+  &.small {
+    padding: 10px 40px;
+    font-weight: 400;
+
+    @media screen and (max-width: ($mobile + px)) {
+      & {
+        padding: 10px 0;
+      }
+    }
+  }
+
+  &.uppercase {
+    text-transform: uppercase;
+  }
+
+  &.transparent {
+    background-color: transparent;
+    border: none;
+
+    &:hover {
+      border: 1px solid;
+    }
+  }
+
+  &.round {
+    padding: 27px;
+  }
+
+  &.radius-25:after {
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+  }
+
+  &.radius-5:after {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+
+  &.radius-2:after {
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+  }
+
+}

@@ -1,0 +1,50 @@
+.subscribe-form {
+
+  h4 {
+    margin: 0 0 14px;
+  }
+
+  form {
+
+    input[type="email"] {
+      color: $color-gray-light;
+      background: transparent;
+      border: 1px solid $color-orange;
+      padding: 12px;
+      margin-right: 10px;
+
+      &:focus {
+        outline: none;
+        border-color: $color-green;
+      }
+    }
+
+    input[type="submit"] {}
+  }
+
+
+  @media screen and (max-width: ($notebook + px)) {
+    margin-right: 15px;
+
+    h4 {
+      margin: 0 0 9px;
+    }
+
+    form {
+
+      input[type="email"] {
+        padding: 11px;
+        margin-right: 7px;
+        width: 52.8%;
+
+        &:focus {
+          outline: none;
+          border-color: $color-green;
+        }
+      }
+
+      input[type="submit"] {}
+    }
+
+  }
+}

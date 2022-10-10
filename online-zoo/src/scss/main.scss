@@ -1,0 +1,13 @@
+@import './vendors';
+@import './vars';
+@import './mixins';
+@import './base';
+@import '../blocks/menu/menu';
+@import '../blocks/sliders/sliders';
+@import '../blocks/header/header';
+@import '../blocks/footer/footer';
+@import '../blocks/buttons/buttons';
+@import '../blocks/forms/forms';
+@import '../blocks/popups/popups.scss';
+@import './index';
+@import './donate';

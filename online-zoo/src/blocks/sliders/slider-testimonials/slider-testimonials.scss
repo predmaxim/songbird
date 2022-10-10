@@ -1,0 +1,205 @@
+.testimonials__slider {
+  overflow: hidden;
+  margin-bottom: 32px;
+  position: relative;
+
+  .testimonials-container {
+    display: flex;
+    width: fit-content;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+
+    .item {
+      position: relative;
+      margin-bottom: 22px;
+      background: $color-gray-light;
+      border: 2px solid transparent;
+      padding: 13px 13px 19px 18px;
+      min-width: 226px;
+      overflow: hidden;
+      max-height: 355px;
+      cursor: pointer;
+      background: linear-gradient($color-gray-light, $color-gray-light) padding-box, linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%) border-box;
+      border-radius: 20px;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
+      -o-border-radius: 20px;
+
+      &:not(:last-child) {
+        margin-right: 29px;
+      }
+
+      &__wrapper {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+
+      .item__header {
+        display: flex;
+
+        .avatar {
+          margin-right: 10px;
+          max-height: 37px;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+        }
+
+        .header-text {
+          display: flex;
+          flex-direction: column;
+
+          .name {}
+
+          .info {
+            display: flex;
+            font-size: 15px;
+            font-weight: 300;
+            color: #BDBDBD;
+
+            .location,
+            .date {
+              margin-right: 5px;
+              line-height: 1;
+            }
+          }
+        }
+      }
+
+      .item__text {
+        font-size: 15px;
+        font-weight: 300;
+        margin-top: 10px;
+        line-height: 1.2;
+        color: $color-gray;
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+
+    @media screen and (max-width: ($notebook + px)) {
+
+      .item {
+        min-width: 259px;
+        max-height: 355px;
+        padding: 13px 13px 58px;
+        margin-bottom: 20px;
+      }
+
+    }
+
+    @media screen and (max-width: ($tablet + px)) {
+      flex-direction: column;
+
+      .item {
+        margin-bottom: 0;
+        max-height: 380px;
+        padding: 13px 13px 6px 18px;
+
+        &:nth-child(1n + 4) {
+          display: none;
+        }
+
+
+        &:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 15px;
+        }
+
+        &__text {
+          max-height: 38px;
+          overflow: hidden;
+        }
+      }
+    }
+
+    @media screen and (max-width: ($mobile + px)) {
+      flex-direction: column;
+
+      .item {
+        margin-right: 0;
+        padding: 7px 13px 11px 18px;
+
+        &:not(:last-child) {
+          margin-bottom: 17px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: ($notebook + px)) {
+    margin-bottom: 52px;
+  }
+
+  @media screen and (max-width: ($tablet + px)) {
+    margin-bottom: 26px;
+  }
+
+  @media screen and (max-width: ($mobile + px)) {
+    margin-bottom: 14px;
+  }
+
+
+
+  .pagination__slider {
+    $range-track-width: 600;
+
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    max-width: $range-track-width + px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    background: $color-gray-light;
+    cursor: pointer;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+
+    &::-webkit-slider-runnable-track {
+      background: $color-gray-light;
+      height: 8px;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+    }
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      -webkit-appearance: none;
+      border: none;
+      background: $color-orange;
+      width: calc($range-track-width / 8) + px;
+      height: 8px;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+}
+
+    @media screen and (max-width: ($tablet + px)) {
+      & {
+        display: none;
+      }
+    }
+
+  }
+}

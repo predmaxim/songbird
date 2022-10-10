@@ -1,0 +1,37 @@
+footer#footer
+  .container
+
+    .logo
+      a.logo_link(href='/')
+        p.logo__name PetStory online
+        img.logo__icon(src=require("Img/bamboo.png"), alt="logo_icon")
+
+    .subscribe-form
+      h4 Subscribe to our news
+      include Forms/subscribe-form/subscribe-form.pug
+
+    .footer__button
+      a.button.orange.big.radius-5.uppercase(href='donate.html')
+        span donate for volunteers
+
+    .socials 
+      .socials__social 
+        a.social-icon(href='javascript://')
+          img.facebook(src=require('Img/social_network.svg') alt="Facebook")
+          span Facebook
+        a.social-icon(href='javascript://')
+          img.twitter(src=require('Img/social_network.svg') alt="Twitter")
+          span Twitter
+        a.social-icon(href='javascript://')
+          img.instagram(src=require('Img/social_network.svg') alt="Instagram")
+          span Instagram
+        a.social-icon(href='javascript://')
+          img.youtube(src=require('Img/social_network.svg') alt="YouTube")
+          span YouTube
+
+    .footer__menu
+      include Menu/menu.pug
+
+    .footer__author 
+      p Designed by Alisa Samborskaya
+      p ©RSSchool & ©Yem Digital 2021

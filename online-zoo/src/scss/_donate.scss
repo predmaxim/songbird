@@ -1,0 +1,391 @@
+$height-home-screen-donate-section-desktop: 390;
+$height-home-screen-donate-section-notebook: 390;
+$height-home-screen-donate-section-tablet: 335;
+$height-home-screen-donate-section-mobile: 187;
+
+
+.home-screen-donate {
+  background: $home-screen-bg;
+  background-size: cover;
+  height: $height-home-screen-donate-section-desktop + px;
+  text-align: center;
+  background-position: center;
+
+
+  @media screen and (max-width: ($notebook + px)) {
+    height: $height-home-screen-donate-section-notebook + px;
+    background-position: 28% 50%;
+    background-size: 158%;
+  }
+
+  @media screen and (max-width: ($tablet + px)) {
+    height: $height-home-screen-donate-section-tablet + px;
+    background-position: 37% 51%;
+    background-size: 215%;
+  }
+
+  @media screen and (max-width: ($mobile + px)) {
+    height: $height-home-screen-donate-section-mobile + px;
+    background-position: 34% 50%;
+    background-size: 246%;
+  }
+
+
+}
+
+.donation-information {
+  background: $color-orange-gradient-light;
+  padding: 40px 0 180px;
+
+
+  h2 {
+    margin: 0;
+    font-size: $font-size-h3 + px;
+    font-weight: 400;
+    color: $color-white;
+    line-height: 1.3;
+  }
+
+  p {
+    color: $color-white;
+    margin: 10px 0 40px;
+  }
+
+  h3 {
+    color: $color-orange;
+    margin: 0 0 60px;
+  }
+
+  &__description {
+    font-size: $font-size-h4 + px;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+
+  &__row-wrap {
+    background: $color-frosted-glass-white;
+    padding: 40px 92px 61.98px;
+
+    h2 {
+      font-size: 48px;
+      color: $color-orange;
+      text-align: center;
+      margin: 0 0 20px;
+    }
+
+    p {
+      color: $color-black-blue;
+      margin: 0;
+    }
+
+    .donation-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 107px 0 48.53px;
+
+      p:first-child {
+        font-size: 72px;
+        line-height: .8;
+        font-weight: 500;
+        margin-bottom: 11px;
+      }
+
+      p:last-child {
+        margin: 0;
+      }
+
+      .panda {
+        max-width: 268.49px;
+        height: auto;
+        display: block;
+      }
+    }
+
+    .donation-wrap .inner-column:nth-child(1) {
+      flex: 0 0 200px;
+    }
+
+    .donation-wrap .inner-column:nth-child(2) {
+      flex: 0 0 70px;
+      text-align: left;
+    }
+
+    .donation-wrap .inner-column:nth-child(3) {
+      flex: 0 0 200px;
+    }
+
+    .icon-x {
+      font-size: 25px;
+    }
+
+    @media screen and (max-width: ($mobile + px)) {
+      .amount-text {
+        margin: 0px 0 8px 0;
+      }
+
+      .range {
+        margin: 0 0 23px;
+
+        &__input-wrap {
+          height: 14px;
+          padding: 0 19px 0;
+
+          input[type=range] {
+            position: relative;
+            top: -5px;
+          }
+        }
+      }
+    }
+
+
+  }
+
+  @media screen and (max-width: ($notebook + px)) {
+    padding: 40px 0 30px;
+    // margin-bottom: 30px;
+
+    h3 {
+      margin-bottom: 40px;
+    }
+
+    .inner-row:first-child {
+      p {
+        margin: 29px 0 45px;
+      }
+    }
+
+    &__row-wrap {
+      background: $color-frosted-glass-white;
+      padding: 20px 47px 45.98px;
+
+      h2 {
+        font-size: 48px;
+        margin: -3px 0 10px -15px
+      }
+
+      .donation-wrap {
+        margin: 102px auto 45.53px;
+
+        .inner-column:nth-child(1) {
+          flex: 0 0 170px;
+        }
+
+        .inner-column:nth-child(2) {
+          flex: 0 0 80px;
+          margin-top: -20px;
+        }
+
+        .inner-column:nth-child(3) {
+          flex: 0 0 308px;
+        }
+      }
+
+
+    }
+
+    .range-wrap {
+      width: 96%;
+      margin: auto;
+    }
+
+    .button {
+      padding: 16px 8.5%;
+    }
+  }
+
+  @media screen and (max-width: ($tablet-land + px)) {
+    padding: 30px 0 46px;
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      margin-bottom: 30px;
+    }
+
+    p {
+      margin: 0 0 30px;
+    }
+
+    &__row-wrap {
+      background: $color-frosted-glass-white;
+      padding: 30px 0px 30.98px;
+      text-align: center;
+
+      h2 {
+        font-size: 48px;
+        margin: 0 0 20px;
+      }
+
+      p {
+        margin-bottom: 97px;
+      }
+
+      .donation-wrap {
+        margin: 0 0 48.53px;
+      }
+
+      .amount-text {
+        text-align: left;
+        margin: 0 0 7px 10px;
+      }
+
+      .range {
+        margin-top: 0;
+      }
+
+    }
+  }
+
+  @media screen and (max-width: ($tablet + px)) {
+
+    h2 {
+      margin-bottom: 15px;
+    }
+
+    .inner-row:first-child p {
+      margin: 0 0 28px;
+    }
+
+    &__row-wrap {
+      .donation-wrap {
+        display: grid;
+        grid-template-columns: .6fr .2fr 1fr;
+        align-items: center;
+        margin: 0 0 40px;
+
+        .inner-column:nth-child(1) {
+          margin: -4px 0 0 14px;
+        }
+
+        .inner-column:nth-child(2) {
+          margin: -28px -9px 0;
+        }
+
+        .inner-column:nth-child(3) {
+          margin: -8px 0 0 9px;
+        }
+
+        .panda {
+          width: 100%;
+          ;
+        }
+      }
+    }
+
+    .range-wrap {
+      width: 100%;
+    }
+
+  }
+
+  @media screen and (max-width: ($tablet - 40 + px)) {
+    padding: 30px 0 21px;
+
+    h3 {
+      font-size: 24px;
+    }
+
+    &__row-wrap {
+      background: $color-frosted-glass-white;
+      padding: 20px 0px 19.98px;
+      text-align: center;
+
+      h2 {
+        font-size: 36px;
+        margin: 0 0 10px;
+      }
+
+      p {
+        font-size: 16px;
+        margin-bottom: 50px;
+      }
+
+      .donation-wrap {
+        margin: 0 0 41.53px;
+      }
+
+      .amount-text {
+        margin: 0 0 8.5px 0;
+      }
+
+      .range {
+        margin: 0 0 25px;
+      }
+
+    }
+  }
+
+  @media screen and (max-width: ($mobile + 80 + px)) {
+    .button {
+      padding: 16px;
+      width: 100%;
+    }
+
+  }
+
+  @media screen and (max-width: ($mobile + px)) {
+    &__row-wrap {
+      padding: 15px 0px 19.98px;
+
+      h2 {
+        font-size: 24px;
+        margin: 0 0 7px;
+      }
+
+      // .inner-row {
+      //   &:first-child {
+      //     p {
+      //       margin: 0 0 24px;
+      //     }
+      //   }
+      // }
+
+      p {
+        margin-bottom: 44px;
+      }
+
+      .donation-wrap {
+        margin: 0 0 2px;
+
+
+        p:first-child {
+          font-size: 40.6px;
+          margin-bottom: 6.2px;
+        }
+
+        p:last-child {
+          font-size: 9.3px;
+        }
+
+        .panda {
+          max-width: 268.49px;
+          height: auto;
+          display: block;
+        }
+
+        .icon-x {
+          font-size: 12px;
+        }
+
+        .inner-column:nth-child(1) {
+          margin: -7px 0 0 -7px;
+        }
+
+        .inner-column:nth-child(2) {
+          margin: -26px -7px 0;
+        }
+
+        .inner-column:nth-child(3) {
+          margin: -8px 6px 0px 9px;
+        }
+      }
+    }
+  }
+
+}

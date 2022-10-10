@@ -1,0 +1,126 @@
+%headerLinkStyle {
+  color: $color-menu-link;
+  font-weight: $weight-menu-link;
+}
+
+header {
+  background: $color-bg-header;
+  height: $height-header-desktop + px;
+  display: flex;
+  position: relative;
+  z-index: 11;
+
+  a {
+    border: none;
+  }
+
+  @media screen and (max-width: ($notebook + px)) {
+    & {
+      height: $height-header-notebook + px;
+    }
+  }
+
+  @media screen and (max-width: ($tablet + px)) {
+    & {
+      height: $height-header-tablet + px;
+      position: sticky;
+      top: 0;
+    }
+  }
+
+  @media screen and (max-width: ($mobile + px)) {
+    & {
+      height: $height-header-mobile + px;
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    width: $max-width + px;
+
+    @media screen and (max-width: ($tablet + px)) {
+      & {
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+.logo {
+  position: relative;
+  margin-right: 63px;
+  border: 1px solid $color-white;
+  border-radius: 2px;
+  padding: 2px 4px;
+  margin-left: 1px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+
+  @media screen and (max-width: ($tablet-land + px)) {
+    & {
+      margin-right: clamp(15px, 6%, 63px);
+    }
+  }
+
+  @media screen and (max-width: ($tablet + px)) {
+    & {
+      border: none;
+      padding: 0;
+    }
+  }
+
+
+  h1 {
+    font-size: 19px;
+    line-height: 1.2;
+    text-align: center;
+    font-weight: 400;
+    text-transform: none;
+    width: min-content;
+
+    @media screen and (max-width: ($tablet + px)) {
+      & {
+        font-size: 12.29px;
+      }
+    }
+
+  }
+
+  a {
+    color: $color-menu-link;
+
+    &:hover {
+      color: $color-orange;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 45%;
+    left: 13%;
+
+    @media screen and (max-width: ($tablet + px)) {
+      & {
+        top: 45%;
+        left: 9%;
+        width: 8px;
+      }
+    }
+
+  }
+}
+
+
+.author {
+  color: $color-white;
+  white-space: nowrap;
+
+  @media screen and (max-width: ($tablet + px)) {
+    & {
+      display: none;
+    }
+  }
+}
