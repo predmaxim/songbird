@@ -1,0 +1,48 @@
+.songbird-header {
+
+  .header-row {
+    display: grid;
+    align-items: center;
+    grid-template-areas: "logo score gallary settings";
+    grid-template-columns: 1fr repeat(3, max-content);
+    grid-auto-flow: row dense;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: $mobile) {
+
+      grid-template-columns: 1fr 1repeat(2, max-content) 1fr;
+      grid-template-areas:
+        "logo gallary settings"
+        "score score score";
+    }
+
+    .logo {
+      grid-area: logo;
+      max-width: 134px;
+    }
+
+    .score {
+      grid-area: score;
+      margin-top: 7px;
+      padding: 10px;
+
+      @media screen and (max-width: $mobile) {
+        text-align: center;
+        margin-bottom: 0;
+      }
+    }
+
+    .gallary {
+      grid-area: gallary;
+      margin-top: 7px;
+      padding: 10px;
+    }
+
+    .settings {
+      grid-area: settings;
+      margin-top: 9px;
+      padding: 10px;
+    }
+  }
+
+}

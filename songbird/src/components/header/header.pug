@@ -1,0 +1,19 @@
+//- header
+header.songbird-header
+
+  .container
+
+    .header-row
+
+      .logo
+        a(href="/")
+          img.logo-img(src=require("Img/songbird-logo.svg"), alt="songbird logo")
+
+      .score
+        include Score/score.pug
+
+      .gallary
+        a(href="#") Gallery
+
+      .settings
+        include Settings/settings.pug
