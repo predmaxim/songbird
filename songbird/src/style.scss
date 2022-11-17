@@ -1,9 +1,12 @@
+@import 'components/base/vendors';
+@import 'components/base/vars';
+@import 'components/base/base';
 @import 'components/birds-description/birds-description';
 @import 'components/birds-list/birds-list';
 @import 'components/footer/footer';
 @import 'components/header/header';
 @import 'components/menu/menu';
-@import 'components/page-result/page-result';
+@import 'components/result/result';
 @import 'components/player/player';
-@import 'components/score-block/score-block';
-@import 'components/settings-menu/settings-menu';
+@import 'components/score/score';
+@import 'components/settings/settings';
