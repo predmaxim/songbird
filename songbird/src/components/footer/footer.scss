@@ -1,0 +1,38 @@
+.footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 70px 0;
+
+  @media screen and (max-width: $mobile) {
+    padding: 50px 0;
+  }
+
+
+  .rss-logo {
+
+    @media screen and (max-width: $mobile) {
+      margin: 0 10px 15px 0;
+    }
+
+    .rss-logo__icon {
+      max-width: 128px;
+    }
+  }
+
+  .author {
+    display: flex;
+    align-items: center;
+
+    .author__link {
+      margin-right: 10px;
+      font-size: 20px;
+    }
+
+    .author__github-icon {
+      max-width: 30px;
+    }
+  }
+
+}
