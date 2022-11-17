@@ -36,7 +36,6 @@
   },
   "description": "",
   "dependencies": {
-    "@mdi/font": "^7.0.96",
     "normalize.css": "^8.0.1"
   }
 }
