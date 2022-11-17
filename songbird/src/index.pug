@@ -2,7 +2,29 @@ doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title SongBird Game
-  body
+    link(rel="stylesheet", href=require('style.scss'))
+    script(src=require('index.js')  defer)
+    include Base/mixins.pug
+
+  body.songbird-body
+
+    include Header/header.pug
+
+    main
+      section.songbird-home
+        .container
+
+      section.songbird-game
+        .container
+
+      section.songbird-result
+        .container
+
+      section.songbird-gallery
+        .container
+
+
+    include Footer/footer.pug
