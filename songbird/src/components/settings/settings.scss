@@ -1,10 +1,80 @@
 .settings-block {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  justify-content: end;
+  cursor: pointer;
+  position: relative;
+  grid-auto-flow: column;
+  align-items: center;
+  padding: 5px 10px;
 
-  .settings-link {
-    display: flex;
+  &:after {
+    content: url("Img/settings-icon.svg");
+    margin-left: 10px;
+    margin-top: 4px;
   }
 
-  .settings-icon {
-    margin-left: 10px;
+  .settings-menu {
+
+    display: grid;
+    justify-content: space-between;
+    // grid-template-columns: auto min-content;
+    padding: 15px 30px;
+    width: 220px;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    z-index: 1;
+
+    &__row {
+      display: grid;
+      justify-content: space-between;
+      grid-template-columns: auto auto;
+      width: inherit;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+
+      .set-dark-theme,
+      .set-light-theme,
+      .set-ru-lang,
+      .set-en-lang {
+        padding: 10px;
+        margin: 0;
+        width: 75px;
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+      }
+
+      .set-dark-theme {
+
+        &:before {
+          content: url("Img/dark.svg");
+        }
+      }
+
+      .set-light-theme {
+
+        &:before {
+          content: url("Img/light.svg");
+        }
+      }
+
+      .set-ru-lang {
+
+        &:before {
+          content: url("Img/ru.svg");
+        }
+      }
+
+      .set-en-lang {
+
+        &:before {
+          content: url("Img/en.svg");
+        }
+      }
+    }
   }
 }
