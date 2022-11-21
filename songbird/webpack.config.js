@@ -10,17 +10,19 @@ const __dirname = dirname(__filename);
 
 const pages = ['index'];
 const aliases = {
+  LightTheme: path.join(__dirname, 'src/themes/theme-light.scss'),
+  DarkTheme: path.join(__dirname, 'src/themes/theme-dark.scss'),
   Img: path.join(__dirname, 'src/assets/img/'),
   Base: path.join(__dirname, 'src/components/base/'),
-  BirdsDescriptoin: path.join(__dirname, 'src/components/birds-descriptoin/'),
+  BirdsDescription: path.join(__dirname, 'src/components/birds-description/'),
   BirdsList: path.join(__dirname, 'src/components/birds-list/'),
   Footer: path.join(__dirname, 'src/components/footer/'),
   Header: path.join(__dirname, 'src/components/header/'),
-  Menu: path.join(__dirname, 'src/components/menu/'),
-  Result: path.join(__dirname, 'src/components/result/'),
   Player: path.join(__dirname, 'src/components/player/'),
   Score: path.join(__dirname, 'src/components/score/'),
   Settings: path.join(__dirname, 'src/components/settings/'),
+  HomePage: path.join(__dirname, 'src/pages/home/'),
+  Slider: path.join(__dirname, 'src/components/slider/'),
 }
 
 
@@ -34,7 +36,7 @@ const devServer = (isDev) => isDev ? {
       paths: ['src/**/*.*'],
       options: { usePolling: true, }
     },
-    static: { directory: join(__dirname, 'dist'), },
+    static: { directory: join(__dirname, 'src'), },
   },
   // stats: 'errors-only'
 } : {}
