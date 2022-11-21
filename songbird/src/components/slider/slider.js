@@ -8,7 +8,7 @@ let curSlider = 0;
 
 const sliderRoll = (toSlide) => {
 
-  if(toSlide) curSlider = toSlide;
+  if (toSlide) curSlider = toSlide;
   else curSlider++;
 
   slider.style.transform = `translateX(-${curSlider * sliderWidth}px)`;
@@ -24,6 +24,16 @@ document.addEventListener('click', (e) => {
   if (e.target === newGameBtn) {
     sliderRoll(1);
     newGame();
+  }
+
+  if (e.target.closest('.gallary')) {
+    document.querySelector('.songbird-gallery').classList.remove('dispnone');
+    sliderRoll(3);
+  }
+
+  if (e.target.closest('.logo')) {
+    curSlider = 0
+    slider.style.transform = `translateX(-${curSlider * sliderWidth}px)`;
   }
 
 })
