@@ -8,7 +8,7 @@
     "build": "webpack",
     "dev": "webpack serve --env isDev",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -e rss-gem-puzzle/ --message 'Deploy to GitHub Pages'"
+    "deploy": "gh-pages -d dist -e songbird/ --message 'Deploy to GitHub Pages'"
   },
   "repository": {
     "type": "git",
