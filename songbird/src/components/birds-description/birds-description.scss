@@ -64,7 +64,17 @@
       height: 25px;
       padding: 0;
       cursor: pointer;
+      position: relative;
+
+      &.play {
+        background: url("assets/img/play-btn.svg") no-repeat;
+      }
+
+      &.stop {
+        background: url("assets/img/stop-btn.svg") no-repeat;
+      }
     }
+
 
     .birds-description-info__info-wrap {
       grid-area: info;

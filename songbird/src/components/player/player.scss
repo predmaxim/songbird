@@ -17,7 +17,8 @@ $thumb-r: .5*$thumb-d;
 
 @mixin track($f: 0) {
   border: none;
-  /*becauseIE*/width: 100%;
+  /*becauseIE*/
+  width: 100%;
   height: $track-h;
   border-radius: $track-r;
   box-shadow: none;
@@ -70,12 +71,16 @@ $thumb-r: .5*$thumb-d;
   .quest-img {
     grid-area: quest-img;
     align-self: center;
+    height: 100px;
+    width: 100px;
 
-    img {
-      height: 100px;
+
+    &.placeholder {
+      background: url("../../assets/img/placeholder-img.svg") no-repeat;
       width: 100px;
-      object-fit: cover;
-      object-position: center;
+      height: 100px;
+      background-position: center!important;
+      background-size: cover!important;
     }
   }
 
@@ -93,11 +98,27 @@ $thumb-r: .5*$thumb-d;
     grid-area: player-volume;
     display: grid;
     justify-self: end;
+    align-items: center;
     grid-template-columns: auto 1fr;
 
     .mute-button {
       margin-right: 15px;
       cursor: pointer;
+
+      &.volume,
+      &.mute {
+        width: 25px;
+        height: 25px;
+
+      }
+
+      &.volume {
+        background: url("../../assets/img/player-volume-btn-light.svg") no-repeat;
+      }
+
+      &.mute {
+        background: url("../../assets/img/mute-light.svg") no-repeat;
+      }
     }
 
     .sound-volume {
@@ -120,7 +141,7 @@ $thumb-r: .5*$thumb-d;
       grid-template-columns: auto;
     }
 
-    .play {
+    .play-button {
       cursor: pointer;
       margin-right: 15px;
 
@@ -128,7 +149,19 @@ $thumb-r: .5*$thumb-d;
         justify-self: end;
       }
 
-      img {}
+      &.play,
+      &.stop {
+        width: 40px;
+        height: 40px;
+      }
+
+      &.play {
+        background: url("../../assets/img/player-play-btn-light.svg") no-repeat;
+      }
+
+      &.stop {
+        background: url("../../assets/img/player-stop-btn-light.svg") no-repeat;
+      }
     }
 
     .progress {
@@ -155,6 +188,7 @@ $thumb-r: .5*$thumb-d;
     --pos: calc(#{$thumb-d} + var(--val)*(100% - #{$thumb-d}));
 
   }
+
   .sound-progress {
     --pos: calc(#{$thumb-d} + var(--val)*(100% - #{$thumb-d}));
   }

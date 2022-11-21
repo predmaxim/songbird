@@ -2,8 +2,8 @@
 import { getCorrectCard } from "Base/base.js";
 
 const player = document.querySelector('.player');
-const playBtn = player.querySelector('.play img');
-const muteButton = player.querySelector('.mute-button img');
+const playBtn = player.querySelector('.play-button');
+const muteButton = player.querySelector('.mute-button');
 const songTimer = player.querySelector('.duration-timer');
 
 let soundProgress = player.querySelector('.sound-progress');
@@ -14,7 +14,7 @@ let restoreVolume = 0;
 const audio = new Audio();
 let isPlay = false;
 
-const questImgElem = document.querySelector('.quest-img img');
+const questImgElem = document.querySelector('.quest-img');
 const questNameElem = document.querySelector('.quest-name');
 
 document.documentElement.classList.add('player-js');
@@ -25,14 +25,15 @@ soundProgress.value = 0;
 
 
 const setCorrectInfoToPlayer = (card) => {
-  questImgElem.src = card.image;
+  // questImgElem.src = card.image;
+  questImgElem.style.setProperty('background', `url("${card.image}")`);
   questNameElem.textContent = card.name;
 }
 
 const clearPlayer = () => {
   if (isPlay) playBtn.click();
-
-  questImgElem.src = 'assets/img/placeholder-img.svg';
+  questImgElem.style.setProperty('background', ``);
+  // questImgElem.classList.add('placeholder');
   questNameElem.textContent = '**********';
   songTimer.innerHTML = `00:00 / 00:00`;
   soundProgress.value = 0;
@@ -47,11 +48,13 @@ const playAudio = (audioURL) => {
 
   if (!isPlay) {
     audio.play();
-    playBtn.src = 'assets/img/player-stop-btn-light.svg';
+    playBtn.classList.remove('play');
+    playBtn.classList.add('stop');
     isPlay = true;
   } else {
     audio.pause();
-    playBtn.src = 'assets/img/player-play-btn-light.svg';
+    playBtn.classList.remove('stop');
+    playBtn.classList.add('play');
     isPlay = false;
   }
   return audio;
@@ -62,9 +65,11 @@ const muter = () => {
     audio.volume = restoreVolume;
     soundVolume.value = restoreVolume;
     soundVolume.style.setProperty('--val', +restoreVolume);
-    muteButton.src = 'assets/img/player-volume-btn-light.svg';
+    muteButton.classList.remove('mute');
+    muteButton.classList.add('volume');
   } else {
-    muteButton.src = 'assets/img/mute-light.svg';
+    muteButton.classList.remove('volume');
+    muteButton.classList.add('mute');
     restoreVolume = +soundVolume.value;
     audio.volume = 0;
     soundVolume.value = 0;
@@ -92,7 +97,7 @@ const secMinFormatter = (secs) => {
 
 
 document.addEventListener('click', (e) => {
-  e.target.closest('.play') ? playAudio(getCorrectCard().audio) : false;
+  e.target.closest('.play-button') ? playAudio(getCorrectCard().audio) : false;
   e.target.closest('.mute-button') ? muter() : false;
 })
 

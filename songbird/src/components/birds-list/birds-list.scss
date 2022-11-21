@@ -55,9 +55,22 @@
 
     .birds-item-badge {
       position: absolute;
-      bottom: 12px;
+      bottom: 13px;
       right: 15px;
-      // opacity: 0;
+
+      &.ok,
+      &.wrong {
+        width: 22px;
+        height: 22px;
+      }
+
+      &.ok {
+        background: url("../../assets/img/v.svg") no-repeat;
+      }
+
+      &.wrong {
+        background: url("../../assets/img/x.svg") no-repeat;
+      }
     }
   }
 

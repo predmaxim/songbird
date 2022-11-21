@@ -37,9 +37,10 @@ const setBirdDescription = (card) => {
 const playBirdSound = (audio) => {
   // const p = audio.play();
   // if (p !== undefined) p.catch((err) => console.log(err));
-  
+
   audio.play();
-  voiceBtnElem.querySelector('img').src = 'assets/img/stop-btn.svg';
+  voiceBtnElem.classList.remove('play');
+  voiceBtnElem.classList.add('stop');
   audioIsPlay = true;
   console.log('play');
 }
@@ -47,7 +48,8 @@ const playBirdSound = (audio) => {
 const stopBirdSound = (audio) => {
   audio.pause();
   audio.currentTime = 0;
-  voiceBtnElem.querySelector('img').src = 'assets/img/play-btn.svg';
+  voiceBtnElem.classList.add('play');
+  voiceBtnElem.classList.remove('stop');
   audioIsPlay = false;
   console.log('stop');
 

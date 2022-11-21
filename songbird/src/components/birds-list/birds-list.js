@@ -1,8 +1,6 @@
 import birdsData from "./data.js";
 
 const birdsListElem = document.querySelector('.birds-list');
-const okBadge = 'assets/img/v.svg';
-const wrongBadge = 'assets/img/x.svg';
 
 // random
 const random = (min, max, amount) => {
@@ -33,7 +31,7 @@ const createBirdsItem = ({ name, id, image }) => {
   birdsItemName.className = 'birds-item-name';
   birdsItemName.textContent = name;
 
-  const badgeImg = document.createElement('img');
+  const badgeImg = document.createElement('div');
   badgeImg.className = 'birds-item-badge';
 
   birdsListItem.appendChild(birdsItemImg)
@@ -68,8 +66,8 @@ const setPlayCards = (stageNum) => {
 
 // set Badge
 const setBadge = (target, boolean) => {
-  if (boolean) target.querySelector('.birds-item-badge').src = okBadge;
-  else target.querySelector('.birds-item-badge').src = wrongBadge;
+  if (boolean) target.querySelector('.birds-item-badge').classList.add('ok');
+  else target.querySelector('.birds-item-badge').classList.add('wrong');
 }
 
 

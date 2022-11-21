@@ -1,17 +1,14 @@
 .player
-  .quest-img
-    img(src="assets/img/placeholder-img.svg" alt="placeholder img")
+  .quest-img.placeholder
 
   p.quest-name ***************
 
   .player-volume
-    .mute-button
-      img(src=require("Img/player-volume-btn-light.svg"), alt="mute")
+    .mute-button.volume
     input.sound-volume(type="range" min="0" max="1" step="0.01" value="0.5")
 
   .player-row
-    .play
-      img(src=require("Img/player-play-btn-light.svg"), alt="play")
+    .play-button.play
 
     .progress
       input.sound-progress(type="range" name="sound-progress" min="0" max="1" step="0.01" value="0")

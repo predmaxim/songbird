@@ -23,7 +23,7 @@ html(lang="en")
               p Are you looking for a word puzzle game? We have a bird quiz game where you can show off your word game skills. Challenging yourself with a words game is the best way to enhance your vocabulary. \nYou can test your knowledge as well as learn the name of new birds and animals. Guess the bird is a word game where you have to find the name of birds and animals to complete the puzzles.
               p You can identify mammals, birds, and animals you have seen in a zoo with pictures. Word games are fun-filled learning methods that help you improve vocabulary and increase brain activity.
 
-            img.songbird-home-img(src=require("Img/home-bird-img.svg"), alt="Bird")
+            img.songbird-home-img(src=require("assets/img/home-bird-img.svg"), alt="Bird")
 
             button.songbird-home-play-btn.songbird-prymary-btn Play
 
@@ -41,7 +41,7 @@ html(lang="en")
             include BirdsDescription/birds-description.pug
 
             include BirdsList/birds-list.pug
-            
+
             include Player/player.pug
 
             button.next-btn
@@ -49,9 +49,9 @@ html(lang="en")
         section.songbird-result
           .container
             p.songbird-result__congratulation Congratulation!
-            p.songbird-result__score You scored #[span.score-you-scored 0] out of #[span.score-out-of  0] points.
+            p.songbird-result__score You scored #[span.score-you-scored 0] out of #[span.score-out-of 30] points.
             p.songbird-result__again Let's play again
-            img.songbird-result__arrow-down(src=require("Img/arrow-down.svg"))
+            img.songbird-result__arrow-down(src=require("assets/img/arrow-down.svg"))
             button.songbird-prymary-qrt-btn.new-game-btn Start new game
 
         section.songbird-gallery
