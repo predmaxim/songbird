@@ -1,0 +1,53 @@
+.theme-dark {
+
+  // BASE
+  $body-bg: #333;
+  $body-bg-gradient: #333;
+  $font-color: #E5E5E5;
+  $link-color: #E5E5E5;
+  $h-color: #fff;
+  $primary-color: #ED6565;
+  $primary-color-dark: #c75454;
+  $secondary-color: #937334;
+
+  // HEADER
+  $header-bg: transparent;
+  $header-font-color:#fff;
+  $logo-name-color: $header-font-color;
+
+  // SCORE
+  $score-bg: $secondary-color;
+  $score-font-color: #fff;
+
+  // SETTINGS MENU
+  $settings-menu-bg: #575757;
+  $settings-menu-icon-color: #fff;
+
+  // LAVEL
+  $lavel-bg: linear-gradient(92.98deg, #58534A 63.06%, #4A3333 224.17%);
+
+  // PLAYER
+  $player-bg-color: linear-gradient(92.98deg, #58534A 63.06%, #4A3333 224.17%);
+  $player-play-btn: inherit;
+  $player-volume-btn: inherit;
+  $player-track-color: #E5E5E5;
+
+  // BIRDS-DESCRIPTION
+  $bird-description-bg: linear-gradient(92.98deg, #58534A 63.06%, #4A3333 224.17%);
+
+  // BIRDS-LIST
+  $bird-list-bg: transparent;
+  $bird-list-hover: #000;
+
+  // NEXT BUTTON
+  $next-btn-bg: $primary-color;
+  $next-btn-bg-hover: $primary-color-dark;
+  $next-btn-bg-disabled-bg: #3C3A36;
+  $next-btn-icon-color: #575757;
+
+  // FOOTER
+  $footer-bg: transparent;
+  $footer-rs-logo: invert(1);
+  $footer-github-logo: invert(1);
+
+}
