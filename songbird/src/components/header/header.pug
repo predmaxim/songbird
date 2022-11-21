@@ -6,10 +6,11 @@ header.songbird-header
     .header-row
 
       .logo
-        a(href="/")
+        a.logo-link(href="/")
           img.logo-img(src=require("Img/songbird-logo.svg"), alt="songbird logo")
+          span.logo-name Songbird
 
-      .score
+      .score.dispnone
         include Score/score.pug
 
       .gallary
