@@ -51,7 +51,6 @@ export default ({ isDev }) => ({
   }, {}),
   output: {
     path: join(__dirname, 'dist'),
-    // publicPath: '/', // uncoment when deploy to gh-pages
     filename: 'assets/js/[name].[contenthash:8].js', // output filename of JS files
     clean: true
   },
@@ -73,7 +72,7 @@ export default ({ isDev }) => ({
             name: '[name].[hash:8]-[width]w.[ext]',
             quality: 50, // default 85
             format: 'webp',
-            esModule: true
+            esModule: true,
             // publicPath: 'assets/img/',
           },
         },
