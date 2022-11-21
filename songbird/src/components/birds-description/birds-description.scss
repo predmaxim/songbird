@@ -1,0 +1,80 @@
+.birds-description {
+  grid-area: b-desc;
+  height: 100%;
+
+  .birds-description-start {
+    text-align: center;
+    // padding: 10%;
+    // margin: auto;
+    margin: 80px;
+
+    @media screen and (max-width: $tablet) {
+      margin: 80px 20px;
+    }
+
+    .arrow-up {
+      justify-self: center;
+      transform: rotateX(180deg);
+      -webkit-transform: rotateX(180deg);
+      -moz-transform: rotateX(180deg);
+      -ms-transform: rotateX(180deg);
+      -o-transform: rotateX(180deg);
+    }
+
+    .birds-description-start__mess-header {
+      justify-self: center;
+      font-size: 25px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .birds-description-start__mess-body {}
+  }
+
+  .birds-description-info {
+    display: grid;
+    grid-template-columns: auto min-content;
+    grid-template-areas:
+      "b-name voice-btn"
+      "info info";
+    height: 100%;
+    background-size: cover!important;
+    background-position: center!important;
+    border-radius: 10px;
+
+    .birds-description-info__birds-name-wrap {
+      grid-area: b-name;
+      margin: 25px 0 0 25px;
+
+      .birds-description-info__birds-name {
+        font-size: 25px;
+        font-weight: 700;
+      }
+
+      .birds-description-info__birds-name-lat {
+        font-size: 14px;
+      }
+    }
+
+    .birds-description-info__birds-voice-btn {
+      margin: 25px 25px 0 0;
+      grid-area: voice-btn;
+      justify-self: end;
+      width: 25px;
+      height: 25px;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    .birds-description-info__info-wrap {
+      grid-area: info;
+      align-self: end;
+
+      .birds-description-info__info-text {
+        padding: 15px 25px;
+        margin: 0;
+      }
+    }
+  }
+
+}
