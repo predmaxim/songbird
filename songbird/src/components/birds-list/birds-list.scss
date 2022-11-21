@@ -1,0 +1,65 @@
+.birds-list {
+  grid-area: b-list;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(3, 1fr);
+
+  @media screen and (max-width:$tablet) {
+    justify-content: space-around;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, 1fr);
+    margin-top: 20px;
+  }
+
+  @media screen and (max-width:$mobile) {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .birds-list__item {
+    padding: 15px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+
+    &:hover {}
+
+    @media screen and (max-width: $notebook) {
+      padding: 0 0 15px;
+      margin: 0 5px 15px;
+    }
+
+
+    .birds-item-img {
+      width: 150px;
+      height: 110px;
+      margin-bottom: 10px;
+      object-fit: cover;
+      object-position: center;
+
+      @media screen and (max-width:$tablet) {
+        width: 180px;
+        height: 140px;
+      }
+
+      @media screen and (max-width:$mobile) {
+        width: 150px;
+        height: 110px;
+      }
+    }
+
+    .birds-item-name {
+      margin: 0;
+      text-align: center;
+    }
+
+    .birds-item-badge {
+      position: absolute;
+      bottom: 12px;
+      right: 15px;
+      // opacity: 0;
+    }
+  }
+
+
+}
