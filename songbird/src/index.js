@@ -1,7 +1,7 @@
-import './components/birds-description/birds-description.js';
-import './components/birds-list/birds-list.js';
-import './components/result/result.js';
-import './components/player/player.js';
-import './components/score/score.js';
-import './components/settings/settings.js';
-console.log('Hello!')
+import 'Base/base.js';
+import 'BirdsDescription/birds-description.js';
+import 'Slider/slider.js';
+import 'BirdsList/birds-list.js';
+import 'Player/player.js';
+import 'Score/score.js';
+import 'Settings/settings.js';
