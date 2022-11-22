@@ -1,4 +1,5 @@
-import { newGame,endGame } from 'Base/base.js';
+import { newGame } from 'Base/base.js';
+import { setGallery } from 'BirdsList/birds-list.js'
 
 const homePlayBtn = document.querySelector('button.songbird-home-play-btn');
 const newGameBtn = document.querySelector('button.new-game-btn');
@@ -28,6 +29,7 @@ document.addEventListener('click', (e) => {
 
   if (e.target.closest('.gallery')) {
     document.querySelector('.score').classList.add('dispnone');
+    setGallery();
     sliderRoll(3);
   }
 

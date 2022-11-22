@@ -1,6 +1,14 @@
 import birdsData from "./data.js";
 
-const birdsListElem = document.querySelector('.birds-list');
+const birdsListElem = document.querySelector('.songbird-game .birds-list');
+const birdsGalleryElem = document.querySelector('.songbird-gallery .birds-list');
+const allCards = birdsData
+  .flat()
+  .map((el, i) => {
+    el.id = i
+    return el
+  });
+
 
 // random
 const random = (min, max, amount) => {
@@ -65,6 +73,19 @@ const setPlayCards = (stageNum) => {
   return cards;
 };
 
+// set Gallery
+const setGallery = () => {
+  const cards = allCards
+    .map(bird => createBirdsItem(bird))
+    .sort(() => Math.random() - 0.5)
+    .forEach(el => birdsGalleryElem.insertAdjacentElement('afterbegin', el));
+  return allCards
+}
+
+const getAllCards = () => {
+  return allCards;
+}
+
 // set Badge
 const setBadge = (target, boolean) => {
   if (boolean) target.querySelector('.birds-item-badge').classList.add('ok');
@@ -73,4 +94,4 @@ const setBadge = (target, boolean) => {
 
 
 
-export { setPlayCards, clearPlayCards, setСorrectCard, setBadge, createBirdsItem };
+export { setPlayCards, clearPlayCards, setСorrectCard, setBadge, createBirdsItem, setGallery, getAllCards };

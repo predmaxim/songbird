@@ -1,4 +1,4 @@
-import { clearPlayCards, setPlayCards, setСorrectCard, setBadge } from 'BirdsList/birds-list.js'
+import { clearPlayCards, setPlayCards, setСorrectCard, setBadge, setGallery,getAllCards } from 'BirdsList/birds-list.js'
 import { hideStartDescription, showStartDescription, setBirdDescription } from 'BirdsDescription/birds-description.js'
 import { setCorrectInfoToPlayer, clearPlayer } from 'Player/player.js'
 import { sliderRoll } from 'Slider/slider.js'
@@ -6,6 +6,7 @@ import { setScore, countScore, getFinalScore, clearScore } from 'Score/score.js'
 
 const nextBtn = document.querySelector('.next-btn');
 
+const allCards = getAllCards();
 let curStage = 0;
 let correctCard; // = {};
 let playCards; // = [];
@@ -110,8 +111,42 @@ document.addEventListener('click', (e) => {
     }
   }
 
+  if (e.target.closest('.songbird-gallery .birds-list__item')) {
+
+    const target = e.target.closest('.songbird-gallery .birds-list__item');
+    const card = allCards[target.id];
+
+    const descriptionStartElem = document.querySelector('.songbird-gallery .birds-description-start');
+    const descriptionInfoElem = document.querySelector('.songbird-gallery .birds-description-info');
+
+    const nameElem = document.querySelector('.songbird-gallery .birds-description-info__birds-name');
+    const nameLatElem = document.querySelector('.songbird-gallery .birds-description-info__birds-name-lat');
+    const descriptionElem = document.querySelector('.songbird-gallery .birds-description-info__info-text');
+    const voiceBtnElem = document.querySelector('.songbird-gallery .birds-description-info__birds-voice-btn');
+
+    descriptionStartElem.classList.add('dispnone');
+    descriptionInfoElem.classList.remove('dispnone');
+
+
+    descriptionInfoElem.style.background = `url(${card.image})`;
+    nameElem.textContent = card.name;
+    nameLatElem.textContent = card.species;
+    descriptionElem.textContent = card.description;
+
+    const audio = new Audio(card.audio);
+
+    voiceBtnElem.addEventListener('click', () => audio.play());
+
+
+  }
+
   if (e.target === nextBtn && nextBtn.classList.contains('active')) {
     if (checkStage(curStage)) newStage(curStage++);
+  }
+
+  if (e.target.closest('.songbird-gallery .new-game-btn')) {
+    sliderRoll(1);
+    newGame(0);
   }
 })
 

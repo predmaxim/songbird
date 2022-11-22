@@ -17,20 +17,7 @@ const voiceBtnElem = descriptionWrapElem.querySelector('.songbird-gallery .birds
 const birdsListElem = document.querySelector('.songbird-gallery .birds-list');
 let audioIsPlay = false;
 
-const allBirds = birdsData.flat();
-// let playCards; // = [];
-
-
-const cardElems = allBirds
-  .map(bird => createBirdsItem(bird))
-  .sort(() => Math.random() - 0.5)
-  .forEach(el => birdsListElem.insertAdjacentElement('afterbegin', el));
 
 
 
-document.addEventListener('click', (e) => {
-  if (e.target.closest('.songbird-gallery .new-game-btn')) {
-    sliderRoll(1);
-    newGame(0);
-  }
-})
+
