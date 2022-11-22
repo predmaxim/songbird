@@ -14,9 +14,18 @@ document.addEventListener('DOMContentLoaded', () => {
       settingsBlock.classList.toggle('active');
     }
 
-    if (e.target === settingsDark || e.target === settingsLight) {
-      settingsDark.classList.toggle('active');
-      settingsLight.classList.toggle('active');
+    if (e.target === settingsLight) {
+      document.querySelector('.songbird-body').classList.remove('theme-dark');
+      document.querySelector('.songbird-body').classList.add('theme-light');
+      settingsDark.classList.remove('active');
+      settingsLight.classList.add('active');
+    }
+
+    if (e.target === settingsDark ) {
+      document.querySelector('.songbird-body').classList.remove('theme-light');
+      document.querySelector('.songbird-body').classList.add('theme-dark');
+      settingsLight.classList.remove('active');
+      settingsDark.classList.add('active');
     }
 
     if (e.target === settingsRu || e.target === settingsEn) {

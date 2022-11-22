@@ -1,8 +1,8 @@
 $track-w: 100%;
 $track-h: 8px;
 $track-r: .5*$track-h;
-$track-bg: $player-track-color;
-$progr-bg: $player-progress-bg;
+$track-bg: var(--player-track-color);
+$progr-bg: var(--player-progress-bg);
 $thumb-d: 1em;
 $thumb-r: .5*$thumb-d;
 
@@ -44,8 +44,8 @@ $thumb-r: .5*$thumb-d;
   width: $thumb-d;
   height: $thumb-d;
   border-radius: 50%;
-  box-shadow: $player-thumb-shadow;
-  background: $primary-color;
+  box-shadow: var(--player-thumb-shadow);
+  background: var(--primary-color);
   cursor: ew-resize
 }
 

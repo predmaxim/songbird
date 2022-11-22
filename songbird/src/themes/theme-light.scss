@@ -1,148 +1,91 @@
-// BASE
-$body-bg: linear-gradient(115.59deg, #FFFFFF -22.09%, #FFF4DF 91.64%);
-$body-bg-gradient: linear-gradient(115.59deg, #FFFFFF -22.09%, #FFF4DF 91.64%);
-$font-color: #333;
-$link-color: #333;
-$h-color: #000;
-$primary-color: #ED6565;
-$primary-color-dark: #dd5858;
-$secondary-color: #FFE2A9;
+.theme-light {
+  // BASE
+  --body-bg: #fff;
+  --body-bg-gradient: linear-gradient(115.59deg, #FFFFFF -22.09%, #FFF4DF 91.64%);
+  // --body-bg-gradient: #333;
+  --font-color: #333;
+  --link-color: #333;
+  --h-color: #000;
+  --primary-color: #ED6565;
+  --primary-color-dark: #dd5858;
+  --secondary-color: #FFE2A9;
 
-// HEADER
-$header-bg: transparent;
-$header-font-color: $font-color;
-$logo-name-color: $header-font-color;
+  // HEADER
+  --header-bg: transparent;
+  --header-font-color: var(--font-color);
+  --logo-name-color: var(--header-font-color);
 
-// SCORE
-$score-bg: $secondary-color;
-$score-font-color: $font-color;
+  // SCORE
+  --score-bg: var(--secondary-color);
+  --score-font-color: var(--font-color);
 
-// SETTINGS
-$settings-menu-bg: #fff;
-$settings-menu-icon-color: $font-color;
+  // SETTINGS
+  --settings-menu-bg: #fff;
+  --settings-menu-icon-color: var(--font-color);
 
-// LAVEL
-$lavel-bg: linear-gradient(92.98deg, #FFECC8 63.06%, #FFB4B4 224.17%);
+  // LAVEL
+  --lavel-bg: linear-gradient(92.98deg, #FFECC8 63.06%, #FFB4B4 224.17%);
 
-// BIRDS-DESCRIPTION
-$bird-description-bg: linear-gradient(107.61deg, #FFECC8 7.47%, #FFB4B4 259.07%);
-$bird-description-info-bg: rgba(56, 53, 42, 0.22);
-$bird-description-info-font-color: #fff;
+  // BIRDS-DESCRIPTION
+  --bird-description-bg: linear-gradient(107.61deg, #FFECC8 7.47%, #FFB4B4 259.07%);
+  --bird-description-info-bg: rgba(56, 53, 42, 0.22);
+  --bird-description-info-font-color: #fff;
 
-// BIRDS-LIST
-$bird-list-bg: transparent;
-$bird-list-hover-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.25);
-
-
-// NEXT BUTTON
-$next-btn-bg: $primary-color;
-$next-btn-bg-hover: $primary-color-dark;
-$next-btn-bg-disabled-bg: #F3EDDE;
-
-// FOOTER
-$footer-bg: transparent;
-$footer-rs-logo: inherit;
-$footer-github-logo: inherit;
-
-// PLAYER
-$player-bg-color: linear-gradient(110.9deg, #FFECC8 35.45%, #FFB4B4 282.33%);
-$player-play-btn: inherit;
-$player-volume-btn: inherit;
-$player-track-color: #fff;
-$player-progress-bg: linear-gradient($primary-color, $primary-color);
-$player-thumb-shadow: 0 1px 8px rgb(172, 172, 172);
-
-// ==========================
-
-.songbird-body {
-  background: $body-bg-gradient;
-  color: $font-color;
-  height: 100%;
-}
-
-.songbird-home-h1 {
-  color: $h-color;
-}
-
-// BUTTONS
-
-.songbird-prymary-btn {
-  color: #fff;
-  background: $primary-color;
-  border: none;
-  font-weight: 700;
-  font-size: 20px;
-  padding: 20px 0;
-  cursor: pointer;
-  box-shadow: 0px 13px 20px 1px rgba(0, 0, 0, 0.1);
+  // BIRDS-LIST
+  --bird-list-bg: transparent;
+  --bird-list-hover-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.25);
 
 
-  border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px;
+  // NEXT BUTTON
+  --next-btn-bg: var(--primary-color);
+  --next-btn-bg-hover: var(--primary-color-dark);
+  --next-btn-bg-disabled-bg: #F3EDDE;
 
-  transition: .3s;
-  -webkit-transition: .3s;
-  -moz-transition: .3s;
-  -ms-transition: .3s;
-  -o-transition: .3s;
+  // FOOTER
+  --footer-bg: transparent;
+  --footer-rs-logo: inherit;
+  --footer-github-logo: inherit;
 
-  &:hover {
-    background: $primary-color-dark;
-    box-shadow: none;
+  // PLAYER
+  --player-bg-color: linear-gradient(110.9deg, #FFECC8 35.45%, #FFB4B4 282.33%);
+  --player-play-btn: inherit;
+  --player-volume-btn: inherit;
+  --player-track-color: #fff;
+  --player-progress-bg: linear-gradient(var(--primary-color), var(--primary-color));
+  --player-thumb-shadow: 0 1px 8px rgb(172, 172, 172);
+
+  // ==========================
+
+  &,
+  .songbird-body {
+    background: var(--body-bg-gradient);
+    color: var(--font-color);
+    height: 100%;
   }
-}
 
-.songbird-prymary-qrt-btn {
-  color: #fff;
-  background: $primary-color;
-  border: none;
-  font-weight: 700;
-  font-size: 20px;
-  padding: 20px 0;
-  cursor: pointer;
-  box-shadow: 0px 13px 20px 1px rgba(0, 0, 0, 0.1);
-
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-
-  transition: .3s;
-  -webkit-transition: .3s;
-  -moz-transition: .3s;
-  -ms-transition: .3s;
-  -o-transition: .3s;
-
-  &:hover {
-    background: $primary-color-dark;
-    box-shadow: none;
+  .songbird-home-h1 {
+    color: var(--h-color);
   }
-}
 
-.next-btn {
-  background: $next-btn-bg-disabled-bg;
-  border: none;
-  cursor: pointer;
+  // BUTTONS
 
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  .songbird-prymary-btn {
+    color: #fff;
+    background: var(--primary-color);
+    border: none;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 20px 0;
+    cursor: pointer;
+    box-shadow: 0px 13px 20px 1px rgba(0, 0, 0, 0.1);
 
-  transition: .3s;
-  -webkit-transition: .3s;
-  -moz-transition: .3s;
-  -ms-transition: .3s;
-  -o-transition: .3s;
 
-  &.active {
-    background: $primary-color;
-    box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+
     transition: .3s;
     -webkit-transition: .3s;
     -moz-transition: .3s;
@@ -150,61 +93,95 @@ $player-thumb-shadow: 0 1px 8px rgb(172, 172, 172);
     -o-transition: .3s;
 
     &:hover {
-      background: $primary-color-dark;
+      background: var(--primary-color-dark);
       box-shadow: none;
+    }
+  }
+
+  .songbird-prymary-qrt-btn {
+    color: #fff;
+    background: var(--primary-color);
+    border: none;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 20px 0;
+    cursor: pointer;
+    box-shadow: 0px 13px 20px 1px rgba(0, 0, 0, 0.1);
+
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+
+    &:hover {
+      background: var(--primary-color-dark);
+      box-shadow: none;
+    }
+  }
+
+  .next-btn {
+    background: var(--next-btn-bg-disabled-bg);
+    border: none;
+    cursor: pointer;
+
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+
+    &.active {
+      background: var(--primary-color);
+      box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.25);
+      transition: .3s;
+      -webkit-transition: .3s;
+      -moz-transition: .3s;
+      -ms-transition: .3s;
+      -o-transition: .3s;
+
+      &:hover {
+        background: var(--primary-color-dark);
+        box-shadow: none;
+      }
+
+      &::after {
+        filter: brightness(10);
+        -webkit-filter: brightness(10);
+      }
+
     }
 
     &::after {
-      filter: brightness(10);
-      -webkit-filter: brightness(10);
+      content: url(Img/next-btn-icon.svg);
     }
-
   }
 
-  &::after {
-    content: url(Img/next-btn-icon.svg);
-  }
-}
+  // SLIDER
 
-// SLIDER
-
-.slider {
-  transition: .3s;
-  -webkit-transition: .3s;
-  -moz-transition: .3s;
-  -ms-transition: .3s;
-  -o-transition: .3s;
-}
-
-// SETTINGS
-
-.settings-block {
-
-  transition: .3s;
-  -webkit-transition: .3s;
-  -moz-transition: .3s;
-  -ms-transition: .3s;
-  -o-transition: .3s;
-
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-
-  &.active {
-    background: $secondary-color;
+  .slider {
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
   }
 
-  &:hover {
-    background: $secondary-color;
-  }
+  // SETTINGS
 
-  .settings-icon {}
-
-  .settings-menu {
-    background: #fff;
-    box-shadow: $player-thumb-shadow;
+  .settings-block {
 
     transition: .3s;
     -webkit-transition: .3s;
@@ -218,326 +195,94 @@ $player-thumb-shadow: 0 1px 8px rgb(172, 172, 172);
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 
-    .set-dark-theme,
-    .set-light-theme,
-    .set-ru-lang,
-    .set-en-lang {
-
-      transition: .3s;
-      -webkit-transition: .3s;
-      -moz-transition: .3s;
-      -ms-transition: .3s;
-      -o-transition: .3s;
-
-      border-radius: 10px;
-      -webkit-border-radius: 10px;
-      -moz-border-radius: 10px;
-      -ms-border-radius: 10px;
-      -o-border-radius: 10px;
-
-      &:hover {
-        background: $secondary-color;
-      }
-
-      &.active {
-        background: $secondary-color;
-      }
-    }
-  }
-}
-
-// SCORE
-
-.score-field {
-  background: $score-bg;
-  color: $score-font-color;
-  font-weight: 700;
-
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-}
-
-// LAVEL
-
-.lavel {
-  background: $lavel-bg;
-  box-shadow: $bird-list-hover-shadow;
-
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-
-  &__item.active {
-    font-weight: 700;
-  }
-
-  /* Works on Firefox */
-  & {
-    scrollbar-width: thin;
-    scrollbar-color: $secondary-color #fff;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-  }
-
-  /* Works on Chrome, Edge, and Safari */
-  &::-webkit-scrollbar {
-    // width: 4px;
-    height: 6px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: #fff;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: $secondary-color;
-    border: none;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-  }
-}
-
-// PLAYER
-
-.player {
-
-  background: $player-bg-color;
-
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-
-
-  .quest-img {
-
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-
-  }
-
-  .quest-name {}
-
-
-  .player-volume {
-
-
-    .mute-button {
-      transition: .3s;
-      -webkit-transition: .3s;
-      -moz-transition: .3s;
-      -ms-transition: .3s;
-      -o-transition: .3s;
-    }
-
-    .sound-volume {}
-
-
-  }
-
-  .player-row {
-
-
-    .play-button {
-
-      &:hover {
-        box-shadow: none;
-      }
-
-      box-shadow: $player-thumb-shadow;
-
-      transition: .3s;
-      -webkit-transition: .3s;
-      -moz-transition: .3s;
-      -ms-transition: .3s;
-      -o-transition: .3s;
-
-      border-radius: 50%;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      -ms-border-radius: 50%;
-      -o-border-radius: 50%;
-
-    }
-
-    .progress {
-
-      .sound-progress {
-        transition: width 1s;
-        -webkit-transition: width 1s;
-        -moz-transition: width 1s;
-        -ms-transition: width 1s;
-        -o-transition: width 1s;
-      }
-
-      .duration-timer {}
-    }
-  }
-
-}
-
-// BIRDS-DESCRIPTION
-
-.birds-description {
-  background: $bird-description-bg;
-
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-
-  .birds-description-info {
-
-    transition: .3s;
-    -webkit-transition: .3s;
-    -moz-transition: .3s;
-    -ms-transition: .3s;
-    -o-transition: .3s;
-
-    @media screen and (max-width: $tablet) {
-      min-height: 400px;
-    }
-
-    @media screen and (max-width: $mobile) {
-      min-height: 350px;
-    }
-
-    &__info-wrap {
-      background: $bird-description-info-bg;
-      border-radius: 10px;
-      -webkit-border-radius: 10px;
-      -moz-border-radius: 10px;
-      -ms-border-radius: 10px;
-      -o-border-radius: 10px;
-    }
-
-    &__info-text,
-    &__birds-name,
-    &__birds-name-lat {
-      color: $bird-description-info-font-color;
-    }
-
-    &__birds-voice-btn {
-
-      box-shadow: $player-thumb-shadow;
-
-      transition: .3s;
-      -webkit-transition: .3s;
-      -moz-transition: .3s;
-      -ms-transition: .3s;
-      -o-transition: .3s;
-
-      border: none;
-      border-radius: 50%;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      -ms-border-radius: 50%;
-      -o-border-radius: 50%;
-
-      &:hover {
-        box-shadow: none;
-
-      }
-
-    }
-
-
-  }
-}
-
-// BIRDS-LIST
-
-.birds-list {
-
-  .birds-list__item {
-    transition: .3s;
-    -webkit-transition: .3s;
-    -moz-transition: .3s;
-    -ms-transition: .3s;
-    -o-transition: .3s;
-
-    &:hover,
     &.active {
-      box-shadow: $bird-list-hover-shadow;
+      background: var(--secondary-color);
+    }
+
+    &:hover {
+      background: var(--secondary-color);
+    }
+
+    .settings-icon {}
+
+    .settings-menu {
+      background: #fff;
+      box-shadow: var(--player-thumb-shadow);
+
+      transition: .3s;
+      -webkit-transition: .3s;
+      -moz-transition: .3s;
+      -ms-transition: .3s;
+      -o-transition: .3s;
 
       border-radius: 10px;
       -webkit-border-radius: 10px;
       -moz-border-radius: 10px;
       -ms-border-radius: 10px;
       -o-border-radius: 10px;
+
+      .set-dark-theme,
+      .set-light-theme,
+      .set-ru-lang,
+      .set-en-lang {
+
+        transition: .3s;
+        -webkit-transition: .3s;
+        -moz-transition: .3s;
+        -ms-transition: .3s;
+        -o-transition: .3s;
+
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+
+        &:hover {
+          background: var(--secondary-color);
+        }
+
+        &.active {
+          background: var(--secondary-color);
+        }
+      }
     }
+  }
 
-    .birds-item-img {
-      border-radius: 10px;
-      -webkit-border-radius: 10px;
-      -moz-border-radius: 10px;
-      -ms-border-radius: 10px;
-      -o-border-radius: 10px;
+  // SCORE
+
+  .score-field {
+    background: var(--score-bg);
+    color: var(--score-font-color);
+    font-weight: 700;
+
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+
+  // LAVEL
+
+  .lavel {
+    background: var(--lavel-bg);
+    box-shadow: var(--bird-list-hover-shadow);
+
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    &__item.active {
+      font-weight: 700;
     }
-
-    .birds-item-badge {}
-  }
-
-
-}
-
-
-// GALLERY
-
-.gallery {
-
-  transition: .3s;
-  -webkit-transition: .3s;
-  -moz-transition: .3s;
-  -ms-transition: .3s;
-  -o-transition: .3s;
-
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-
-  &.active {
-    background: $secondary-color;
-  }
-
-  &:hover {
-    background: $secondary-color;
-  }
-
-
-
-}
-
-.songbird-gallery {
-  .birds-list {
 
     /* Works on Firefox */
     & {
       scrollbar-width: thin;
-      scrollbar-color: $secondary-color #fff;
+      scrollbar-color: var(--secondary-color) #fff;
       border-radius: 10px;
       -webkit-border-radius: 10px;
       -moz-border-radius: 10px;
@@ -547,7 +292,8 @@ $player-thumb-shadow: 0 1px 8px rgb(172, 172, 172);
 
     /* Works on Chrome, Edge, and Safari */
     &::-webkit-scrollbar {
-      width: 6px;
+      // width: 4px;
+      height: 6px;
     }
 
     &::-webkit-scrollbar-track {
@@ -560,13 +306,271 @@ $player-thumb-shadow: 0 1px 8px rgb(172, 172, 172);
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: $secondary-color;
+      background-color: var(--secondary-color);
       border: none;
       border-radius: 10px;
       -webkit-border-radius: 10px;
       -moz-border-radius: 10px;
       -ms-border-radius: 10px;
       -o-border-radius: 10px;
+    }
+  }
+
+  // PLAYER
+
+  .player {
+
+    background: var(--player-bg-color);
+
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+
+    .quest-img {
+
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+
+    }
+
+    .quest-name {}
+
+
+    .player-volume {
+
+
+      .mute-button {
+        transition: .3s;
+        -webkit-transition: .3s;
+        -moz-transition: .3s;
+        -ms-transition: .3s;
+        -o-transition: .3s;
+      }
+
+      .sound-volume {}
+
+
+    }
+
+    .player-row {
+
+
+      .play-button {
+
+        &:hover {
+          box-shadow: none;
+        }
+
+        box-shadow: var(--player-thumb-shadow);
+
+        transition: .3s;
+        -webkit-transition: .3s;
+        -moz-transition: .3s;
+        -ms-transition: .3s;
+        -o-transition: .3s;
+
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+
+      }
+
+      .progress {
+
+        .sound-progress {
+          transition: width 1s;
+          -webkit-transition: width 1s;
+          -moz-transition: width 1s;
+          -ms-transition: width 1s;
+          -o-transition: width 1s;
+        }
+
+        .duration-timer {}
+      }
+    }
+
+  }
+
+  // BIRDS-DESCRIPTION
+
+  .birds-description {
+    background: var(--bird-description-bg);
+
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    .birds-description-info {
+
+      transition: .3s;
+      -webkit-transition: .3s;
+      -moz-transition: .3s;
+      -ms-transition: .3s;
+      -o-transition: .3s;
+
+      @media screen and (max-width: $tablet) {
+        min-height: 400px;
+      }
+
+      @media screen and (max-width: $mobile) {
+        min-height: 350px;
+      }
+
+      &__info-wrap {
+        background: var(--bird-description-info-bg);
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+      }
+
+      &__info-text,
+      &__birds-name,
+      &__birds-name-lat {
+        color: var(--bird-description-info-font-color);
+      }
+
+      &__birds-voice-btn {
+
+        box-shadow: var(--player-thumb-shadow);
+
+        transition: .3s;
+        -webkit-transition: .3s;
+        -moz-transition: .3s;
+        -ms-transition: .3s;
+        -o-transition: .3s;
+
+        border: none;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+
+        &:hover {
+          box-shadow: none;
+
+        }
+
+      }
+
+
+    }
+  }
+
+  // BIRDS-LIST
+
+  .birds-list {
+
+    .birds-list__item {
+      transition: .3s;
+      -webkit-transition: .3s;
+      -moz-transition: .3s;
+      -ms-transition: .3s;
+      -o-transition: .3s;
+
+      &:hover,
+      &.active {
+        box-shadow: var(--bird-list-hover-shadow);
+
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+      }
+
+      .birds-item-img {
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+      }
+
+      .birds-item-badge {}
+    }
+
+
+  }
+
+
+  // GALLERY
+
+  .gallery {
+
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    &.active {
+      background: var(--secondary-color);
+    }
+
+    &:hover {
+      background: var(--secondary-color);
+    }
+
+
+
+  }
+
+  .songbird-gallery {
+    .birds-list {
+
+      /* Works on Firefox */
+      & {
+        scrollbar-width: thin;
+        scrollbar-color: var(--secondary-color) #fff;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+      }
+
+      /* Works on Chrome, Edge, and Safari */
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #fff;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--secondary-color);
+        border: none;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+      }
     }
   }
 }
