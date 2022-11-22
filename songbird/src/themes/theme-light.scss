@@ -275,6 +275,42 @@ $player-thumb-shadow: 0 1px 8px rgb(172, 172, 172);
   &__item.active {
     font-weight: 700;
   }
+
+  /* Works on Firefox */
+  & {
+    scrollbar-width: thin;
+    scrollbar-color: $secondary-color #fff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+
+  /* Works on Chrome, Edge, and Safari */
+  &::-webkit-scrollbar {
+    // width: 4px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $secondary-color;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
 }
 
 // PLAYER
@@ -491,4 +527,46 @@ $player-thumb-shadow: 0 1px 8px rgb(172, 172, 172);
     background: $secondary-color;
   }
 
+
+
+}
+
+.songbird-gallery {
+  .birds-list {
+
+    /* Works on Firefox */
+    & {
+      scrollbar-width: thin;
+      scrollbar-color: $secondary-color #fff;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+    }
+
+    /* Works on Chrome, Edge, and Safari */
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #fff;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $secondary-color;
+      border: none;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+    }
+  }
 }
