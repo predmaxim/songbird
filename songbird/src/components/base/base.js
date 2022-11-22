@@ -1,8 +1,8 @@
 import { clearPlayCards, setPlayCards, setСorrectCard, setBadge } from 'BirdsList/birds-list.js'
+import { hideStartDescription, showStartDescription, setBirdDescription } from 'BirdsDescription/birds-description.js'
 import { setCorrectInfoToPlayer, clearPlayer } from 'Player/player.js'
 import { sliderRoll } from 'Slider/slider.js'
 import { setScore, countScore, getFinalScore, clearScore } from 'Score/score.js'
-import { hideStartDescription, showStartDescription, setBirdDescription } from 'BirdsDescription/birds-description.js'
 
 const nextBtn = document.querySelector('.next-btn');
 
@@ -10,7 +10,7 @@ let curStage = 0;
 let correctCard; // = {};
 let playCards; // = [];
 let gameStoped = false;
-let wrongAnswers = 0;
+let wrongAnswers = {};
 
 const right = new Audio('https://www.myinstants.com/media/sounds/rightanswer.mp3');
 const wrong = new Audio('https://www.myinstants.com/media/sounds/wrong_SriFgVc.mp3');
@@ -31,7 +31,7 @@ const setStage = (stageNum) => {
 };
 
 const newStage = () => {
-  wrongAnswers = 0;
+  wrongAnswers = {};
   curStage = setStage(curStage++);
 
   nextBtn.classList.remove('active');
@@ -100,10 +100,9 @@ document.addEventListener('click', (e) => {
         // playAudio().pause();
 
       } else {
-        wrongAnswers++
+        wrongAnswers[card.id] = 1;
         wrong.play();
         setBadge(target, false);
-
       }
     }
   }

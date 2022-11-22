@@ -9,10 +9,18 @@ const setScore = () => {
 };
 
 const countScore = (wrongAnswers) => {
-  let points = stagePoints - wrongAnswers;
+  let wrong = 0;
+
+  for (const key in wrongAnswers) {
+    if (Object.hasOwnProperty.call(wrongAnswers, key)) {
+      wrongAnswers[key] = 1 ? wrong++ : false;
+    }
+  }
+
+  let points = stagePoints - wrong;
 
   pointsSum += points
-  allPoints -= wrongAnswers;
+  allPoints -= wrong;
 
 };
 
