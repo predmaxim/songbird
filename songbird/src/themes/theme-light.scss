@@ -180,7 +180,6 @@ $player-thumb-shadow: 0 1px 8px rgb(172, 172, 172);
 
 .settings-block {
 
-
   transition: .3s;
   -webkit-transition: .3s;
   -moz-transition: .3s;
@@ -265,6 +264,7 @@ $player-thumb-shadow: 0 1px 8px rgb(172, 172, 172);
 
 .lavel {
   background: $lavel-bg;
+  box-shadow: $bird-list-hover-shadow;
 
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -463,5 +463,32 @@ $player-thumb-shadow: 0 1px 8px rgb(172, 172, 172);
     .birds-item-badge {}
   }
 
+
+}
+
+
+// GALLERY
+
+.gallery {
+
+  transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+
+  &.active {
+    background: $secondary-color;
+  }
+
+  &:hover {
+    background: $secondary-color;
+  }
 
 }

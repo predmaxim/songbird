@@ -23,6 +23,7 @@ const aliases = {
   Settings: path.join(__dirname, 'src/components/settings/'),
   HomePage: path.join(__dirname, 'src/pages/home/'),
   Slider: path.join(__dirname, 'src/components/slider/'),
+  Gallery: path.join(__dirname, 'src/components/gallery/'),
 }
 
 

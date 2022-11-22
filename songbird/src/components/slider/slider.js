@@ -26,8 +26,8 @@ document.addEventListener('click', (e) => {
     newGame();
   }
 
-  if (e.target.closest('.gallary')) {
-    document.querySelector('.songbird-gallery').classList.remove('dispnone');
+  if (e.target.closest('.gallery')) {
+    document.querySelector('.score').classList.add('dispnone');
     sliderRoll(3);
   }
 

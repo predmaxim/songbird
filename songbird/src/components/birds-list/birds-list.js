@@ -72,4 +72,4 @@ const setBadge = (target, boolean) => {
 
 
 
-export { setPlayCards, clearPlayCards, setСorrectCard, setBadge };
+export { setPlayCards, clearPlayCards, setСorrectCard, setBadge, createBirdsItem };

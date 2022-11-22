@@ -5,3 +5,4 @@ import 'BirdsList/birds-list.js';
 import 'Player/player.js';
 import 'Score/score.js';
 import 'Settings/settings.js';
+import 'Gallery/gallery.js';
