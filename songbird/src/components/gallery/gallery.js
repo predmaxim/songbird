@@ -31,6 +31,6 @@ const cardElems = allBirds
 document.addEventListener('click', (e) => {
   if (e.target.closest('.songbird-gallery .new-game-btn')) {
     sliderRoll(1);
-    newGame();
+    newGame(0);
   }
 })

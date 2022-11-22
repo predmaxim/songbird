@@ -1,4 +1,4 @@
-import { newGame } from 'Base/base.js';
+import { newGame,endGame } from 'Base/base.js';
 
 const homePlayBtn = document.querySelector('button.songbird-home-play-btn');
 const newGameBtn = document.querySelector('button.new-game-btn');

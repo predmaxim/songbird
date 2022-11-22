@@ -44,6 +44,7 @@ const createBirdsItem = ({ name, id, image }) => {
 // clear Cards
 const clearPlayCards = () => {
   if (birdsListElem.hasChildNodes()) birdsListElem.replaceChildren();
+  return 0;
 };
 
 // set Сorrect Card random from Play Cards

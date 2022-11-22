@@ -31,25 +31,29 @@ const setStage = (stageNum) => {
 };
 
 const newStage = () => {
+
   wrongAnswers = {};
-  curStage = setStage(curStage++);
 
   nextBtn.classList.remove('active');
+  curStage = setStage(curStage++);
+
   clearPlayer();
   showStartDescription();
   clearPlayCards();
+
   playCards = setPlayCards(curStage);
   correctCard = setСorrectCard(curStage);
   gameStoped = false;
 }
 
 const newGame = () => {
+  curStage = 0;
+  gameStoped = false;
   clearScore();
   clearPlayer();
   newStage(curStage);
 
   document.querySelector('.score').classList.remove('dispnone');
-  gameStoped = false;
 }
 
 const showResult = () => {
@@ -65,7 +69,6 @@ const stopStage = () => {
 const endGame = () => {
   showResult();
   gameStoped = true;
-  curStage = 0;
 }
 
 const getCorrectCard = () => {
@@ -75,9 +78,9 @@ const getCorrectCard = () => {
 
 document.addEventListener('click', (e) => {
 
-  if (e.target.closest('.birds-list__item')) {
+  if (e.target.closest('.songbird-game .birds-list__item')) {
 
-    const target = e.target.closest('.birds-list__item');
+    const target = e.target.closest('.songbird-game .birds-list__item');
     const card = playCards.filter(el => el.id === +target.id)[0];
 
     hideStartDescription();
@@ -119,4 +122,4 @@ document.addEventListener('click', (e) => {
 // Буду очень при очень при очень благодарен :)
 // Спасибо большое:)`)
 
-export { newGame, getCorrectCard };
+export { newGame, endGame, getCorrectCard };
