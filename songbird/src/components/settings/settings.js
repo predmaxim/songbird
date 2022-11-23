@@ -14,6 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
       settingsBlock.classList.toggle('active');
     }
 
+    if (e.target !== settingsBlock) {
+      settingsBlock.classList.remove('active');
+      settingsMenu.classList.add('dispnone');
+    }
+
     if (e.target === settingsLight) {
       document.querySelector('.songbird-body').classList.remove('theme-dark');
       document.querySelector('.songbird-body').classList.add('theme-light');
