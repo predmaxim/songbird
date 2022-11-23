@@ -1,5 +1,6 @@
 // import { getRandomNum } from "./functions.js";
 import { getCorrectCard } from "Base/base.js";
+import { getDescAudio, playBirdSound } from "BirdsDescription/birds-description.js";
 
 const player = document.querySelector('.player');
 const playBtn = player.querySelector('.play-button');
@@ -41,10 +42,9 @@ const clearPlayer = () => {
 }
 
 const playAudio = (audioURL) => {
+  if(!getDescAudio().paused) getDescAudio().pause();
+
   audio.src = audioURL;
-  // audio.preload = 'none';
-  // audio.load();
-  // audio.volume = soundVolume.value;
 
   if (!isPlay) {
     audio.play();
@@ -57,7 +57,6 @@ const playAudio = (audioURL) => {
     playBtn.classList.add('play');
     isPlay = false;
   }
-  return audio;
 }
 
 const muter = () => {
@@ -89,7 +88,9 @@ const secMinFormatter = (secs) => {
   return (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
 }
 
-
+const getPlayerAudio = () => {
+  return audio;
+}
 // document.addEventListener('input', e => {
 // 	e.target.style.setProperty('--val', +e.target.value);
 // }, false)
@@ -129,4 +130,4 @@ document.addEventListener('input', e => {
 
 }, false)
 
-export { setCorrectInfoToPlayer, clearPlayer, playAudio };
+export { setCorrectInfoToPlayer, clearPlayer, getPlayerAudio };

@@ -1,6 +1,6 @@
-import { clearPlayCards, setPlayCards, setСorrectCard, setBadge, setGallery,getAllCards } from 'BirdsList/birds-list.js'
-import { hideStartDescription, showStartDescription, setBirdDescription } from 'BirdsDescription/birds-description.js'
-import { setCorrectInfoToPlayer, clearPlayer } from 'Player/player.js'
+import { clearPlayCards, setPlayCards, setСorrectCard, setBadge, getAllCards } from 'BirdsList/birds-list.js'
+import { hideStartDescription, showStartDescription, setBirdDescription, getDescAudio } from 'BirdsDescription/birds-description.js'
+import { setCorrectInfoToPlayer, clearPlayer, getPlayerAudio } from 'Player/player.js'
 import { sliderRoll } from 'Slider/slider.js'
 import { setScore, countScore, getFinalScore, clearScore } from 'Score/score.js'
 
@@ -101,7 +101,7 @@ document.addEventListener('click', (e) => {
 
         if (checkStage(curStage)) nextBtn.classList.add('active');
         else setTimeout(endGame, 2000);
-        // playAudio().pause();
+        getPlayerAudio().pause();
 
       } else {
         wrongAnswers[card.id] = 1;

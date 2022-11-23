@@ -1,3 +1,5 @@
+import { getPlayerAudio } from 'Player/player.js';
+
 const descriptionWrapElem = document.querySelector('.birds-description');
 const descriptionStartElem = descriptionWrapElem.querySelector('.birds-description-start');
 const descriptionInfoElem = descriptionWrapElem.querySelector('.birds-description-info');
@@ -7,8 +9,9 @@ const nameLatElem = descriptionWrapElem.querySelector('.birds-description-info__
 const descriptionElem = descriptionWrapElem.querySelector('.birds-description-info__info-text');
 const voiceBtnElem = descriptionWrapElem.querySelector('.birds-description-info__birds-voice-btn');
 
-// let audio;
-let audioIsPlay = false;
+let audio = new Audio();
+audio.controls = 'true'
+let isPlay = false;
 
 const hideStartDescription = () => {
   descriptionStartElem.classList.add('dispnone');
@@ -20,41 +23,41 @@ const showStartDescription = () => {
   descriptionInfoElem.classList.add('dispnone');
 }
 
+const playBirdSound = (audio) => {
+  if(!getPlayerAudio().paused) getPlayerAudio().pause();
+
+  if (isPlay) {
+    audio.currentTime = 0;
+    voiceBtnElem.classList.add('play');
+    voiceBtnElem.classList.remove('stop');
+    isPlay = false;
+    console.log('stop');
+    audio.pause();
+    audio.currentTime = 0;
+  } else {
+    voiceBtnElem.classList.remove('play');
+    voiceBtnElem.classList.add('stop');
+    isPlay = true;
+    console.log('play');
+    audio.play();
+  }
+}
+
+const getDescAudio = () => {
+  return audio;
+}
+
 const setBirdDescription = (card) => {
   descriptionInfoElem.style.background = `url(${card.image})`;
   nameElem.textContent = card.name;
   nameLatElem.textContent = card.species;
   descriptionElem.textContent = card.description;
+  audio.src = card.audio;
 
-  const audio = new Audio(card.audio);
-
-  voiceBtnElem.addEventListener('click', () => {
-    if (audioIsPlay) stopBirdSound(audio);
-    else playBirdSound(audio);
-  });
-}
-
-const playBirdSound = (audio) => {
-  // const p = audio.play();
-  // if (p !== undefined) p.catch((err) => console.log(err));
-
-  audio.play();
-  voiceBtnElem.classList.remove('play');
-  voiceBtnElem.classList.add('stop');
-  audioIsPlay = true;
-  console.log('play');
-}
-
-const stopBirdSound = (audio) => {
-  audio.pause();
-  audio.currentTime = 0;
-  voiceBtnElem.classList.add('play');
-  voiceBtnElem.classList.remove('stop');
-  audioIsPlay = false;
-  console.log('stop');
-
+  voiceBtnElem.addEventListener('click', () => playBirdSound(audio));
 }
 
 
 
-export { hideStartDescription, showStartDescription, setBirdDescription, stopBirdSound };
+
+export { hideStartDescription, showStartDescription, setBirdDescription, getDescAudio, playBirdSound };

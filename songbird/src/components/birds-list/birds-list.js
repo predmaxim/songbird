@@ -76,7 +76,7 @@ const setPlayCards = (stageNum) => {
 // set Gallery
 const setGallery = () => {
   const cards = allCards
-    .map(bird => createBirdsItem(bird))
+    .map(card => createBirdsItem(card))
     .sort(() => Math.random() - 0.5)
     .forEach(el => birdsGalleryElem.insertAdjacentElement('afterbegin', el));
   return allCards
