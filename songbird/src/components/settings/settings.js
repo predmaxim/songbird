@@ -8,6 +8,34 @@ const settingsLight = settingsMenu.querySelector('.set-light-theme');
 const settingsRu = settingsMenu.querySelector('.set-ru-lang');
 const settingsEn = settingsMenu.querySelector('.set-en-lang');
 
+const setTheme = (theme) => {
+  if (theme === 'light') {
+    document.querySelector('.songbird-body').classList.remove('theme-dark');
+    document.querySelector('.songbird-body').classList.add('theme-light');
+    settingsDark.classList.remove('active');
+    settingsLight.classList.add('active');
+  }
+
+  if (theme === 'dark') {
+    document.querySelector('.songbird-body').classList.remove('theme-light');
+    document.querySelector('.songbird-body').classList.add('theme-dark');
+    settingsLight.classList.remove('active');
+    settingsDark.classList.add('active');
+  }
+
+  localStorage.setItem('themeSettingsGame', theme);
+}
+
+if (localStorage.getItem('langSettingsGame')) {
+  const lang = localStorage.getItem('langSettingsGame');
+  setLang(lang);
+};
+
+if (localStorage.getItem('themeSettingsGame')) {
+  const theme = localStorage.getItem('themeSettingsGame');
+  setTheme(theme);
+};
+
 document.addEventListener('click', (e) => {
   if (e.target.closest('.settings-block')) {
     settingsMenu.classList.toggle('dispnone');
@@ -19,19 +47,9 @@ document.addEventListener('click', (e) => {
     settingsMenu.classList.add('dispnone');
   }
 
-  if (e.target === settingsLight) {
-    document.querySelector('.songbird-body').classList.remove('theme-dark');
-    document.querySelector('.songbird-body').classList.add('theme-light');
-    settingsDark.classList.remove('active');
-    settingsLight.classList.add('active');
-  }
+  if (e.target === settingsLight) setTheme('light')
 
-  if (e.target === settingsDark) {
-    document.querySelector('.songbird-body').classList.remove('theme-light');
-    document.querySelector('.songbird-body').classList.add('theme-dark');
-    settingsLight.classList.remove('active');
-    settingsDark.classList.add('active');
-  }
+  if (e.target === settingsDark) setTheme('dark')
 
   if (e.target === settingsRu) {
     settingsEn.classList.remove('active');
