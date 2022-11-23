@@ -6,6 +6,7 @@ const allCards = birdsData
   .flat()
   .map((el, i) => {
     el.id = i
+    console.log(el)
     return el
   });
 
