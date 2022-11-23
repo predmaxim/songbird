@@ -73,7 +73,19 @@ const languages = {
 }
 
 const setLang = (lang) => {
-  console.log(languages.settings.theme[lang])
+  const settingsRu = document.querySelector('.set-ru-lang');
+  const settingsEn = document.querySelector('.set-en-lang');
+
+  if (lang === 'ru') {
+    settingsEn.classList.remove('active');
+    settingsRu.classList.add('active');
+  }
+
+  if (lang === 'en') {
+    settingsEn.classList.add('active');
+    settingsRu.classList.remove('active');
+  }
+
   // HOME
   document.querySelector('.songbird-home-text p').innerHTML = languages.home.homeText[lang];
   document.querySelector('.songbird-home-play-btn').textContent = languages.home.homeBtn[lang];
@@ -105,6 +117,8 @@ const setLang = (lang) => {
   document.querySelector('.set-light-theme').textContent = languages.settings.theme[lang][1];
   document.querySelector('.set-ru-lang').textContent = languages.settings.language[lang][0];
   document.querySelector('.set-en-lang').textContent = languages.settings.language[lang][1];
+
+  localStorage.setItem('langSettingsGame', lang);
 }
 
 export { setLang };
