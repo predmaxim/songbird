@@ -1,3 +1,4 @@
+import 'Lang/lang.js';
 import 'Base/base.js';
 import 'BirdsDescription/birds-description.js';
 import 'Slider/slider.js';
