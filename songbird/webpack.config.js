@@ -24,6 +24,7 @@ const aliases = {
   HomePage: path.join(__dirname, 'src/pages/home/'),
   Slider: path.join(__dirname, 'src/components/slider/'),
   Gallery: path.join(__dirname, 'src/components/gallery/'),
+  Lang: path.join(__dirname, 'src/lang/'),
 }
 
 
