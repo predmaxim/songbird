@@ -206,7 +206,7 @@
     .settings-icon {}
 
     .settings-menu {
-      background: #fff;
+      background: var(--settings-menu-bg);
       box-shadow: var(--player-thumb-shadow);
 
       transition: .3s;

@@ -31,9 +31,13 @@
   --player-play-btn: inherit;
   --player-volume-btn: inherit;
   --player-track-color: #E5E5E5;
+  --player-progress-bg: linear-gradient(var(--primary-color), var(--primary-color));
+  --player-thumb-shadow: 0 1px 8px rgb(88, 88, 88);
 
   // BIRDS-DESCRIPTION
   --bird-description-bg: linear-gradient(92.98deg, #58534A 63.06%, #4A3333 224.17%);
+  --bird-description-info-bg: rgba(56, 53, 42, 0.22);
+  --bird-description-info-font-color: #fff;
 
   // BIRDS-LIST
   --bird-list-bg: transparent;
@@ -47,8 +51,7 @@
 
   // FOOTER
   --footer-bg: transparent;
-  --footer-rs-logo: invert(1);
-  --footer-github-logo: invert(1);
+  --invert-color: invert(1);
 
 
   // ==========================
@@ -139,6 +142,12 @@
     -ms-transition: .3s;
     -o-transition: .3s;
 
+    // filter: opacity(1);
+    // -webkit-filter: opacity(1);
+
+
+
+
     &.active {
       background: var(--primary-color);
       box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.25);
@@ -162,6 +171,8 @@
 
     &::after {
       content: url(Img/next-btn-icon.svg);
+      filter: opacity(.3);
+      -webkit-filter: opacity(.3);
     }
   }
 
@@ -191,6 +202,11 @@
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 
+    &::after {
+      filter: var(--invert-color);
+      -webkit-filter: var(--invert-color);
+    }
+
     &.active {
       background: var(--secondary-color);
     }
@@ -202,7 +218,7 @@
     .settings-icon {}
 
     .settings-menu {
-      background: #fff;
+      background: var(--settings-menu-bg);
       box-shadow: var(--player-thumb-shadow);
 
       transition: .3s;
@@ -233,6 +249,11 @@
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
+
+        &:before {
+          filter: var(--invert-color);
+          -webkit-filter: var(--invert-color);
+        }
 
         &:hover {
           background: var(--secondary-color);
@@ -406,6 +427,13 @@
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 
+    .birds-description-start {
+      .arrow-up {
+        filter: var(--invert-color);
+        -webkit-filter: var(--invert-color);
+      }
+    }
+
     .birds-description-info {
 
       transition: .3s;
@@ -478,7 +506,7 @@
 
       &:hover,
       &.active {
-        box-shadow: var(--bird-list-hover-shadow);
+        background: #444;
 
         border-radius: 10px;
         -webkit-border-radius: 10px;
@@ -501,6 +529,12 @@
 
   }
 
+  .songbird-result {
+    &__arrow-down {
+      filter: invert(1);
+      -webkit-filter: invert(1);
+    }
+  }
 
   // GALLERY
 
@@ -570,4 +604,8 @@
     }
   }
 
+  .rss-logo__icon {
+    filter: var(--invert-color);
+    -webkit-filter: var(--invert-color);
+  }
 }
