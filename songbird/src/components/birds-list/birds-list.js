@@ -3,8 +3,10 @@ import birdsData from "./data.js";
 const birdsListElem = document.querySelector('.songbird-game .birds-list');
 const birdsGalleryElem = document.querySelector('.songbird-gallery .birds-list');
 const allCards = birdsData
-  .flatMap((el, i) => {
+  .flat()
+  .map((el, i) => {
     el.id = i
+    console.log(el)
     return el
   });
 
@@ -74,6 +76,7 @@ const setPlayCards = (stageNum) => {
 
 // set Gallery
 const setGallery = () => {
+  birdsGalleryElem.replaceChildren();
   const cards = allCards
     .map(card => createBirdsItem(card))
     .sort(() => Math.random() - 0.5)
