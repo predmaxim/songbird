@@ -55,8 +55,8 @@ const clearPlayCards = () => {
   return 0;
 };
 
-// set Сorrect Card random from Play Cards
-const setСorrectCard = (stageNum) => {
+// set Correct Card random from Play Cards
+const setCorrectCard = (stageNum) => {
   const r = random(0, 5, 1)[0]
   return birdsData[stageNum][r];
 };
@@ -95,4 +95,4 @@ const setBadge = (target, boolean) => {
 
 
 
-export { setPlayCards, clearPlayCards, setСorrectCard, setBadge, createBirdsItem, setGallery, getAllCards };
+export { setPlayCards, clearPlayCards, setCorrectCard, setBadge, createBirdsItem, setGallery, getAllCards };
