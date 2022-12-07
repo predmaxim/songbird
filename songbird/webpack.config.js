@@ -1,4 +1,4 @@
-import path, { resolve as _resolve, join } from 'path';
+// import path, { resolve as _resolve, join } from 'path';
 import PugPlugin, { loader as _loader } from 'pug-plugin';
 import CompressionPlugin from 'compression-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
