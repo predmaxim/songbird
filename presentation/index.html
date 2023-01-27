@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Redux - presentation</title>
+
+	<link rel="stylesheet" href="./reset.css">
+	<link rel="stylesheet" href="./reveal.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./theme/night.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="./plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<!-- slide 1 -->
+			<section>
+				<section data-auto-animate>
+					<img class="img" src="./img/redux-logo.jpeg" alt="redux-logo" width="300">
+					<h1>Redux</h1>
+				</section>
+
+				<section data-auto-animate>
+					<img class="img" src="./img/redux-logo.jpeg" alt="redux-logo" width="200">
+					<h1>Redux</h1>
+					<h4>what is it and why is it needed</h4>
+				</section>
+
+				<section data-auto-animate>
+					<p>Redux is a tool for managing data state and UI in entity-heavy JavaScript
+						applications</p>
+				</section>
+				<section data-auto-animate>
+					<p>It is a JavaScript library</p>
+				</section>
+			</section>
+
+			<!-- slide 2 -->
+			<section>
+				<section data-auto-animate>
+					<h2>What is Redux for?</h2>
+				</section>
+				<section data-auto-animate>
+					<h2>What is Redux for?</h2>
+					<ul>
+						<li class="li">To manage the state of an application that works with a large amount of data</li>
+					</ul>
+				</section>
+				<section data-auto-animate>
+					<h2>What is Redux for?</h2>
+					<ul>
+						<li class="li">To manage the state of an application that works with a large amount of data</li>
+						<li class="li">Convenient replacement of the built-in state tools in React</li>
+					</ul>
+				</section>
+				<section data-auto-animate>
+					<h2>What is Redux for?</h2>
+					<ul>
+						<li class="li">To manage the state of an application that works with a large amount of data</li>
+						<li class="li">Convenient replacement of the built-in state tools in React</li>
+						<li class="li">Easier scaling of the application, its transformation for different tasks</li>
+					</ul>
+				</section>
+				<section data-auto-animate>
+					<h2>What is Redux for?</h2>
+					<ul>
+						<li class="li">To manage the state of an application that works with a large amount of data</li>
+						<li class="li">Convenient replacement of the built-in state tools in React</li>
+						<li class="li">Easier scaling of the application, its transformation for different tasks</li>
+						<li class="li">Getting rid of errors associated with disorder in the state object</li>
+					</ul>
+				</section>
+				<section data-auto-animate>
+					<h2>What is Redux for?</h2>
+					<ul>
+						<li class="li">To manage the state of an application that works with a large amount of data</li>
+						<li class="li">Convenient replacement of the built-in state tools in React</li>
+						<li class="li">Easier scaling of the application, its transformation for different tasks</li>
+						<li class="li">Getting rid of errors associated with disorder in the state object</li>
+						<li class="li">Predictability and understandability of the application</li>
+					</ul>
+				</section>
+				<section data-auto-animate>
+					<h2>What is Redux for?</h2>
+					<ul>
+						<li class="li">To manage the state of an application that works with a large amount of data</li>
+						<li class="li">Convenient replacement of the built-in state tools in React</li>
+						<li class="li">Easier scaling of the application, its transformation for different tasks</li>
+						<li class="li">Getting rid of errors associated with disorder in the state object</li>
+						<li class="li">Predictability and understandability of the application</li>
+						<li class="li">Easier debugging and refinement</li>
+					</ul>
+				</section>
+				<section data-auto-animate>
+					<h2>What is Redux for?</h2>
+					<ul>
+						<li class="li">To manage the state of an application that works with a large amount of data</li>
+						<li class="li">Convenient replacement of the built-in state tools in React</li>
+						<li class="li">Easier scaling of the application, its transformation for different tasks</li>
+						<li class="li">Getting rid of errors associated with disorder in the state object</li>
+						<li class="li">Predictability and understandability of the application</li>
+						<li class="li">Easier debugging and refinement</li>
+						<li class="li">Improve the performance and performance of the program</li>
+					</ul>
+				</section>
+			</section>
+
+			<!-- slide 3 -->
+			<section>
+				<section data-auto-animate>
+					<h2>Why you need a state object?</h2>
+				</section>
+				<section data-auto-animate>
+					<p class="p"><b>State</b>, is a concept that is commonly used in complex programs.</p>
+					<p class="p">A large application contains a lot of data that one or another component may need at any time</p>
+				</section>
+				<section data-auto-animate>
+					<pre><code class="code">
+						// An example of the state and its initialization
+						const state = { posts: [], activePostId: null, categories: [] };
+						// Somewhere inside the application
+						state.posts.push(/* новый пост */);
+						// Somewhere in another part
+						state.posts.map(/* processing logic */);
+					</code></pre>
+				</section>
+			</section>
+
+			<!-- slide 4 -->
+			<section>
+				<section data-auto-animate>
+					<h2>What does "state management" mean?</h2>
+				</section>
+				<section data-auto-animate>
+					<p class="p">The state object must be managed, otherwise errors are inevitable when working with large
+						programs</p>
+				</section>
+				<section data-auto-animate>
+					<p class="p">Management helps to make the operation of the object logical</p>
+				</section>
+			</section>
+
+			<!-- slide 5 -->
+			<section>
+				<section data-auto-animate>
+					<h2>Basic Concepts</h2>
+				</section>
+				<section data-auto-animate>
+					<h2>Basic Concepts</h2>
+					<ul>
+						<li class="li">Single source of state</li>
+					</ul>
+				</section>
+				<section data-auto-animate>
+					<h2>Basic Concepts</h2>
+					<ul>
+						<li class="li">Single source of state</li>
+						<li class="li">Access to the state</li>
+					</ul>
+				</section>
+				<section data-auto-animate>
+					<h2>Basic Concepts</h2>
+					<ul>
+						<li class="li">Single source of state</li>
+						<li class="li">Access to the state</li>
+						<li class="li">Changes</li>
+					</ul>
+				</section>
+			</section>
+
+			<!-- slide 6 -->
+			<section>
+				<section data-auto-animate>
+					<h2>How an application works with Redux?</h2>
+				</section>
+				<section data-auto-animate>
+					<h2>How an application works with Redux?</h2>
+					<ul>
+						<li class="li">State source</li>
+					</ul>
+				</section>
+				<section data-auto-animate>
+					<h2>How an application works with Redux?</h2>
+					<ul>
+						<li class="li">State source</li>
+						<li class="li">Interface created on the basis of the current state</li>
+					</ul>
+				</section>
+				<section data-auto-animate>
+					<h2>How an application works with Redux?</h2>
+					<ul>
+						<li class="li">State source</li>
+						<li class="li">Interface created on the basis of the current state</li>
+						<li class="li">Action-functions</li>
+					</ul>
+				</section>
+				<section>
+					<img class="img" src="./img/redux1.png" alt="">
+				</section>
+			</section>
+
+			<!-- slide 7 -->
+			<section>
+				<section data-auto-animate>
+					<h2>Benefits of Redux</h2>
+				</section>
+				<section data-auto-animate>
+					<h2>Benefits of Redux</h2>
+					<ul>
+						<li class="li">Easy work with state</li>
+					</ul>
+				</section>
+				<section data-auto-animate>
+					<h2>Benefits of Redux</h2>
+					<ul>
+						<li class="li">Easy work with state</li>
+						<li class="li">Simplify scaling</li>
+					</ul>
+				</section>
+				<section data-auto-animate>
+					<h2>Benefits of Redux</h2>
+					<ul>
+						<li class="li">Easy work with state</li>
+						<li class="li">Simplify scaling</li>
+						<li class="li">Simple study</li>
+					</ul>
+				</section>
+				<section data-auto-animate>
+					<h2>Benefits of Redux</h2>
+					<ul>
+						<li class="li">Easy work with state</li>
+						<li class="li">Simplify scaling</li>
+						<li class="li">Simple study</li>
+						<li class="li">Lots of useful tools</li>
+					</ul>
+				</section>
+			</section>
+
+			<!-- slide 8 -->
+			<section>
+				<section data-auto-animate>
+					<h2>How to get started with Redux</h2>
+				</section>
+				<section data-auto-animate>
+					<h2>How to get started with Redux</h2>
+					<pre><code>
+						npm install redux;
+						yarn add redux;
+					</code></pre>
+				</section>
+			</section>
+
+			<!-- slide 9 -->
+			<section>
+				<section data-auto-animate>
+					<h2>Thank you</h2>
+				</section>
+			</section>
+
+
+
+
+		</div>
+	</div>
+
+	<script src="./reveal.js"></script>
+	<script src="./plugin/notes/notes.js"></script>
+	<script src="./plugin/markdown/markdown.js"></script>
+	<script src="./plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>
